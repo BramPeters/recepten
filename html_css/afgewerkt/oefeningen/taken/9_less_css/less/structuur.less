@@ -1,0 +1,87 @@
+//	LESS bestand
+/*  STRUCTUUR en LAY-OUT */ 
+
+.container{
+	//fixed gecentreerd
+	.container-fixed(@containerWidth); 					// @width
+	
+	//fluid gecentreerd
+	//.container-fluid(80%, @maxContainerWidth);		// @width, max-width
+	
+	background:@asideAchtergrond;
+	.clearfix();
+	}
+	
+// header geen padding vr navbar ea.
+header{
+	position:relative;
+	background:@headerAchtergrond;
+	padding:0;
+	margin:0;
+	.clearfix();
+	}
+header h1,header h2,header h3,header p{
+	margin-left:@goot;
+	}
+
+aside {
+	background:@asideAchtergrond;
+	float:left;
+	width:24%;
+	.paddingLinks();
+	}
+.inhoud{
+	background:@inhoudAchtergrond;
+	color:@wit;
+	float:left;
+	width:73%;
+	
+	.paddingRondom();
+	}
+footer{
+	background:@footerAchtergrond;
+	color:@wit;
+	
+	.paddingRondom();
+	.clear();
+	}
+/* login form */
+#login{
+	float:right;
+	margin:2px 2px 0 0;
+	
+	h4{display:inline;}
+	
+	form{ 
+		display:inline;
+		*{ display:inline;}
+		}
+	}
+
+/* extra kader */	
+#extra {
+	margin:1em;
+	border: 4px solid @wit;
+	color:@koolstof;
+	background:@honing;
+	.paddingRondom();
+	.gradVertGroen(); //verwijder in startbestand	
+	}
+	
+/* padding classes */
+.paddingRondom{padding:@goot;}
+.paddingOpzij{padding:0 @goot;}
+.paddingRechts{padding: 0 @goot 0 0;}
+.paddingLinks{padding: 0 0 0 @goot;}
+	
+
+
+
+
+
+
+
+
+
+
+

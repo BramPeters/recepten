@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JS adv project: JSON Feeds halen met AJAX en verwerken</title>
+<style media="screen" type="text/css">
+#output {
+	background-color:#CCC;
+	padding:0.6em 0.6em 0.6em 0;
+	width:40em;
+}
+span.auteur{
+	color:#600
+	}
+span.datum{
+	color:#600;
+	font-size:0.8em;
+	}
+span.tags{
+	color:#660;
+	font-family:"Courier New", Courier, monospace;
+	}
+</style>
+
+</head>
+<body>
+<h1>JS adv project: JSON Feeds halen met AJAX en verwerken</h1>
+<h2>Een <a href="http://delicious.com/help/feeds">delicious feed</a> verwerken in onze pagina</h2>
+<p>Denk er aan: dit Ajax project kan enkel werken via http vanop een webserver</p>
+<p>Kies de feed:
+  <select name="feed" id="feed">
+    <option value="hotlist" selected="selected">Delicious hotlist bookmarks</option>
+    <option value="popular">Delicious popular bookmarks</option>
+    <option value="recent">Delicious recent bookmarks</option>
+    <option value="openleren_bm">Openleren bookmarks</option>
+    <option value="openleren_tags">Openleren Tags</option>
+  </select>
+  (standaard: hotlist)</p>
+<div id="output"></div>
+</body>
+</html>

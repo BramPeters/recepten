@@ -1,0 +1,15 @@
+In bestand /data/plantendao.php van de startbestanden van plantenshop
+
+Vervang 
+
+require_once('entities/planten.php');
+require_once('entities/soorten.php');
+
+door
+
+require_once(__ROOT__.'/entities/planten.php');
+require_once(__ROOT__.'/entities/soorten.php');
+
+
+Indien deze aanpassing niet gemaakt werd zal deze fout aan het licht komen in hoofdstuk 4(AJAX),
+in de vorm van een JSON formatting error alert.

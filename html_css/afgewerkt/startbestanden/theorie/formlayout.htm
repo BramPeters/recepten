@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Formulier lay-out</title>
+<style>
+body {
+	font-size:100%;
+}
+
+div.container {
+	width:40em;
+	margin:1em;
+}
+/**** form lay-out ******/
+
+form {
+	font-size:1em;
+	color: #333;
+	margin:0;
+	padding:0;
+	outline:1px dashed red;
+}
+form * {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+form div {
+	position:relative;
+	clear: left;
+	display: block;
+	zoom: 1;
+	margin: 0.2em 0;
+	padding: 0;
+}
+form div.controlbox {
+	width:19.7em;
+	display:inline-block;
+}
+
+/****** velden, controls *************/
+
+input[type="email"], input[type="password"], input[type="text"], input[type="url"], input[type="search"], input[type="number"], input[type="date"], input[type="tel"], textarea {
+	width: 19.7em; /*chrome probleem: 20em te groot, door focus()????? */
+	min-height: 1em;
+	padding: 0.4em 0.5em;
+	margin:0;
+	font-size:inherit;
+}
+input[type="checkbox"], input[type="radio"] {
+	padding: 0;
+	margin:0.4em 0.5em;
+}
+input[type="checkbox"].inline, input[type="radio"].inline {
+	margin:0;
+}
+
+input.kort {
+	width:7em;
+}
+input.error {
+	border: 1px dotted red;
+}
+select {
+	border: 1px solid #999;
+	padding: 0.2em 0.5em;
+	min-width:7em;
+	margin:0;
+}
+textarea {
+	overflow:auto;
+	vertical-align:top;
+	min-height:7em;
+	margin:0;
+}
+/** focus **/
+input:focus,textarea:focus,select:focus  {	
+	border:1px solid magenta;
+	background:snow;
+	-webkit-box-shadow: 0 0 10px rgb(255,44,255);
+	-moz-box-shadow: 0 0 5px rgb(255,44,255);
+	box-shadow: 0 0 5px rgb(255,44,255);
+	
+}
+/* buttons*/
+
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+	padding: 0.3em 1.3em;
+	font-size: 1em;			
+}
+.css3button {
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(  top,  #fff3db 0%,  #ffc821 25%,  #ff3c00);
+	background: -webkit-gradient(  linear, left top, left bottom,  from(#fff3db),  color-stop(0.25, #ffc821),  to(#ff3c00));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #b85f00;
+	-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.5),  inset 0px -1px 0px rgba(255,255,255,0.7);
+	-webkit-box-shadow: 0px 1px 3px rgba(000,000,000,0.5),  inset 0px -1px 0px rgba(255,255,255,0.7);
+	box-shadow: 0px 1px 3px rgba(000,000,000,0.5),  inset 0px -1px 0px rgba(255,255,255,0.7);
+	text-shadow: 0px -1px 1px rgba(181,050,181,0.2),  0px 1px 0px rgba(255,255,255,0.3);
+}
+
+
+/***************labels en berichten********************/
+
+label {
+	/* algemeen, losse labels, buiten form */
+	float:none;
+	display: inline;
+	min-height: 0.875em;
+	padding:0.2em 0;
+	margin:0;
+	font-size:1em;
+	text-align: left;
+}
+form div label {
+	/*labels in div */ 	
+	float:left;
+	font-size:1em;
+	display: inline-block;
+	width: 10em;
+	margin:0;
+	padding-right:1em;
+	text-align: right;
+}
+form div label.fieldval {
+	/* veld gebonden berichten*/
+	display:inline-block;
+	float: right;
+	width: 10em;
+	color: red;
+	font-style: italic;
+	text-align:left;
+	padding-left:1em;
+}
+form div label.compact {
+	width: 5em;
+}
+form label.labelCheckbox, label.labelRadio {
+	float: none;
+	display: inline;
+	zoom: 1;
+	padding: 0;
+	text-align: left;
+}
+
+label.verplicht {
+	position:relative;
+	padding-right:1.2em;
+	}
+label.verplicht::before {
+	content: "\2764"; /* hartje */
+ 	display: inline-block;
+ 	position:absolute;
+ 	top:0.1em;
+ 	right: 0em;
+ 	color:magenta;
+ 	padding-right: 0.1em;
+}
+
+/******andere ******/
+abbr.verplicht {
+	color:magenta;
+	font-size:1.3em;
+}
+
+</style>
+</head>
+<body>
+<h1>Formulier lay-out</h1>
+<p> De meest forms zitten in een andere container, alhoewel het <code>form</code> element  een container op zich is, de breedte wordt dus meestal bepaald door de container.</p>
+<div class="container">
+  <form action="bevestigen.html" method="get" id="frmgegevens" name="frmgegevens">
+    <label>Velden met een <abbr class="verplicht" >&#9829;</abbr> zijn essentieel om uw abonnement te kunnen registreren.</label>
+    <div>
+      <label for="vnaam" class="verplicht" title="verplicht">naam:</label>
+      <input type="text"  id="naam" name="naam" autofocus placeholder="uw naam" title="vul hier uw naam in "  required />
+      <label class="fieldval" id="val_vnaam">vul uw naam in</label>
+    </div>
+    <div>
+      <label for="straat" class="verplicht" >Straat:</label>
+      <input type="text" id="straat" name="straat" title="uw straat  met huisnummer" required />
+      <label class="fieldval" id="val_straat">vul uw straat in</label>
+    </div>
+    <div>
+      <label for="postnr" class="verplicht" >Postnummer:</label>
+      <input type="number" id="postnr" name="postnr"  class="kort" title="het postnummer van uw gemeente"  required />
+      <label class="fieldval" id="val_postnr"></label>
+    </div>
+    <div>
+      <label for="gemeente" class="verplicht" >Gemeente:</label>
+      <input type="text" id="gemeente" name="gemeente"   title="de gemeente waar u woont"  required />
+      <label class="fieldval" id="val_gemeente"></label>
+    </div>
+    <div>
+      <label for="land" class="verplicht" >Land:</label>
+      <select id='land' name='land' title='in welk land woont u?' required >
+        <option value=1>Belgi&euml;</option>
+        <option value=2>Nederland</option>
+        <option value=3>Swaziland</option>
+      </select>
+      <span class="fieldval" id="val_tel"></span> </div>
+    <div>
+      <label for="tel">Telefoon:</label>
+      <input type="tel" id="tel" name="tel"  placeholder="uw telefoonnummer" title="uw vaste of mobiele telefoon" />
+      <span class="fieldval" id="val_tel"></span> </div>
+    <div>
+      <label for="email" class="verplicht" >Email:</label>
+      <input type="email" id="email" name="email" placeholder="uw emailadres" title="mijn emailadres" required />
+      <span class="fieldval" id="val_email"></span> </div>
+    <div>
+      <label for="geboren" >Geboortedatum:</label>
+      <input type="date" id="geboren" name="geboren" placeholder="uw geboortedatum" title="uw geboortedatum in het formaat 1956-12-31" required />
+      <span class="fieldval" id="val_geboren"></span> </div>
+    <div>
+      <label>Geslacht:</label>
+      <input  type="radio" id="vrouw" value="v" name="sexe" title="uw geslacht" />
+      <label class="labelRadio" for="vrouw" >Vrouw</label>
+      <input type="radio" id="man" value="m"  name="sexe"  />
+      <label class="labelRadio" for="man" >Man</label>
+      <span class="fieldval" id="val_sexe"></span> </div>
+    <div>
+      <label>Competenties</label>
+      <div class="controlbox">
+        <input type="checkbox" id="java" value="java"  name="java"  />
+        <label class="labelCheckbox" for="java" > Java </label>
+        <br />
+        <input type="checkbox" id="C#" value="C#"  name="C#"  />
+        <label class="labelCheckbox" for="C#" >C#</label>
+        <br />
+        <input type="checkbox" id="php" value="php" name="php"  />
+        <label class="labelCheckbox" for="php">PHP</label>
+        <br />
+        <input type="checkbox" id="js" value="js"  name="js"  />
+        <label class="labelCheckbox" for="js">Javascript</label>
+      </div>
+    </div>
+    <div>
+      <label for="vragen" >Hebt u nog vragen?</label>
+      <textarea id="vragen" name="vragen" placeholder="vragen?" title="Heeft u nog vragen?" rows="8" ></textarea>
+      <span class="fieldval" id="val_geboren"></span>
+      </div>
+    <div>
+      <label class="labelCheckbox">
+        <input type="checkbox" id="actiesmail" value name="kortingen"  />
+        ik wens per email op de hoogte gehouden te worden van kortingen en acties</label>
+    </div>
+    <div>
+      <label class="labelCheckbox">
+        <input type="checkbox" id="actiespost" value name="actiespost"  />
+        ik wens per post op de hoogte gehouden te worden van kortingen en acties</label>
+    </div>
+    <div>U moet ook onze <a href="#">Algemene VerkoopsVoorwaarden</a> lezen en ermee akkoord gaan. U moet deze checkbox
+      <input type="checkbox"  class="inline" id="akkoord" value name="akkoord"  />
+      aanvinken om toe te stemmen met de algemene verkoopsvoorwaarden. </div>
+    <div>
+      <input class="blauw" type="submit" value="Bevestig"/>
+      <input class="css3button" type="reset" value="Annuleer" />
+    </div>
+  </form>
+</div>
+</body>
+</html>

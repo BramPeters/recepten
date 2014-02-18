@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS PF taak: faculteit</title>
+<style>
+	<!--
+label {
+	display:inline-block;
+	width:100px;
+}
+div.vb {
+	background-color:#CCFFCC;
+	padding:1em;
+}
+-->
+</style>
+</head>
+
+<body>
+
+<h1>Javascript PF taak: Faculteit</h1>
+
+<h3>Opdracht: </h3>
+<ul>
+  <li>De faculteit van een geheel getal is het product van alle gehele getallen van 1 t.e.m. het getal zelf. Bijv: 	5! = 1 * 2 * 3 * 4 * 5 = 120. </li>
+  <li>	We veronderstellen dat een getal ingegeven wordt, valideer dat met de functie <code>isNaN()</code></li>
+  <li>Opgelet: de faculteit van 0 (0!) is 1, en de faculteit van een negatief getal bestaat niet. </li>
+  <li>Indien de invoer goed is toont het de faculteit van dat getal in het outputelement. </li>
+</ul>
+<h3>Geteste topics</h3>
+<ul>
+  <li>programmatielogica : iteratie</li>
+</ul>
+<h3>Oplossing: </h3>
+
+<form name="frmFaculteit" id="frmFaculteit" method="get" action="">
+<p>
+<label for="getal">getal</label>
+<input type="text" name="getal" id="getal">
+</p>
+<p>
+<button type="button" id="deKnop">Bereken faculteit</button>
+</p>
+</form> 
+<div class="vb" id="output"></div>
+
+</body>
+</html>

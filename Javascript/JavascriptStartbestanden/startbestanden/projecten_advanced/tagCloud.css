@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document voor tagCloud.js 
+
+dit zijn algemene stylerules voor de container en de tags 
+door opties ingestelde styles worden door het script inline gezet
+denk er aan dat deze stylesheetrules meer specifiek moeten zijn dan stylerules gezet door andere stylesheets, 
+daarom de class tagCloud => de container
+
+*/
+
+.tagCloud{
+	display:block;
+	position:relative;
+	border:1px solid silver;
+	padding:1em;
+	margin:1em;
+	}
+
+.tagCloud span{
+	display:inline-block;	/* anders plakken ze allemaal aan elkaar in 1 lijn */
+	}
+.tagCloud a{
+	display:inline-block;
+	text-decoration:none;
+	}
+.tagCloud a:hover{	
+	background-color:#9C3;
+}

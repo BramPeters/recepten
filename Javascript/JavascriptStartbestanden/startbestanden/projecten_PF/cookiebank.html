@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS project: cookieBank</title>
+<style>
+div.waarschuwing {
+	display:none;
+	background-color:yellow;
+	color:red;
+	border:medium solid red;
+	padding:1em;
+	margin:1em;
+	width: 34em;
+}
+#output {
+	background-color:#F5F5F5;
+	padding: 1em;
+	width: 34em;
+}
+form {
+	background-color: silver;
+	width: 34em;
+	padding: 1em;
+}
+form input[type=text], form select, button {
+	width: 14em;
+}
+button.small {
+	width:2em;
+}
+form label {
+	display: inline-block;
+	text-align: right;
+	width: 4em;
+	padding: 0.3em 1em;
+}
+label.msg {
+	width: auto;
+	text-align: left;
+}
+</style>
+</head>
+<body>
+<h1>CookieBank</h1>
+<p>Welkom bij CookieBank, de bank met smaak!</p>
+<div id="output"></div>
+<div class="waarschuwing"></div>
+<form name="frmBank" action="" method="get">
+  <p> * verplicht </p>
+  <div>
+    <label for='bedrag'>bedrag *</label>
+    <input type="text" name="bedrag" id="bedrag">
+    <label class="msg"></label>
+  </div>
+  <div>
+    <label>&nbsp;</label>
+    <button type="button" class="small" id="krediet">+</button>
+    <button type="button" class="small" id="debiet">-</button>
+    <label class="msg"></label>
+  </div>
+</form>
+</body>
+</html>

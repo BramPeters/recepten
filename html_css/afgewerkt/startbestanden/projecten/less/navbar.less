@@ -1,0 +1,72 @@
+// LESS bestand
+// navbar
+// --------------------------------------------------
+
+/*  navigatiebalk horizontaal */
+
+//breedte wordt dynamisch berekend
+
+.navbar{
+	.navbarhor(5, 4px);
+	
+	overflow:visible;
+	width:100%;
+	padding:0;
+	margin:0;
+	background:@rood;	
+	.clearfix();
+	
+	a{
+	  display:inline;
+	  cursor: pointer;
+	  color:@koolstof;
+	  &:hover{
+		  text-decoration:none;
+		  color:@wit;
+		  }
+	}
+	ul{
+		
+	  list-style:none;
+	  margin:0;
+	  padding:0;							
+	  width:100%;
+	 
+	
+	  li {
+		
+		float:left;	
+		font-size:1em;			
+		font-weight:bold;	
+		text-align:center;
+		
+		border-left:none;
+		border-top:1px solid @roodDonker;
+		border-bottom:1px solid @roodDonker;
+		border-right:1px solid @roodDonker;
+		background:@rood;	
+		//.border-radius(1em);
+		
+		&:first-child{
+			  border-left:1px solid @roodDonker;
+		  }
+		&:hover{
+			color:@wit;
+			background-color:@roodDonker;
+			}
+		}
+	}	
+}
+
+.navbarhor(@aantal,@paddingPx: 2px) {
+	ul{
+	  li {
+		margin:0;
+		padding:@paddingPx*2 @paddingPx;
+		// vb: floor((1020 -( 5 * 4px * 2) - ( 5 + 1)) / 5 )
+		width: floor((@containerWidth - (@aantal * @paddingPx * 2) - (@aantal + 1))/@aantal);
+		}
+	}
+}
+
+

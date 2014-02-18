@@ -1,0 +1,43 @@
+.well{
+    padding-left: 0;
+    padding-right: 0;
+    
+}
+.form-inline{
+    margin-bottom:0;
+}
+#logo { 
+    margin-bottom:1em;
+}
+h2 i[class|="icon"]{padding-right: 0.6em;}
+
+#info ul{
+    padding: 0;
+}
+#info ul li{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+.login>#submit{
+    background-color: #6D9207;
+    border:solid #047B00 1px;
+    color:white;
+}
+
+.minifoto{
+   
+    margin-bottom: 2.127659574468085%;
+    
+}
+.contact #send{
+    background-color: #6D9207;
+    border:solid white 1px;
+    color:white;
+    padding:10px;
+    margin-bottom: 1.5em;
+}
+.filler{
+    margin-bottom:-2%;
+}

@@ -1,0 +1,37 @@
+<a href='desertlife.html' title='Welkom bij DesertLife'>Welkom</a>
+<a href='wiewat.html' title='Wie is wie bij DesertLife en wat doen we?'>Wie zijn we?</a>
+<a href='lid.html' title='Interesse om lid te worden?'>lid worden</a>
+<a href='bib.html' title='Welke boeken zijn er in onze bibliotheek?'>bibliotheek</a>
+<a href='reizen.html' title='Welke reisjes en reizen deden we en zijn er gepland?'>reizen</a>
+<a href='media.html' title="Foto's en video's van het verenigingsleven">foto en video</a>
+<a href='kalender.html' title='De kalender van DesertLife'>Kalender</a>
+<a href='opendeur.html'>opendeurdagen</a>
+<a href='dokter.html' title='De cactusdokter beantwoordt uw vragen'>Cactusdokter</a>
+<a href='kweektips.html' title='Hoe kweek ik een cactus of een vetplant?'>kweektips</a>
+<a href='ziektes.html' title='Welke plagen en ziektes belagen mijn cactus of vetplant?'>ziektes</a>
+<a href='#' title='Vraag en aanbod'>Zoekertjes</a>
+<a href='zoek.html' title='Ik zoek een bepaalde plant, een boek, een serre...'>ik zoek</a>
+<a href='aanbod.html' title='Ik heb planten, boeken een serre aan te bieden'>ik bied aan</a>
+<a href='planten.html' title='Wat zijn succulenten?'>Succulenten</a>
+<a href='cactussen.html'>cactussen</a>
+<a href='echinocereus.html'>Echinocereus</a>
+<a href='opuntia.html'>Opuntia</a>
+<a href='Mammillaria.html'>Mammillaria</a>
+<a href='vetplanten.html'>vetplanten</a>
+<a href='#'>Zuid-Afrika</a>
+<a href='crassula.html'>Crassula</a>
+<a href='aloe.html'>Aloe</a>
+<a href='gasteria.html'>Gasteria</a>
+<a href='lithops.html'>Lithops</a>
+<a href='#'>Madagascar</a>
+<a href='euphorbia.html'>Euphorbia</a>
+<a href='pachypodium.html'>Pachypodium</a>
+<a href='meer.html' title='Wat zijn succulenten?'>Meer</a>
+<a href='artikels.html' title='Artikels'>artikels</a>
+<a href='infokaart.html' title='Waar vind je verenigingen, kwekers, liefhebbers'>Infokaart</a>
+<a href='links.html'>links</a>
+<a href='downloads.html'>downloads</a>
+        
+      
+    
+ 

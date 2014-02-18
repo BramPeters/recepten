@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DesertLife</title>
+<link rel="stylesheet" href="css/desertlife.css" />
+</head>
+<body>
+<header class="container">
+  <h1>Cactusvereniging</h1>
+  <h2>DesertLife</h2>
+  <nav>
+    <ul>
+      <li><a href='desertlife.html' title='Welkom bij DesertLife'>Welkom</a>
+        <ul>
+          <li><a href='wiewat.html' title='Wie is wie bij DesertLife en wat doen we?'>Wie zijn we?</a></li>
+          <li><a href='lid.html' title='Interesse om lid te worden?'>lid worden</a></li>
+          <li><a href='bib.html' title='Welke boeken zijn er in onze bibliotheek?'>bibliotheek</a></li>
+          <li><a href='reizen.html' title='Welke reisjes en reizen deden we en zijn er gepland?'>reizen</a></li>
+          <li><a href='media.html' title="Foto's en video's van het verenigingsleven">foto en video</a></li>
+        </ul>
+      </li>
+      <li><a href='kalender.html' title='De kalender van DesertLife'>Kalender</a>
+        <ul>
+          <li><a href='opendeur.html'>opendeurdagen</a></li>
+        </ul>
+      </li>
+      <li><a href='dokter.html' title='De cactusdokter beantwoordt uw vragen'>Cactusdokter</a>
+        <ul>
+          <li><a href='kweektips.html' title='Hoe kweek ik een cactus of een vetplant?'>kweektips</a></li>
+          <li><a href='ziektes.html' title='Welke plagen en ziektes belagen mijn cactus of vetplant?'>ziektes</a></li>
+        </ul>
+      </li>
+      <li> <a href='#' title='Vraag en aanbod'>Zoekertjes</a>
+        <ul>
+          <li><a href='zoek.html' title='Ik zoek een bepaalde plant, een boek, een serre...'>ik zoek</a></li>
+          <li><a href='aanbod.html' title='Ik heb planten, boeken een serre aan te bieden'>ik bied aan</a></li>
+        </ul>
+      </li>
+      <li><a href='planten.html' title='Wat zijn succulenten?'>Succulenten</a>
+        <ul>
+          <li><a href='cactussen.html'>cactussen</a>
+            <ul>
+              <li><a href='echinocereus.html'>Echinocereus</a></li>
+              <li><a href='opuntia.html'>Opuntia</a></li>
+              <li><a href='Mammillaria.html'>Mammillaria</a></li>
+            </ul>
+          </li>
+          <li><a href='vetplanten.html'>vetplanten</a>
+            <ul>
+              <li><a href='#'>Zuid-Afrika</a>
+                <ul>
+                  <li><a href='crassula.html'>Crassula</a></li>
+                  <li><a href='aloe.html'>Aloe</a></li>
+                  <li><a href='gasteria.html'>Gasteria</a></li>
+                  <li><a href='lithops.html'>Lithops</a></li>
+                </ul>
+              </li>
+              <li ><a href='#'>Madagascar</a>
+                <ul>
+                  <li><a href='euphorbia.html'>Euphorbia</a></li>
+                  <li><a href='pachypodium.html'>Pachypodium</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href='meer.html' title='Wat zijn succulenten?'>Meer</a>
+        <ul>
+          <li><a href='artikels.html' title='Artikels'>artikels</a></li>
+          <li><a href='infokaart.html' title='Waar vind je verenigingen, kwekers, liefhebbers'>Infokaart</a></li>
+          <li><a href='links.html'>links</a></li>
+          <li><a href='downloads.html'>downloads</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<section id="inhoud" class="col-group container">
+  <article class="col-4">
+    <div class="col-content">
+      <div class="blokje" id="prentje"></div>
+      <div class="blokje">
+        <h1>Aanmelden</h1>
+        <form action="index.php?option=login" method="post" name="login">
+          Gebruikersnaam<br />
+          <input type="text" name="username" class="inputbox" size="10" />
+          <br />
+          Wachtwoord<br />
+          <input type="password" name="passwd" class="inputbox" size="10" />
+          <br />
+          <input type="checkbox" name="remember" class="inputbox" value="yes" />
+          Onthou mijn gegevens<br />
+          <input type="submit" name="Submit" class="button" value="Login" />
+          <a href="index.php?option=com_registration&amp;task=lostPassword">Wachtwoord vergeten</a>?
+        </form>
+      </div>
+      <div class="blokje">
+        <h1>Zoeken</h1>
+        <form action="index.php" method="post">
+          <input class="inputbox" type="text" name="searchword" value=""  onBlur="if(this.value=='') this.value='zoek...';" onFocus="if(this.value=='zoek...') this.value='';" />
+          <br />
+          <input type="submit" name="Submit" value="Zoeken" />
+        </form>
+      </div>
+    </div>
+  </article>
+  <article class="col-8">
+    <div class="col-content">
+      <div class="intro">
+        <h1><a href="artikels.htm">Europese Landenconferentie opnieuw groot succes</a></h1>
+        <p>Elke liefhebber kent ondertussen de Europese Landenconferentie in Blankenberge wel en was waarschijnlijk ook aanwezig. Er werden een kleine 7000 bezoekers geteld, een stijging van 32% met vorig jaar. Ook het aantal verkopers was dit jaar groter: er was ongeveer 450 lopende meter plantenverkoop... <br />
+          <a href="artikels.htm">Lees verder...</a></p>
+      </div>
+      <div class="intro">
+        <h1><a href="artikels.htm">Cactusextract verzacht kater</a></h1>
+        <p>Onderzoekers van de Universiteit van Tulane in de Verenigde Staten hebben proefondervindelijk bewezen dat een extract uit <em>Opuntia ficus-indica </em>de symptonen van een harige kater vermindert.
+          
+          Aan een aantal vrijwilligers (?) werd een pil toegediend die een extract bevatte van de schil van de vrucht van de Opuntia... <br />
+          <a href="artikels.htm">Lees verder...</a></p>
+      </div>
+      <div class="intro">
+        <h1><a href="artikels.htm">Gestekte planten zijn identiek aan hun ouder</a></h1>
+        <p>Stekken is vegetatief vermeerderen, dit betekent dat er geen twee geslachten voor nodig zijn en de afstammeling dus alle kenmerken van de ouder exact behoudt. </p>
+        <p>Stekken heeft een tweetal voordelen: ten eerste heeft een stek heel wat voorsprong op een zaailing. Ten tweede kan je zeker zijn dat de karakteristieken van een mooie of speciale plant onverdund verdergezet worden... <br />
+          <a href="artikels.htm">Lees verder...</a></p>
+      </div>
+      <div class="intro">
+        <h1><a href="artikels.htm">Enten groeien 10 maal zo snel</a></h1>
+        <p>Enten betekent een deel van een plant op een andere plant vast laten groeien. </p>
+        <p>Enten wordt zeer veel toegepast in de fruit- en sierteelt waar een lekkere of mooie bovenstam op een stevige onderstam geënt wordt. </p>
+        <p>Ook bij succulenten wordt dit principe toegepast: een kop van een cactus of tak van een vetplant wordt op een onderstam geënt omdat deze veel sterkere en stevigere wortels heeft...<br />
+          <a href="artikels.htm">Lees verder...</a></p>
+      </div>
+    </div>
+  </article>
+</section>
+<footer> &copy; DesertLife | <a href="sitemap.html">Sitemap</a> </footer>
+</body>
+</html>

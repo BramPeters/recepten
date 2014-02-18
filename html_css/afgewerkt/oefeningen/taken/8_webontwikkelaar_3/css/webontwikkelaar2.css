@@ -1,0 +1,198 @@
+@charset "utf-8";
+/*CSS voor Home, RESPONSIVE MOBILE FIRST*/
+
+
+/*******ALGEMEEN + MOBILE FIRST*************/
+body, div, article, section{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font: 16px/1.4 "Lucida Grande", sans-serif;
+    color:#333;
+    background-color: #eed3d7;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+h1, h2{
+    font-size:1.4125em;
+    padding: 0 0.3333em;
+}
+header{
+    position: relative;
+}
+section{
+    clear:both;
+
+}
+
+p{
+    margin-left:0.375em;
+}
+
+.container{
+    overflow:auto;
+}
+/*KOP PHONE*/
+header h1{
+    margin:0.2222em;
+}
+#kopnav{
+    border-top: 1px solid gray;
+    padding-top: 0.6em;
+    margin:0;
+}
+
+.wikkel{
+    width: 70%;
+    margin:0 auto;
+    min-width: 1000px;
+}
+#top{
+    background-color:#000;
+}
+.bottom{
+    background-color:#000;
+}
+/*EINDE ALGEMEEN*/
+/****************loginmenu mobile first********************/
+/*LOGINMENU*/
+.login{
+    float:right;
+    color:white;
+    font-size: 1.2em;
+}
+.login>#submit{
+    background-color: #6D9207;
+    border:solid #047B00 1px;
+    color:white;
+}
+
+/****************hoofdmenu mobile first********************/
+/* vertikaal menu breedte bepaald door container*/
+
+#topmenu{
+    list-style: none;
+    font-size: 0.875em;
+    font-weight: bold;
+    padding:0;
+    margin: 0 1em;
+    width:auto;
+
+}
+
+#topmenu li{
+    display:block;
+    margin:0;
+    padding: 0.4286em 1.1428em;
+    border-bottom: 1px solid silver;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    border-top:1px solid silver;
+}
+
+#topmenu li:first-child{
+    border-top:1px solid silver;
+}
+
+#topmenu a{
+    display: inline;
+    cursor: pointer;
+}
+#topmenu li:hover{
+    color:white;
+    background-color: darkseagreen;
+}
+
+/*EINDE HOOFDMENU*/
+
+/********HELPER CLASSES PHONE ONLY**************/
+.phone-only{
+    display:block;
+}
+.klein-tablet{
+    display:none;
+}
+groter-tablet{
+    display:none;
+}
+.desktop{
+    display:none;
+}
+
+/*EINDE HELPER CLASSES PHONE*/
+
+
+/*}EINDE MQ */
+/*grotere tablets*/
+@media screen and (min-width:600px){
+    .phone-only{
+        display:none;
+    }
+    .klein-tablet{
+        display:block;
+    }
+    groter-tablet{
+        display:block;
+    }
+    .desktop{
+        display:none;
+    }
+    body{
+        background-color: #f8efc0;
+    }
+
+    /*TOPMENU*/
+    #topmenu {
+        clear:both;
+        text-align:right;
+        float:right;
+        margin-bottom: 5px;
+    }
+    #topmenu ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+    #topmenu ul li{display:inline;}
+    #topmenu ul li a {
+        display:inline-block;
+        width:7em;
+        padding:0.2em;
+        font-size:1.2em;
+        font-weight:bold;
+        color:#6C6A68;
+        text-decoration:none;
+    }
+    #topmenu ul li a:hover, #topmenu ul li a:active{
+        color:#005689;
+        text-decoration: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/**/
+/*CLEARFIX*/
+.clearFix:before, .clearFix:after{
+    content: " ";
+    display: table;
+}
+.clearFix:after{
+    clear:both;
+}
+.clearfix{
+    *zoom:1;
+}

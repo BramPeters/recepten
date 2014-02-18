@@ -1,0 +1,174 @@
+@seconden:0.25s;
+@outerglow: #9ddff5;
+
+/*1*/
+@bgcolor_1: #7da315;
+@color_1: #3d4f0c;
+@tshadow_1:#99bf31;
+/*2*/
+@bgcolor_2: #1e8bb4;
+@color_2: #223a44;
+@tshadow_2:#44a8d0;
+/*3*/
+@bgcolor_3: #c86c1f;
+@color_3: #5a3517;
+@tshadow_3:#d28344;
+/*4*/
+@bgcolor_4: #d0a525;
+@color_4: #604e18;
+@tshadow_4:#d8b54b;
+/*5*/
+@bgcolor_5: #af1e83;
+@color_5: #460f35;
+@tshadow_5:#d8b54b;
+
+*{
+	/* A universal CSS reset */
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-size:14px;
+	color:#666;
+	background:#111 no-repeat;
+	
+	/* CSS3 Radial Gradients */
+	background-image:-moz-radial-gradient(center -100px 45deg, circle farthest-corner, #444 150px, #111 300px);
+	background-image:-webkit-gradient(radial, 50% 0, 150, 50% 0, 300, from(#444), to(#111));
+	
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+#main{
+	margin:80px auto;
+	position:relative;
+	width:40px;
+}
+
+h1{
+	color:#fff;
+	font-size:30px;
+	font-weight:normal;
+	padding:60px 0 20px;
+	text-align:center;
+}
+
+h2{
+	font-weight:normal;
+	text-align:center;
+}
+
+h1,h2{
+	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+}
+
+a{
+    &, &:visited, &:active {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+    }
+    &:hover{
+	text-decoration:underline;
+    }
+    img{
+	border:none;
+    }
+}
+
+p.note{
+	color:#707070;
+	font-size:10px;
+	text-align:center;
+	margin:50px;
+}
+
+
+
+/*navmenu*/
+
+#navigationMenu{
+ li {
+	list-style:none;
+	height:39px;
+	padding:2px;
+	width:40px;
+ }
+ span {
+	/* Container properties */
+	width:0;
+	left:38px;
+	padding:0;
+	position:absolute;
+	overflow:hidden;
+
+	/* Text properties */
+	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:39px;
+	
+	/* CSS3 Transition: */
+	-webkit-transition: @seconden;
+	
+	/* Future proofing (these do not work yet): */
+	-moz-transition: @seconden;
+	transition: @seconden;
+  }
+  a {
+	background:url('../img/navigation.jpg') no-repeat;
+	height:39px;
+	width:38px;
+	display:block;
+	position:relative;
+
+        &:hover{
+            text-decoration:none;
+            /* CSS outer glow with the box-shadow property */
+            -moz-box-shadow:0 0 5px @outerglow;
+            -webkit-box-shadow:0 0 5px @outerglow;
+            box-shadow:0 0 5px @outerglow;
+
+            & span{ 
+                width:auto; 
+                padding:0 20px;
+                overflow:visible; 
+                }
+        }
+   }
+
+
+  .menuspan (@bgc, @col, @tshad){
+     background-color: @@bgc;
+     color: @@col;
+     text-shadow: 0 0 5px @@tshad;
+    }
+
+    .loopingClass (@index) when (@index < 6){
+        
+         .m_item@{index} {
+
+            @waarde: -((38*@index)-38);
+            background-position: ~"@{waarde}px" 0;
+            &:hover{
+                background-position:~"@{waarde}px" -39px;
+            }
+
+            & span{
+                .menuspan(~"bgcolor_@{index}", ~"color_@{index}", ~"tshadow_@{index}")
+            }/*einde span*/
+        }/*einde ~".m_item@{index}"*/
+
+    .loopingClass(@index + 1);
+    }
+
+  .loopingClass (6){}
+
+
+  .loopingClass (1);
+
+}/*einde navmenu*/

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS PF Eindoefening</title>
+<link rel="stylesheet" href="JS_PF_eindoefening.css" />
+</head>
+<body>
+<div id="container">
+  <div id="kop">
+    <h1>JS PF Eindoefening</h1>
+    <h2>Kervers.be, verse groenten webshop</h2>
+  </div>
+  <div id="midden">
+    <p>Bestel nu, geleverd binnen het uur!</p>
+    <h2>Bestelformulier</h2>
+    <form id="frmBestel" name="frmBestel" action="js_form_ontvanger.html" method="get">
+      <p>
+        <label for="winkel">kies winkel</label>
+        <select name="winkel" id="winkel">
+          <option value="">--- kies uw winkel ---</option>
+        </select>
+      </p>
+      <p>
+        <label for="groente">kies groente</label>
+        <select name="groente" id="groente">
+          <option  value="">--- maak uw keuze ---</option>
+        </select>
+        <label class="inline" for="aantal">aantal/gewicht</label>
+        <input type="text" class= "number" name="aantal" id="aantal" />
+      </p>
+      <p>
+        <button type="button" id="toevoegen">OK, gooi maar in mijn mandje</button>
+      </p>
+    </form>
+    <div id="winkelmandje">
+      <h2>Winkelmandje</h2>
+      <div class="item" id="leeg">mijn mandje is leeg </div>
+      <div class="item" id="totaal"><div class='cel cellinks' id="totTekst">Totaal</div><div id="totNum" class='cel celrechts'>0</div></div>
+    </div>
+     
+  </div>
+  <div id="voet">&copy;vdab</div>
+</div>
+</body>
+</html>

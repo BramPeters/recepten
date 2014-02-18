@@ -1,0 +1,119 @@
+// LESS Document 
+// Typografie
+
+
+// Body 
+// -------------------------
+
+body {
+  margin: 0;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @tekstKleur;
+  background-color: @bodyAchtergrond;
+}
+
+
+// ALINEAS
+// --------
+
+p {
+  margin: 0 0 @baseLineHeight / 2;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  .rood{
+	  color:@rood;
+	  }
+}
+
+// HEADINGS
+// --------
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  color: @headingsColor;
+  /*een small element in een heading */
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: @grijsLicht;
+  }
+}
+h1 {
+  font-size: @baseFontSize * 2 ;
+  line-height: @baseLineHeight * 2;
+}
+h2 {
+  font-size: @baseFontSize * 1.6;
+  line-height: @baseLineHeight * 2;
+}
+
+
+// LISTS
+// -----
+
+ul, ol {
+  padding: 0;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+ul ul,ul ol,ol ol,ol ul {
+  margin-bottom: 0;
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+li {
+  line-height: @baseLineHeight;
+}
+
+// ANDERE
+// ------
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+  color:@oranje;
+}
+small {
+   font-size: @baseFontSize - 2;
+   color: @grijsLicht;
+}
+
+// LINKS
+// ------
+
+a {
+	color:@linkKleur;
+	text-decoration: none;
+
+	&:hover,&:active {
+	
+		text-decoration:underline;
+		color:@linkKleurHover;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,360 @@
+@charset "utf-8";
+/*CSS voor Plantenshop, RESPONSIVE MOBILE FIRST*/
+
+
+/*******ALGEMEEN + MOBILE FIRST*************/
+body, div, article, section{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font: 16px/1.4 "Lucida Grande", sans-serif;
+    color:#333;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+h1, h2{
+    font-size:1.4125em;
+    padding: 0 0.3333em;
+}
+header{
+    position: relative;
+}
+section{
+    clear:both;
+
+}
+
+p{
+    margin-left:0.375em;
+}
+
+.container{
+    overflow:auto;
+}
+/*KOP PHONE*/
+header h1{
+    margin:0.2222em;
+}
+#kopnav{
+    border-top: 1px solid gray;
+    padding-top: 0.6em;
+    margin:0;
+}
+
+
+/****************hoofdmenu mobile first********************/
+/* vertikaal menu breedte bepaald door container*/
+
+#hoofdmenu{
+    list-style: none;
+    font-size: 0.875em;
+    font-weight: bold;
+    padding:0;
+    margin: 0 1em;
+    width:auto;
+
+}
+
+#hoofdmenu li{
+    display:block;
+    margin:0;
+    padding: 0.4286em 1.1428em;
+    border-bottom: 1px solid silver;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+}
+
+#hoofdmenu li:first-child{
+    border-top:1px solid silver;
+}
+
+#hoofdmenu a{
+    display: inline;
+    cursor: pointer;
+}
+#hoofdmenu li:hover{
+    color:white;
+    background-color: darkseagreen;
+}
+
+/********HELPER CLASSES**************/
+/*afwerken*/
+.phone-only{
+    display:block;
+}
+.klein-tablet{
+    display:none;
+}
+groter-tablet{
+    display:none;
+}
+.desktop{
+    display:none;
+}
+
+
+/****thumbnaillist mobile first **********/
+/*mobile: bullets enkel titel, gn foto, gn tekst*/
+.thumbnaillist{
+    list-style-type: none;
+    font-size:0.9em;
+    width:100%;
+    margin:0;
+    padding:0.5em 0;
+    background:lavender;
+}
+
+.thumbnaillist li{
+    padding: 0 0 0.9em 3em;
+    margin:0.5em;
+    background: transparent url(../img/flower.png) 0 0 no-repeat;
+}
+
+.thumbnaillist h4{
+    font-size:1.125em;
+    color:white;
+    margin:0;
+    padding-top:0.2em;
+}
+
+.thumbnaillist img{
+    display:none;
+}
+
+
+
+/*TABLETS*/
+@media screen and (min-width:361px){
+    /*helper classes*/
+    .phone-only{
+        display:none;
+    }
+    .klein-tablet{
+        display:block;
+    }
+    groter-tablet{
+        display:none;
+    }
+    .desktop{
+        display:none;
+    }
+
+
+/************TABLET LAYOUT***********************************/
+
+/*Hoofdmenu bovenaan, 3 items per lijn= 26.8%+3%+1px border, toon figuren*/
+
+.container{
+    width:94%;
+    margin: 0 auto;
+}
+
+header{
+    height:10em;
+    background-color: darkseagreen;
+
+}
+
+header h1{
+    font-size: 2em;
+    position:absolute;
+    top: 3.5em;
+    left: 0;
+    margin: 0 0.5em;
+}
+
+#kopnav{
+    border:none;
+    padding:0;
+}
+#inhoud h2{
+    font-size: 1.25em;
+    padding:0;
+}
+
+/*hoofdmenu*/
+#hoofdmenu{
+    margin:0;
+    overflow:visible;
+}
+#hoofdmenu li{
+    font-size: 1.2em;
+    width:26.8%;
+    float:left;
+    border-top:none;
+    border-bottom: 1px solid darkslategrey;
+    border-left: none;
+    border-right: 1px solid darkslategrey;
+    padding: 0.8em 3%;
+}
+
+#hoofdmenu li:first-child, #hoofdmenu li:nth-child(4){
+    border-top:none;
+    border-left:1px solid darkslategrey;
+}
+#hoofdmenu li:hover{
+    color:white;
+    background-color: darkslategrey;
+}
+
+
+/*thumblist tablet geen bullets, image zichtbaar, titel op img*/
+.thumbnaillist li{
+    position: relative;
+    background: none;
+    border:none;
+    padding:1%;
+    margin:1%;
+    overflow: hidden;
+    height:6.3333em;
+}
+.thumbnaillist h4{
+    position: absolute;
+    bottom:0.2em;
+    left:0.2em;
+    display: block;
+    margin-left:0.4em;
+    color:#00FFFF;
+    width:38%;
+
+}
+.thumbnaillist img{
+    display: inline-block;
+    float: left;
+    margin-right: 0.5em;
+    max-width: 40%;
+    min-width: 10em;
+}
+.thumbnaillist p{
+    margin:0;
+}
+}
+/*}EINDE MQ */
+/*grotere tablets*/
+@media screen and (min-width:600px){
+    .phone-only{
+        display:none;
+    }
+    .klein-tablet{
+        display:block;
+    }
+    groter-tablet{
+        display:block;
+    }
+    .desktop{
+        display:none;
+    }
+}
+
+
+
+/*DESKTOPS*/
+@media screen and (min-width:800px){
+    .phone-only{
+        display:none;
+    }
+    .klein-tablet{
+        display:block;
+    }
+    groter-tablet{
+        display:block;
+    }
+    .desktop{
+        display:block;
+    }
+
+/**/
+.container{
+    width:80%;
+    max-width:1000px;
+    margin: 0 auto;
+    position:relative;
+    height:100%;
+
+}
+header{
+    height:10em;
+}
+header h1{
+    font-size:2.5em;
+    margin:0;
+    position:static;
+}
+#inhoud h2{
+    font-size:1.375em;
+}
+#kopnav{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.aside{
+    float:left;
+    width:25%;
+    padding: 0 1%;
+}
+.kolom{
+    float:left;
+    width:72%;
+    padding: 0 0 1em 0;
+}
+p{margin:0;}
+
+#hoofdmenu li:nth-child(1n+0){
+    width: 16.4%;
+    padding: 0.3em 0;
+    border-top: 1px solid LavenderBlush;
+    border-right: 1px solid LavenderBlush;
+    border-bottom:none;
+    border-left:none;
+    text-align:center;
+}
+#hoofdmenu li:first-child{
+    border-left: 1px solid LavenderBlush;
+}
+
+.thumbnaillist{
+    padding:0;
+    overflow:auto;
+}
+.thumbnaillist li{
+    float:left;
+    width:48%;
+    height:36em;
+    padding:0;
+    
+}
+.thumbnaillist h4{
+    position: static;
+    color: darkgreen;
+    margin:0;
+    padding: 5px 0 0 0;
+    width:100%;
+    
+}
+
+.thumbnaillist img{
+    float:none;
+    margin:0;
+    max-width:90%;
+    border: 5px solid snow;
+    border-radius: 0.2em;
+}
+}/*einde 800px*/
+
+@media screen and (min-width:960px){
+
+    .thumbnaillist li{
+        width:31%;
+        
+    }
+    .thumbnaillist img{
+        max-width:95%;
+    }
+}

@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* CSS Document voor deGazet */
+/*TYPOGRAFIE*/
+body{
+    font-family:Georgia, "Times New Roman", Times, serif;
+    font-size: 100%;
+
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+    color:#005689;
+}
+a, a:visited{
+    text-decoration: none;
+
+}
+
+a:hover, a:active{
+    text-decoration: underline;
+
+}
+
+/*KLEURENSCHEMAS*/
+body{
+    background:white;
+    color:#333;
+}
+
+#topbanner, footer{
+    background: #EDEDED;
+
+}
+
+.nieuws h1, .nieuws h2, .nieuws h3, .nieuws h4, .nieuws h5, .nieuws h6{
+    color:#005689;
+
+}
+.nieuws a, .nieuws a:visited ,.nieuws a:hover, .nieuws a:active{
+    color:#005689
+
+}
+
+
+/*STRUCTUUR EN LAY-OUT*/
+
+.wikkel{
+    width: 980px;
+    margin:0 auto;
+
+}
+
+header{
+    padding-top: 0.375em;
+
+}
+section, aside {
+    margin-top: 0.25em;
+    margin-bot: 0.25em;
+}
+article{
+    margin: 0 20px 0 0;
+    padding: 0.375em 0 1.25em;
+
+}
+article p{
+    margin:0;
+    padding:0 0 0.75em 0;
+}
+article h2{
+    margin: 0.375em 0;
+}
+
+/*GRID*/
+
+.span1{
+    width:196px;
+    float:left;
+}
+.span2{
+    width:392px;
+    float:left;
+}
+.span3{
+    width:588px;
+    float:left;
+}
+.span4{
+    width:784;
+    float:left;
+}
+.span5{
+    width:980px;
+    float:left;
+}
+.span5>article{
+    margin-right:0;
+}
+.span5>h2{
+    margin-right:0;
+}
+
+/*CLEARFIX*/
+.clearFix:before, .clearFix:after{
+    content: " ";
+    display: table;
+}
+.clearFix:after{
+    clear:both;
+}
+.clearfix{
+    *zoom:1;
+}
+
+
+/*ARTICLE EN SECTION OPMAAK*/
+.metTitel{ padding-top:0;}
+.metTitel>h2{
+    background: #EDEDED;
+    border-top: 3px solid #D61D00;
+    margin: 0 20px 0.8em 0;
+    padding: 0.8em 0 0.8em 0.4em;
+}
+.zonderTitel>h2{display:none;}
+article.toparticle>h2{font-size:1.5em;}
+#andernieuws article>h2{
+    font-size:1.125em;
+    margin: 0.125em 0;
+}
+
+
+
+/*TOPMENU*/
+#topmenu {text-align:right;}
+#topmenu ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+#topmenu ul li{display:inline;}
+#topmenu ul li a {
+    display:inline-block;
+    width:7em;
+    padding:0.2em;
+    font-size:0.8em;
+    font-style:italic;
+    color:#499BAB;
+    text-decoration:none;
+}
+#topmenu ul li a:hover, #topmenu ul li a:active{
+    color:#005689;
+    text-decoration: none;
+}
+
+/*EXTRA MENU*/
+#extramenu{
+    border-bottom: 1px solid #bebebe;
+    height:1.375em;
+}
+#extramenu ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    
+}
+#extramenu ul li{
+    display:inline;
+}
+#extramenu ul li a{
+    display: inline-block;
+    font-size:0.9em;
+    padding:0.2em;
+    color:#ccc;
+    text-decoration: none;
+}
+#extramenu ul li a:hover, #topmenu ul li a:active{
+    color:#505050;
+    text-decoration: none;
+}
+
+/*HOOFDMENU*/
+#hoofdmenu{
+   background:#ededed; 
+}
+#hoofdmenu ul {
+    list-style-type: none;
+        margin:0;
+        padding:0;
+        float:left;
+}
+#hoofdmenu ul li {float:left;}
+#hoofdmenu ul li a{
+    display:block;
+    padding:0.375em 0.5em;
+    border-right: 1px solid #b1b1b1;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color:#005689;
+}
+#hoofdmenu ul li a:hover,#hoofdmenu ul li a:active,#hoofdmenu ul li a.actief{
+    text-decoration: none;
+    background: #D61D00;
+    color:white;
+}
+
+/*heet vd naald teaser*/
+#heet{ padding:6px 0;}
+#heetvandenaald{
+    font-weight: bold;
+    color:#D61D00;
+    padding-right:1em;
+}
+
+/*logo replacement, #logo=h1*/
+#logo a{
+    display:block;
+    width: 346px;
+    height:77px;
+    margin:14px 0 20px 0;
+    padding:0;
+    background: transparent url(../img/degazet.png) no-repeat;
+    text-indent: -99999px;
+}
+
+/*BORDERS*/
+.bt8 {border-top:8px solid #D61D00}
+.bt3 {border-top:3px solid #D61D00}
+.bb8 {border-bottom:8px solid #D61D00}
+.bb3 {border-bottom:3px solid #D61D00}

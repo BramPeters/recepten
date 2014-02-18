@@ -1,0 +1,148 @@
+/*BODY*/
+body{
+background-color:#FCFAF8;
+width:100%;
+margin: 0;
+}
+p{
+    color:#52463F;
+}
+div {
+	margin:0;
+	padding:0;
+        
+	}
+
+        h1{
+            font-size: 4em;
+        }
+        h1, h2{
+            color:#7EA107;
+        }
+        
+        #KopInfo>h2{
+            color:#52463F;
+        }
+        
+        /*nav{clear:both; float:left;}*/
+/*LOGINMENU*/
+#loginmenu{
+    background-color: #8FB209;
+    overflow:auto;
+    margin:0;
+    padding:0;
+    clear:both;
+    
+    
+}
+header form {
+    float:right;
+    clear:right;
+    font-size: 1.2em;
+    color:white;
+    background-color: #8FB209;
+    
+ }
+header form fieldset {
+    border: 0;
+}
+header form legend {
+    display: none;
+}
+form>#submit{
+    background-color: #6D9207;
+}
+
+/*LOGO*/
+#logo{
+    clear:both;
+    float:left;	
+    margin:10px 0 0 200px;
+    padding:0;
+}
+
+/*TOPMENU*/
+#topmenu {clear:both;text-align:right;}
+#topmenu ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+#topmenu ul li{display:inline;}
+#topmenu ul li a {
+    display:inline-block;
+    width:7em;
+    padding:0.2em;
+    font-size:1.3em;
+    font-weight:bold;
+    color:#52463F;
+    text-decoration:none;
+}
+#topmenu ul li a:hover, #topmenu ul li a:active{
+    color:#058;
+    text-decoration: none;
+}
+
+
+
+/****footer****/
+footer {
+	clear: both;
+	padding: 1em 3em 0;
+	border-top: 1px solid silver;
+	text-align: center;
+        
+}
+footer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+footer li {
+	display: inline;
+	margin: 0 1em;
+}
+footer p {
+	font-size: smaller;
+        margin: 0 auto;
+}
+
+
+
+/*Informatiefoto's'*/
+
+#foto1{
+    float:right;
+    border:solid #E9DCE9 8px;
+    }
+#foto2{
+    float:left;
+    margin-top:-20px;
+    border:solid #E9DCE9 8px;
+}
+img{
+   
+   padding:10px 10px 10px 10px;
+    
+}
+
+/*Deel 1*/
+#KopInfo
+
+
+/*Deel 2*/
+#OpleidingInfo{
+    background-color: #EBE8E5;
+}
+
+/*CLEARFIX*/
+.clearFix:before, .clearFix:after{
+    content: " ";
+    display: table;
+}
+.clearFix:after{
+    clear:both;
+}
+.clearfix{
+    *zoom:1;
+}

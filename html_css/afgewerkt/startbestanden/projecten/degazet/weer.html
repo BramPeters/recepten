@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="css/gazet.css" rel="stylesheet">
+<title>De Gazet</title>
+<script>
+/*
+dit Javascript enkel ter ondersteuning van deze HTML/CSS cursus: 
+U hoeft voor deze HTML/CSS cursus geen Javascript kennen of rekening te houden met dit scriptje
+*/
+
+window.onload = function (){
+	//datetijd voor weertabel
+	var eNu		 	= document.querySelector("#nu");
+	var dNu 		= new Date();
+	var sISO		= dNu.toISOString();
+	var sDate 		= dNu.toLocaleDateString();
+	var sTijd 		= dNu.toLocaleTimeString();
+	var s 			= sDate + " " + sTijd;
+	eNu.innerHTML 	= s; 
+	eNu.setAttribute("datetime",sISO);
+}
+</script>
+</head>
+<body class="weer">
+<div id="topbanner">
+  <div class="wikkel">
+    <nav id="topmenu">
+      <ul>
+        <li><a href="dating.html">Dating</a></li>
+        <li><a href="culinair.html">Culinair</a></li>
+        <li><a href="webshop.html">Webshop</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="wikkel cf">
+  <div class="inhoud">
+    <header>
+      <nav id="extramenu">
+        <ul>
+          <li><a href="abonneren.html">Abonneren</a></li>
+          <li><a href="klantendienst.html">Klantendienst</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+      </nav>
+      <h1 id="logo"><a href="index.html"  title="De Gazet met het allerlaatste nieuws">De Gazet</a></h1>
+      <nav id="hoofdmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="binnenland.html" >Binnenland</a></li>
+          <li><a href="buitenland.html">Buitenland</a></li>
+          <li><a href="sport.html">Sport</a></li>
+          <li><a href="cultuur.html">Cultuur</a></li>
+          <li><a href="economie.html">Economie</a></li>
+          <li><a href="sport.html">Wetenschap</a></li>
+          <li><a href="sport.html">Blog</a></li>
+          <li><a href="weer.html" class="actief">Weer</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!--span3 section-->
+    
+    <section class="span4 bt8 bb3">
+      <article>
+        <h2>Het weer vandaag</h2>
+        <p><img src="img/weerkaart.png" alt="het weer vandaag">Vanmiddag blijft het overwegend zwaarbewolkt met regelmatig lichte tot matige regen over het midden van het land en af en toe wat lichte regen in het uiterste noordwesten en zuidoosten. We blijven in de zachte lucht met maxima van 14 graden op de Hoge Venen tot 18 of 19 graden in het centrum van het land. De wind neemt in kracht af en wordt vanaf het noorden meestal matig uit zuidwest tot west. In het zuiden van het land waait die nog tijdelijk vrij krachtig uit het zuidwesten met rukwinden tot 70 km/h </p>
+        <p>Vannacht blijft het overwegend zwaarbewolkt met de meeste regen over het noorden van het land. Opnieuw is het in het uiterste zuiden en later ook over het midden droger met tijdelijk zelfs enkele opklaringen. Het blijft zacht met minima tussen 10 en 14 graden. De wind waait in het noordelijk deel van het land aanvankelijk zwak uit veranderlijke richtingen maar trekt later zoals in het zuiden opnieuw aan tot matig of vrij krachtig uit zuid tot zuidwest. Op het einde van de nacht draait de wind aan zee in het noordwesten bruusk naar het noorden en wordt vrij krachtig tot krachtig.</p>
+        <h3>Algemene luchtgesteldheid</h3>
+        <p>Regengebieden, verbonden aan een lagedrukkern, die zich snel richting Denemarken en later naar het westen van Rusland verplaatst, blijven nog tot morgennamiddag over het land slepen. Morgen ontwikkelt zich een hogedrukzone ten westen van Ierland en die zal ons weer tijdens de rest van het weekend gunstig beïnvloeden.</p>
+        <p>Zondag en maandag is het rustig en droog met temperaturen rond 15 of 16 graden. </p>
+        <h3>Waarnemingen</h3>
+        
+        <!--startversie-->
+        <table border="1">
+          <caption>
+          Waarnemeningen-
+          <time id="nu" datetime="2013-05-08T11:42:51.849Z">5/8/2013 1:42:51 PM</time>
+          <br>
+          België
+          </caption>
+          <tbody>
+            <tr>
+              <th scope="col">Plaats</th>
+              <th scope="col">Weer</th>
+              <th scope="col" colspan="2" >Temp</th>
+              <th scope="col">Richting</th>
+              <th scope="col" colspan="2">Snelheid</th>
+              <th scope="col" colspan="2" >zicht</th>
+              <th scope="col">Druk / trend</th>
+            </tr>
+            <tr>
+              <td><a href="http://www.kmi.be/meteo/view/nl/1586641-Webcam+Zeebrugge.html">ZeeBrugge</a></td>
+              <td><img src="img/w3.gif"  title="bewolkt met opklaringen" alt="bewolkt met opklaringen"></td>
+              <td>11.1</td>
+              <td>°C</td>
+              <td>SE</td>
+              <td>6</td>
+              <td>kmu</td>
+              <td>20</td>
+              <td>km</td>
+              <td>999 hPa, Stijgend</td>
+            </tr>
+            <tr>
+              <td><a href="http://www.kmi.be/meteo/view/nl/1586641-Webcam+Zeebrugge.html">Oostende</a></td>
+              <td><img src="img/w1.gif"  title="zonnig" alt="zonnig"></td>
+              <td>14.0</td>
+              <td>°C</td>
+              <td>E</td>
+              <td>14</td>
+              <td>kmu</td>
+              <td>30</td>
+              <td>km</td>
+              <td>998 hPa, Stijgend</td>
+            </tr>
+            <tr>
+              <td><a href="http://www.kmi.be/meteo/view/nl/1586624-Webcam+Ukkel.html">Ukkel</a></td>
+              <td><img src="img/w10.gif"  title="lichte buien" alt="lichte buien"></td>
+              <td>13.2</td>
+              <td>°C</td>
+              <td>NNE</td>
+              <td>7</td>
+              <td>kmu</td>
+              <td>15</td>
+              <td>km</td>
+              <td>992 hPa, Stijgend</td>
+            </tr>
+            <tr>
+              <td><a href="http://www.kmi.be/meteo/view/nl/1586652-Webcam+Wideumont.html">Widuemont</a></td>
+              <td><img src="img/w7.gif" title="overtrokken" alt="overtrokken"></td>
+              <td>12.8</td>
+              <td>°C</td>
+              <td>E</td>
+              <td>6</td>
+              <td>kmu</td>
+              <td>35</td>
+              <td>km</td>
+              <td>1002 hPa, Stijgend</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      
+      <!--span3 section-->
+      
+      <article class="bt8">
+        <h3>Klimatogrammen</h3>
+        <p>Het KMI publiceerde gisteren de laatste nieuwe klimaatgegevens voor ons land, waarvan we hier de gegevens voor Oostende en St-Hubert overnemen. Wat opvalt is de langzame stijging van de langjarig gemiddelden.</p>
+        
+        <!--startversie-->
+        
+        <table border="1">
+          <thead>
+            <tr>
+              <th colspan="13">Gemiddelde klimaatgegevens 2011</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th colspan="13">&copy; <a href="http://www.kmi.be">KMI </a></th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <th colspan="13">Klimatogram voor Oostende</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th>Jan</th>
+              <th>Feb</th>
+              <th>Maa</th>
+              <th>Apr</th>
+              <th>Mei</th>
+              <th>Jun</th>
+              <th>Jul</th>
+              <th>Aug</th>
+              <th>Sep</th>
+              <th>Okt</th>
+              <th>Nov</th>
+              <th>Dec</th>
+            </tr>
+            <tr>
+              <td>Max. temperatuur in °C</td>
+              <td>4</td>
+              <td>6</td>
+              <td>8</td>
+              <td>11</td>
+              <td>15</td>
+              <td>18</td>
+              <td>19</td>
+              <td>19</td>
+              <td>19</td>
+              <td>15</td>
+              <td>10</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Min. temperatuur in °C</td>
+              <td>1</td>
+              <td>1</td>
+              <td>2</td>
+              <td>5</td>
+              <td>8</td>
+              <td>11</td>
+              <td>13</td>
+              <td>13</td>
+              <td>11</td>
+              <td>8</td>
+              <td>4</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Dagen met neerslag</td>
+              <td>14</td>
+              <td>13</td>
+              <td>10</td>
+              <td>10</td>
+              <td>9</td>
+              <td>9</td>
+              <td>12</td>
+              <td>13</td>
+              <td>10</td>
+              <td>14</td>
+              <td>14</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Uren zon</td>
+              <td>60</td>
+              <td>75</td>
+              <td>145</td>
+              <td>195</td>
+              <td>230</td>
+              <td>230</td>
+              <td>220</td>
+              <td>205</td>
+              <td>170</td>
+              <td>120</td>
+              <td>65</td>
+              <td>45</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>verwijder mij</p>
+        <table border="1">
+          <thead>
+            <tr>
+              <th colspan="13">Gemiddelde klimaatgegevens 2011</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th colspan="13">&copy; <a href="http://www.kmi.be">KMI </a></th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <th colspan="13">Klimatogram voor St.-Hubert</th>
+            </tr>
+          <tbody>
+            <tr>
+              <th></th>
+              <th>Jan</th>
+              <th>Feb</th>
+              <th>Maa</th>
+              <th>Apr</th>
+              <th>Mei</th>
+              <th>Jun</th>
+              <th>Jul</th>
+              <th>Aug</th>
+              <th>Sep</th>
+              <th>Okt</th>
+              <th>Nov</th>
+              <th>Dec</th>
+            </tr>
+            <tr>
+              <td>Max. temperatuur in °C</td>
+              <td>1</td>
+              <td>4</td>
+              <td>6</td>
+              <td>10</td>
+              <td>14</td>
+              <td>18</td>
+              <td>18</td>
+              <td>18</td>
+              <td>17</td>
+              <td>11</td>
+              <td>6</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Min. temperatuur in °C</td>
+              <td>-3</td>
+              <td>-1</td>
+              <td>0</td>
+              <td>2</td>
+              <td>5</td>
+              <td>8</td>
+              <td>10</td>
+              <td>9</td>
+              <td>8</td>
+              <td>5</td>
+              <td>1</td>
+              <td>-1</td>
+            </tr>
+            <tr>
+              <td>Neerslag in mm</td>
+              <td>95</td>
+              <td>84</td>
+              <td>65</td>
+              <td>83</td>
+              <td>88</td>
+              <td>97</td>
+              <td>113</td>
+              <td>121</td>
+              <td>80</td>
+              <td>75</td>
+              <td>93</td>
+              <td>109</td>
+            </tr>
+            <tr>
+              <td>Dagen met neerslag</td>
+              <td>20</td>
+              <td>18</td>
+              <td>19</td>
+              <td>19</td>
+              <td>18</td>
+              <td>15</td>
+              <td>18</td>
+              <td>18</td>
+              <td>15</td>
+              <td>17</td>
+              <td>20</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>Uren zon</td>
+              <td>51</td>
+              <td>82</td>
+              <td>122</td>
+              <td>155</td>
+              <td>192</td>
+              <td>205</td>
+              <td>204</td>
+              <td>176</td>
+              <td>156</td>
+              <td>95</td>
+              <td>57</td>
+              <td>43</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+    
+    <!--span1 section rechterkolom-->
+    
+    <section class="span1 bt8"> 
+      
+      <!-- teasers commentaren-->
+      <div class="container_teasers" id="blogs">
+        <h2>Commentaren</h2>
+        <ul>
+          <li><a href="#">
+            <h3><img src="http://lorempixel.com/112/65/people/1" alt="Europa"> "So long chaps!"</h3>
+            </a>
+            <p>Zou je er om geven moesten de Engelsen Europa verlaten?</p>
+          </li>
+          <li><a href="#">
+            <h3><img src="http://lorempixel.com/112/65/people/2" alt="partijpolitiek">Partijpolitiek</h3>
+            </a>
+            <p>De naderende verkiezingen zorgen voor extra verhitting</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <!--einde content--> 
+</div>
+<!--einde wikkel-->
+<footer>
+  <div class="wikkel">De Gazet is een oefening voor HTML &amp; CSS</div>
+</footer>
+</body>
+</html>

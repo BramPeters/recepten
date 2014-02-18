@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+height: 100%;
+}
+div{
+	margin:0;padding:0;
+	}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;padding:0;
+	background-color:#CCC;
+	}
+	
+/*******************LAYOUT*******************/
+
+#container{
+	width: 800px;
+	min-height: 100%;
+	margin:0 auto;
+	background-color:white;
+}
+#kop{
+	height:165px;
+	padding: 1em ;
+	background-image:url(header.jpg);
+	background-repeat:no-repeat;
+	}
+#kop h1{
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:3em;
+	padding:0;
+	margin:0;
+	color:white;
+	}
+#kop h2{
+	color:#CCC;
+	}
+	
+#midden{
+	padding: 0 1em ;min-height: 100%;
+	}
+
+#voet{
+	position:absolute;
+   	bottom:0;
+   	width:800px;
+   	background:#a5f6ca;
+	text-align:center;
+	color:#205c34;
+	padding:1em 0;
+	}
+/*******************WINKELMANDJE*******************/
+
+#winkelmandje{
+	width:500px;
+	border:1px solid silver;
+	
+	}
+#winkelmandje .item{
+	width:500px;
+	font-size: 1em;
+	
+	background-color:#EEE;
+	border-top:1px solid gray;
+	color:black;
+	overflow:auto;
+	
+	}
+#winkelmandje .cel{
+	float:left;
+	padding:  2px;
+	
+	}
+#winkelmandje .cellinks		{width:196px;text-align:left;}
+#winkelmandje .celrechts	{float:right;width:96px;text-align:right;background-color:#ff4116; }
+
+#winkelmandje #totaal{
+	background-color:#FFF;
+	text-align:right;
+
+	}	
+#winkelmandje h2{
+	width:480px;
+	font-size: 1em;
+	height: 20px;
+	padding: 10px;
+	margin:0;
+	background-color:#ff4116;
+	color:white;
+	
+	}
+/*******************FORM*******************/
+form {
+	width: 520px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+}
+fieldset {
+	margin-bottom:1em;
+ 	border 1px solid #CCC;
+}
+legend {
+	font-weight:bold;
+	font-size:1.1em;
+}
+label {
+	display:block;
+	width:120px;
+	text-align:left;
+	float:left;
+	padding-right:10px;
+	margin: 5px 0;
+}
+label.inline {
+	display:inline;
+	width:auto;
+	float:none;
+}
+select {
+	margin:5px 0;
+	width: 200px;
+}
+input {
+	margin:5px 0;
+}
+input.text {
+ 	padding 0 0 0 3px;
+	width: 200px;
+}
+input.number {
+ 	padding 0 0 0 3px;
+	width: 40px;
+}
+/* fouten container */
+ul.fouten {
+	display:inline-block;
+	list-style-type:none;
+	font-size:0.9em;
+	padding:3px;
+	margin: 3px 0;
+	}
+ul.fouten li{
+	color:red;
+	}

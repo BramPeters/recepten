@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JS adv taak: Array Augmentation</title>
+<style media="screen" type="text/css">
+<!--
+body {
+	font-family:Arial, Helvetica, sans-serif;
+}
+em {
+	font-style:normal;
+	font-weight:bold;
+	color:#906;
+}
+img {
+	float:left
+}
+h3 {
+	clear:both;
+}
+#canvas {
+	position:relative;
+	background-color:#CFF;
+	margin:1em;
+	padding:0;
+	width: 700px;
+	height:500px;
+	border:2px solid silver;
+}
+span.tag {
+	position:absolute;
+	top:0;
+	left:0;
+}
+#output {
+	background-color:#CFC;
+	padding:1em;
+}
+table {
+	table-layout:fixed;
+	empty-cells:hide;
+	border-collapse:collapse;
+}
+td, th {
+    padding:6px 2px;
+	border:1px solid silver;
+}
+-->
+</style>
+</head>
+<script type="text/javascript">
+var origineel = [
+				 ["Adinda",45,"Journalist"],
+				 ["Inge",42,"Ingenieur"],
+				 ["Jean",66,"Directeur"],
+				 ["Jan",22,"Werkzoekend"]				 
+				]
+
+window.onload = function(){
+	
+	divOutput = document.getElementById('output');
+	
+	var str = "<h2>origineel</h2>" + toonArray(origineel);
+	
+	divOutput.innerHTML = str;
+}
+
+//===================================================
+function toonArray(arr){
+//returnt een HTML string in een table
+
+var str = "<table>";
+var aantalRijen = arr.length;
+var aantalKols = arr[0].length; //veronderstel een item is ook een array
+
+for(var rij=0;rij<aantalRijen;rij++){	
+	str += "<tr>";
+	for(var kol=0;kol<aantalKols;kol++){
+			str += "<td>";
+			str += arr[rij][kol];
+			str += "</td>";
+	}
+	str += "</tr>";
+}
+str += "</table>\n";
+return str;
+}
+
+</script>
+<body
+<h1>JS advanced taak:  Array Augmentation</h1>
+<p>Een taak over <i>augmentation</i> van het <b>Array</b> object</p>
+<h3>Geteste topics</h3>
+<ul>
+  <li>prototype</li>
+  <li>augmentation</li>
+</ul>
+<h3>Opdracht: </h3>
+<ul>
+  <li>Voeg een nieuwe method <em>transpose()</em> toe aan het <strong>Array</strong> object zodat alle arrays ervan gebruik kunnen maken</li>
+  <li>Deze method werkt enkel  op een <em>twee-dimensioneel</em> array en returnt  opnieuw een <em>twee-dimensioneel</em> array, maar waarvan de rijen kolommen geworden zijn en de kolommen rijen </li>
+  <li>Schrijf  deze code in je <em>nuttig_lib.js</em> library</li>
+  <li>Gebruik  het startbestand en de aanwezige voorbeelden en functies om aan te tonen  dat je <i>Augmentation</i> werkt</li>
+</ul>
+
+<div id="output"></div>
+</body>
+</html>

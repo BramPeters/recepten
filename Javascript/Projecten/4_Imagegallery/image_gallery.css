@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* Modern Art image gallery */
+
+body {
+	font: 100% Cambria, "Times New Roman", Times, serif;
+	background: white;
+	margin: 0;
+	padding: 0;
+	color: #000000;
+}
+#container {
+	width: 52em;
+	background: #FFFFFF;
+	margin: 0 auto;
+	border: 1px solid #000000;
+	text-align: left;
+	height:700px;
+	overflow:auto;
+}
+sidebar {
+	float: left;
+	width: 13em;
+	background: #EBEBEB;
+	padding: 15px 0;
+}
+sidebar h1 {
+	margin: 0 0.2em;
+	padding: 10px 0;
+	color:#00CCCC
+}
+#kader {
+	margin: 0 0 0 13em;
+	padding:0 1em;
+	background-color:white; 
+}
+#info{
+	background-color:#EBEBEB;
+	padding:0.4em 0.2em;
+	}
+img {
+	padding:0;
+	margin:0;
+	float: left;
+}
+a:link, a:visited, a:hover, a:active {
+	color:#990000;
+	text-decoration:none
+}
+select {
+	margin-left:1em;
+}
+#noscript{
+	border:1px double red;
+	padding: 1em;
+	margin:1em;
+	background-color:yellow;
+	color:red;
+	font-weight:bold;
+	}

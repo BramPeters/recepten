@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            label {
+                display:inline-block;
+                width:100px;
+            }
+            output {
+                background-color:#CCFFCC;
+                padding:1em;
+            }
+        </style>
+        <script>
+
+            window.onload = function() {
+
+                //=============variabelen=======
+
+                var eOutput = document.getElementById('output');
+                var eKnop = document.getElementById('deKnop');
+                var eGetal = document.getElementById('getal');
+
+                //=============event handlers===========
+
+                eKnop.onclick = function() {
+                    //var nGetal = eGetal.value;
+                    //if (nGetal == "" || isNaN(nGetal)) {
+                    //    alert('Deze functie werkt enkel met getallen');
+                    //} else {
+                    //    eOutput.innerHTML = lussenMaar(parseInt(nGetal));
+                    //}
+
+                    eOutput.innerHTML = arrayLus();
+                };
+                            function arrayLus() {
+                var aGetallen = [12, 2, 4, 8, 5];
+                var sTekst = "";
+                var i = 0;
+                while (i < aGetallen.length) {
+                    sTekst += aGetallen[i] + "&nbsp;";
+                    i++;
+                }
+                console.log(sTekst);
+                return sTekst;
+            }
+            }//einde window.onload
+
+            //=============functies=================
+
+
+            function lussenMaar(n) {
+                /*   Testfunctie voor iteraties  */
+                console.log(n);
+                var sTekst = "";
+                //          for(var i=1; i<=n; i++){
+                //              for(var j=1;j<=n;j++){
+                //              sTekst += i*j + "&nbsp;";
+                //          }
+                //          sTekst += "<br>";
+                //      }
+                //	  return sTekst;
+
+                var i = 1;
+                while (i <= n) {
+                    var j = 1;
+                    while (j <= n) {
+                        sTekst += i * j + "&nbsp;";
+                        j++;
+                    }
+                    sTekst += "<br>";
+                    i++;
+                }
+                return sTekst;
+            }
+        </script>
+        <title>JS PF project: Getallenreeksen</title>
+    </head>
+    <body>
+        <article id="container">
+            <h1>JS PF project: Getallenreeksen</h1>
+            <p>Een oefening op het maken van lusstructuren</p>
+            <section>
+                <p>Vul een getal in en klik op de knop</p>
+                <form name="frmGetallenreeksen" id="frmGetallenreeksen" method="get" action="">
+                    <p>
+                        <label for="getal">getal</label>
+                        <input type="text" name="getal" id="getal" size="10" />
+                    </p>
+                    <p>
+                        <label></label>
+                        <button type="button" id="deKnop">Go</button>
+                    </p>
+                    <p>
+                        <label>resultaat:</label>
+                    <div id="output"></div>
+                    </p>
+                </form>
+            </section>
+        </article>
+    </body>
+</html>

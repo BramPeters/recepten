@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Gegeven doorgeven van één pagina naar een ander</title>
+
+
+<style media="screen" type="text/css">
+	<!-- 
+	
+	div.vb{
+		background-color:#CCFFCC;
+		padding:1em;
+		}
+	td{padding:0}
+	-->
+</style>
+<script>
+<!--
+//****************
+function getQueryString(){
+// leest de querystring
+	var searchStr= unescape(location.search.substring(1));
+	return searchStr;
+}
+
+
+function getGET(){
+	var paren="";
+	// Decodeer functie
+	// knip de searchstring net voorbij het vraagteken af
+	var strGet= getQueryString()
+	// als er een searchstring is
+	if (strGet) {
+	
+		var formElement = strGet.split("&");
+		// declareer een tijdelijk array die de naam-waarde paren zal bevatten
+		var tmpArray = new Array();
+		// loopt doorheen het formelement array
+		for (i=0;i<formElement.length;i++) {
+			// naam en waarden worden gescheiden in een tmparray
+			tmpArray = formElement[i].split("=");			
+			paren+=tmpArray[0]+" = " + tmpArray[1]+ "<br />";
+			}
+	}
+return paren;
+}
+//****************
+function schrijfParen(){
+	
+	var container = document.getElementById('vb_paren');
+	container.innerHTML = getGET();
+}
+
+//******************************
+
+function init(){
+//na laden pagina
+
+	//alert (getQueryString())
+	schrijfParen();
+
+}
+-->
+</script>
+</head>
+<body onLoad="init()">
+<h1>Universele ontvanger van gegevens</h1>
+<p>Dit JS script schrijft alle <em>naam=waarde</em> paren van eender welk form op de pagina</p>
+<p>Gebruik een GET als method</p>
+
+<div class="vb" id="vb_paren"></div>
+
+</body>
+</html>

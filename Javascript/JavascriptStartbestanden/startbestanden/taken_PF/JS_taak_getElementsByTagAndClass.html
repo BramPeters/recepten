@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl">
+
+
+<head>
+<title>JS PF taak: getElementsByTagAndClass</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css" media="screen">
+/* <![CDATA[ */
+pre, code{color:#660033}
+div#laatste{border:1px solid gold;padding: 1em;}
+.opmerking {
+	color:red;
+}
+/* ]]> */
+</style>
+<script type="text/javascript">
+// <![CDATA[ 
+window.onload = function(){
+	//knoppen
+	var knop1 = document.getElementById('knop1');
+	var knop2 = document.getElementById('knop2');
+	var knop3 = document.getElementById('knop3');
+	//eventhandlers
+	knop1.onclick = test1;
+	knop2.onclick = test2;
+	knop3.onclick = test3;
+	
+	}
+
+function getElementsByTagAndClass(container, tagName, klasse){
+//maak hier je functie 
+}
+
+//===========================================
+function test1(){
+/* kleurt alle SPAN.opmerking  blauw */
+	if(console) console.log('test1 present');
+
+}
+
+
+function test2(){
+/* omkadert alle P.opmerking  */
+	if(console) console.log('test2 present');
+
+}
+
+
+function test3(){
+/* kleurt alle SPAN.opmerking  geel in de DIV#laatste*/
+	if(console) console.log('test3 present');
+
+}
+//  ]]> 
+</script>
+</head>
+
+<body>
+<h1>JS PF taak: getElementsByTagAndClass</h1>
+
+
+<h2>Opdracht:</h2>
+<ul>
+  <li> DOM2 voorziet enkel de methodes <code>document.getElementById</code> en <code>element.getElementsByTagName</code>, helaas niets in verband met CSS Classes. </li>
+  <li> Maak een eigen functie <code>getElementsByTagAndClass(tag,class)</code> die een collectie returnt met alle elementen van een bepaalde tag en class.  Een collection is dus een array van elementen. </li>
+  <li>In onderstaand voorbeeld wordt deze functie gebruikt om alle p elementen van de <code>class</code> <i>opmerking</i> te refereren:<br />
+    <br />
+  <pre>
+  var eOpm = getElementsByTagAndClass('p','opmerking'); 
+  for (var i=0;i&lt;eOpm.length;i++){ 	
+  	eOpm[i].style.color='blue'; 
+  }
+  </pre>
+  </li>
+  <li>Demonstreer de werking van deze functie met verschillende tags en klasses. </li>
+</ul>
+
+
+<h2>Oplossing:</h2>
+
+
+<p><button id="knop1" >kleur alle SPAN class opmerking blauw</button></p>
+<p><button id="knop2" >omkader alle P class opmerking</button></p>
+<p><button id="knop3" >kleur alle SPAN class opmerking geel in de div #laatste</button></p>
+
+<p>Dit is een normale alinea, geen opmerking. Dit is een normale alinea, geen opmerking. Dit is een normale alinea, geen opmerking. Dit is een normale alinea, geen opmerking. </p>
+<p>normale tekst. normale tekst. normale tekst. normale tekst. normale tekst. normale tekst.<span class="opmerking">dit is een SPAN class opmerking</span>. normale tekst. normale tekst. <span class="opmerking">dit is een SPAN class opmerking</span>. The crazy fox jumps over the lazy dog. The crazy fox jumps over the <span class="opmerking">SPAN class opmerking hier</span> normale tekst. normale tekst. normale tekst. normale tekst. normale tekst. normale tekst.<span class="opmerking">lazy dog.</span>.normale tekst. normale tekst. normale tekst. normale tekst. normale tekst. normale tekst.</p>
+
+<p class="opmerking">Deze alinea is een volledige opmerking.  Deze alinea is een volledige opmerking. </p>
+<p class="opmerking">P class opmerking.</p>
+<div class="opmerking">DIV class opmerking.</div>
+
+<p>Deze tekst heeft <span class="kat opmerking frikadel">een span met meerdere classes: <i>kat opmerking frikadel </i></span> heeft. Werkt je functie hier ook?</p>
+<p>Deze <span class="op merking bopmerking opmerk en flopmerkingen"><i>op merking bopmerking opmerk en flopmerkingen</i></span> mogen niet reageren, deze <span class="opmerking">opmerking</span> wel</p>
+<div id="laatste">
+Normale tekst in de div #laatste. Normale tekst in de div #laatste. Normale tekst in de div #laatste. <span class="opmerking">een SPAN opmerking</span>.Normale tekst in de div #laatste. Normale tekst in de div #laatste. Normale tekst in de div #laatste. <span class="opmerking">een SPAN opmerking</span>.
+<p class="opmerking">een opmerking alinea in de duv laatste</p>
+Normale tekst in de div #laatste. Normale tekst in de div #laatste. 
+</div>
+
+
+
+</body>
+</html>
+

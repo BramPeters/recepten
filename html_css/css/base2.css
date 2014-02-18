@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/********HELPER CLASSES PHONE ONLY**************/
+.phone-only{
+    display:block;
+}
+.desktop{
+    display:none;
+}
+
+/*EINDE HELPER CLASSES PHONE*/
+
+
+/********** BACKGROUND*********************************************/
+body {
+    background-color: white;
+    color: white;
+    font-family: 'Lucida Grande', 'Lucida Grande', Verdana, Arial;
+    font-size: 12px;
+}
+.wikkel{
+    width: 70%;
+    margin:0 auto;
+    min-width: 1000px;
+    background-color: dimgrey;
+    background-color: #CCC;
+
+    -moz-box-shadow: 0 0 5px 5px #4B0082;
+    -webkit-box-shadow: 0 0 5px 5px #4B0082;
+    box-shadow: 0 0 5px 5px #4B0082;
+}
+
+.Middenstuk{
+    width: 100%;
+    margin: 20px;
+    margin-left: 100px;
+}
+
+#kop{
+
+    height:12em;
+    border-bottom: 2px solid #4B0082;
+    margin-bottom: 2em;
+    -webkit-border-radius: 0px 0px 12px 12px;
+    border-radius: 0px 0px 12px 12px;
+    -moz-border-radius: 0px 0px 12px 12px;
+}
+
+#kop h1{
+    color:#4B0082;
+    text-align: center;
+}
+h1{
+    font-size: 3.5em;
+    font-weight: bold;
+}
+h1{
+    color:#4B0082;
+}
+
+h2{
+    font-size: 3.5em;
+    font-weight: bold;
+}
+h2{
+    color:#4B0082;
+}
+div p{
+    text-align: center;
+}
+#footer p{
+    color:#4B0082;
+    text-align: center;
+}
+.wikkel{
+    margin-top: 14px;
+    margin-bottom:14px;
+
+}
+
+/**/
+#accordion{
+width: 600px;
+margin: 0px;
+padding: 0px;
+list-style: none;
+}
+
+#accordion h2{
+font-size: 12pt;
+margin: 0px;
+padding: 10px;
+background: #ccc;
+border-bottom: 1px solid #fff;
+}
+#accordion li div.content{
+display: none;
+padding: 10px;
+background: #f9f9f9;
+border: 1px solid #ddd;
+}
+
+#accordion li:hover div.content{
+display: inherit;
+}
+
+
+
+/**/

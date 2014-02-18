@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS project: cookieBank</title>
+        <style>
+            div.waarschuwing {
+                display:none;
+                background-color:yellow;
+                color:red;
+                border:medium solid red;
+                padding:1em;
+                margin:1em;
+                width: 34em;
+            }
+            #output {
+                background-color:#F5F5F5;
+                padding: 1em;
+                width: 34em;
+            }
+            form {
+                background-color: silver;
+                width: 34em;
+                padding: 1em;
+            }
+            form input[type=text], form select, button {
+                width: 14em;
+            }
+            button.small {
+                width:2em;
+            }
+            form label {
+                display: inline-block;
+                text-align: right;
+                width: 4em;
+                padding: 0.3em 1em;
+            }
+            label.msg {
+                width: auto;
+                text-align: left;
+            }
+        </style>
+        <script type="text/javascript" src="nuttig_lib.js"></script>
+        <script type="text/javascript">
+            window.onload = function() {
+                //DOM elementen
+                var eOutput = document.getElementById('output');
+                var eKnopKrediet = document.getElementById('krediet');
+                var eKnopDebiet = document.getElementById('debiet');
+
+                //standaardwaarden
+                var sMsg = '';
+                var sNaam = 'nieuwe klant';
+                var nSaldo = 0;
+                if (localStorage) {
+                    //kan deze browser het script aan?
+                    console.log('localstorage ok');
+                    if (localStorage.klantnaam) {
+                             //gekende klant
+                            var sNaam = localStorage.klantnaam;
+                            var nSaldo = parseFloat(localStorage.saldo).toFixed(2);
+
+                            //bericht
+                            sMsg += "Welkom " + sNaam + ",";
+                            sMsg += "Uw saldo bedraagt " + nSaldo + " Euro";
+                            //knop
+                            var eKnop = maakKnop('Sluit rekening');
+                            eKnop.addEventListener('click', rekeningSluiten);
+                            console.log('klantennaam ok');
+                        }
+                        else {
+                            //eerste bezoek
+                            sMsg += "Welkom beste bezoeker. ";
+                            sMsg += "U ontvangt een startsaldo van 100 Euro!";
+                            //knop
+                            var eKnop = maakKnop('Open rekening');
+                            eKnop.addEventListener('click', rekeningOpenen);
+                            console.log('klantennaam Nok');
+                        }
+                    }
+                
+                else {
+                    //test cookie
+                    if (getCookie('klantnaam')) {
+                        //gekende klant
+                        var sNaam = getCookie('klantnaam');
+                        var nSaldo = parseFloat(getCookie('saldo')).toFixed(2);
+
+                        //bericht
+                        sMsg += "Welkom " + sNaam + ",";
+                        sMsg += "Uw saldo bedraagt " + nSaldo + " Euro";
+                        //knop
+                        var eKnop = maakKnop('Sluit rekening');
+                        eKnop.addEventListener('click', rekeningSluiten);
+                    }
+                    else {
+                        //eerste bezoek
+                        sMsg += "Welkom beste bezoeker. ";
+                        sMsg += "U ontvangt een startsaldo van 100 Euro!";
+                        //knop
+                        var eKnop = maakKnop('Open rekening');
+                        eKnop.addEventListener('click', rekeningOpenen);
+                    }
+                }
+                    //generische DOM elementen
+                    var dfBericht = document.createDocumentFragment();
+                    var eNl = document.createElement('br');
+
+                    //vervolledig en voeg toe
+                    var tNode = document.createTextNode(sMsg);
+                    dfBericht.appendChild(tNode);
+                    dfBericht.appendChild(eNl.cloneNode(false));
+                    dfBericht.appendChild(eNl.cloneNode(false));
+                    dfBericht.appendChild(eKnop);
+                    eOutput.appendChild(dfBericht);
+
+                    //event handler voor +-knoppen
+                    eKnopKrediet.addEventListener('click', function() {
+                        berekenen('+');
+                    });
+                    eKnopDebiet.addEventListener('click', function() {
+                        berekenen('-');
+                    });
+                
+            };
+            /************* FUNCTIES **************/
+            function maakKnop(tekst) {
+                var eKnop = document.createElement('button');
+                var sTekst = document.createTextNode(tekst);
+                eKnop.appendChild(sTekst);
+                eKnop.setAttribute('type', 'button');
+                return eKnop;
+            }
+            //------------
+            function rekeningOpenen() {
+                //console.log('rekening openen')
+                var sNaam = window.prompt("Uw naam, graag?", "");
+                if (sNaam !== "" && sNaam !== null) {
+                    localStorage.setItem('klantnaam', sNaam);
+                    localStorage.setItem('saldo',100);
+                   // setCookie('klantnaam', sNaam, 100);
+                   // setCookie('saldo', 100, 100);
+                    window.history.go(0);
+                }
+            }
+            //------------
+            function rekeningSluiten() {
+                //console.log('rekening sluiten')
+                localStorage.clear();
+                //clearCookie('klantnaam');
+                //clearCookie('saldo');
+                window.history.go(0);
+            }
+            //---------------------------
+            function berekenen(bewerking) {
+                var nNieuwSaldo = 0;
+                var eBedrag = document.getElementById('bedrag');
+                var sBedrag = eBedrag.value;
+                //var sSaldo = getCookie('saldo');
+                var sSaldo = localStorage.getItem('saldo');
+                var sBericht = "";
+                var re = /,/;
+                sBedrag = sBedrag.replace(re, '.');
+
+                if (sSaldo !== "" && !isNaN(sSaldo)) {
+                    if (sBedrag !== "" && !isNaN(sBedrag)) {
+                        nSaldo = parseFloat(sSaldo);
+                        nBedrag = parseFloat(sBedrag);
+                        switch (bewerking) {
+                            case '+':
+                                nNieuwSaldo = nSaldo + nBedrag;
+                                break;
+                            case '-':
+                                nNieuwSaldo = nSaldo - nBedrag;
+                                break;
+                        }
+                        if (nNieuwSaldo <= 0) {
+                            var nMax = nSaldo - 1;
+                            sBericht += "Uw saldo is onvoldoende.";
+                            sBericht += "U kunt max: " + nMax + " Euro afhalen.";
+                            eBedrag.value = nMax;
+                            eBedrag.focus();
+                            toonWaarschuwing(sBericht);
+                        }
+                        else {
+                            localStorage.setItem('saldo',nNieuwSaldo);
+                            //setCookie('saldo', nNieuwSaldo, 100);
+                            window.history.go(0);
+                            eBedrag.value = "";
+                        }
+
+                    }
+                    else {
+                        alert('U moet een correct bedrag ingeven');
+                    }
+                }
+                else {
+                    //gn saldo= gn rekening
+                    var bOpenen = window.confirm('U heeft nog geen rekening geopenend, nu doen?');
+                    if (bOpenen === true) {
+                        rekeningOpenen();
+                    }
+                }
+            }
+            //---------------------
+            function toonWaarschuwing(msg) {
+                var eWarning = document.querySelector('.waarschuwing');
+                eWarning.innerHTML = msg;
+                eWarning.style.display = "block";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>CookieBank</h1>
+        <p>Welkom bij CookieBank, de bank met smaak!</p>
+        <div id="output"></div>
+        <div class="waarschuwing"></div>
+        <form name="frmBank" action="" method="get">
+            <p> * verplicht </p>
+            <div>
+                <label for='bedrag'>bedrag *</label>
+                <input type="text" name="bedrag" id="bedrag">
+                <label class="msg"></label>
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <button type="button" class="small" id="krediet">+</button>
+                <button type="button" class="small" id="debiet">-</button>
+                <label class="msg"></label>
+            </div>
+        </form>
+    </body>
+</html>

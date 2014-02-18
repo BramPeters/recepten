@@ -1,0 +1,126 @@
+header{
+    min-height: 320px;
+    background: url(../../img/clouds_groot.png) 50% top repeat-x;
+    position:relative;
+}
+.multiplebgs header{
+    background-image: url(../../img/clouds_groot.png), url(../../img/clouds_klein.png);
+    background-position: 100% 0%, 0% 100%;
+    background-repeat:repeat-x,repeat-x;
+
+
+-webkit-animation-name: zweven;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timin-function: ease-in-out;
+
+    
+    -animation-name: zweven;
+    -animation-duration: 10s;
+    -animation-iteration-count: infinite;
+    -animation-direction: alternate;
+    -animation-timin-function: ease-in-out;
+}
+
+
+@keyframes zweven{
+    0%{background-position: 0% 0%, 100% 100%;}
+    50%{background-position: 50% 0%, 50% 50%;}
+    100%{background-position: 100% 0%, 0% 100%;}
+    }
+    @-webkit-keyframes zweven{
+    0% {background-position: 0% 0%, 100% 100%;}
+    50% {background-position: 50% 0%, 50% 50%;}
+    100% {background-position: 100% 0%, 0% 100%;}
+    }
+    
+
+.textshadow h1, .textshadow h2{
+    -moz-text-shadow: 20px 20px 5px silver;
+    -webkit-text-shadow: 20px 20px 5px silver;
+    -o-text-shadow: 20px 20px 5px silver;
+    text-shadow: 20px 20px 5px silver;
+}
+
+a.drama{margin-right:1em;}
+a.drama:link, a.drama:visited{
+    color: #ccc;
+    font-size: 1.2em;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    vertical-align: middle;
+    text-shadow: rgba(0,0,0,0.4) 0 1px 0;
+    padding: 0.5em 1em;
+    border-top: 1px solid #f7afaf;
+
+    background: #f0182a;/*niet afgewerkt*/
+    background: -moz-linear-gradient(top,  #f0182a 1%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0182a), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f0182a 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f0182a 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f0182a 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f0182a 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0182a', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+
+    -webkit-box-shadow: rgba(0,0,0,1) 3px 3px 3px;
+    -moz-box-shadow: rgba(0,0,0,1) 3px 3px 3px;
+    box-shadow: rgba(0,0,0,1) 3px 3px 3px;
+
+}
+
+
+a.drama:hover{
+    border-top-color: #e609f2;
+    background: #e609f2;
+    color:#f5edf5;
+}
+
+a.drama:active{
+    border-top-color: #f70a0a;
+    background: red;
+    color:white;
+
+
+}
+
+#zon{
+    position:absolute;
+    z-index:-10;
+    bottom:5em;
+    left:0;
+    width:4em;
+    height:4em;
+    background-color: orange;
+    border-radius: 50%;
+    opacity: 0;
+    transform:scale(0.5);
+    
+    -webkit-animation-name:rijzen;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-timing-function: linear;
+    
+    animation-name:rijzen;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+@keyframes rijzen{
+    0%{top:400px;left:0; opacity:0; width:4em; height:4em; box-shadow:#FCC 0px 0px 10px 10px;}
+    50%{top:0;left:50%; opacity:1;background-color:yellow; width:6em; height:6em; box-shadow:#FF6 0px 0px 200px 200px;}
+    100%{top:400px;left:100%; opacity:1; background-color:red; width:8em; height:8em; box-shadow:#F69 0px 0px 200px 200px;}
+}
+
+@-webkit-keyframes rijzen{
+    0%{top:400px;left:0; opacity:0; width:4em; height:4em; -webkit-box-shadow:#FCC 0px 0px 10px 10px;}
+    50%{top:0;left:50%; opacity:1;background-color:yellow; width:6em; height:6em; -webkit-box-shadow:#FF6 0px 0px 200px 200px;}
+    100%{top:400px;left:100%; opacity:1; background-color:red; width:8em; height:8em; -webkit-box-shadow:#F69 0px 0px 200px 200px;}
+}

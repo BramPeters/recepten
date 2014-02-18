@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+	height: 100%;
+}
+div {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+	background-color:white;
+}
+/*******************LAYOUT*******************/
+
+#kopstrook {
+	height:85px;
+	border-bottom:1px solid silver;
+}
+#kop {
+	width:800px;
+	margin: 0 auto;
+}
+#kop h1 {
+	font-family:"Arial", Gadget, sans-serif;
+	font-size:3em;
+	padding:0;
+	margin:0;
+	color:#39F;
+}
+#kop h2 {
+	color:#CCC;
+}
+#middenstrook {
+	width: 800px;
+	min-height: 80%;
+	margin:0 auto;
+	background-color:white;
+	padding: 0 1em;
+}
+#voetstrook {
+	height:60px;
+}
+#voet {
+	width: 800px;
+	margin: 0 auto;
+	border-top:1px solid silver;
+	text-align:center;
+	padding:1em 0;
+}
+/*******************PROFIEL***********************************/
+#profiel div{
+	margin: 0;
+	}
+#profiel div.foto{
+	float:right;
+	}
+#profiel div:hover{
+	background-color:#EEE;
+	}
+#profiel span{
+	display:inline-block;
+	margin: 0.3em 0;
+	padding:0.2em;
+	
+	}
+#profiel span.label{
+	width: 120px;
+	color: #39F;
+	vertical-align:top;
+	}	
+	
+/*******************INLINE EDIT***********************************/
+.eVeld {
+	background-color:#FFC;
+	border:1px solid silver;
+}
+input.eVeld {
+	width:200px;padding:3px 4px;
+}
+textarea.eVeld {
+	width:400px;
+	height:9em;
+	line-height:inherit;
+	margin:0;
+	padding:3px 4px;
+}

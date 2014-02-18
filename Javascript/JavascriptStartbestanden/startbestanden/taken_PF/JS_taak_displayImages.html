@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS PF taak: Toon - verberg figuren</title>
+<style type="text/css" media="screen">
+body {
+	background-color:white;
+	font-family:Arial, Helvetica, sans-serif
+}
+aside {
+	float:left;
+	width:210px;
+	height:600Px;
+	background-color:#FFFFCC;
+	padding: 2em 0 1em 0.4em;
+	border:1px groove silver;
+	border-radius:1em;
+}
+article {
+	padding:1em;
+	background-color:white;
+	width:auto;
+	min-width:700px;
+	margin-left:230px;
+	border:1px groove silver;
+	border-radius:1em;
+}
+footer {
+	border:1px groove silver;
+	border-radius:1em;
+	margin:1em 0 0 230px;
+	padding:1em;
+	text-align:center;
+}
+footer img {
+	border:none;
+}
+dl {
+	margin-left: 50px
+}
+dt {
+	font-weight:bold;
+	padding-left:23px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	background-image:url(../images/question.gif);
+	background-repeat:no-repeat;
+	background-position: 0px 0px;
+}
+dd {
+	padding-left:18px;
+	background-image:url(../images/hand.gif);
+	background-repeat:no-repeat;
+	background-position:  0px 5px;
+}
+img.screenshot {
+	margin-top:20px;
+	margin-bottom:20px;/*	display:none; */
+}
+div.toggle {
+	margin:10px 0 0 50px;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>JS PF taak: Toon - verberg figuren </h1>
+  <p>In dit cursus-extract staan te veel screenshots om het lezen makkelijk te maken. Voor deze opdracht  voorzie je interactiviteit zodat de gebruiker</p>
+  <ul>
+    <li>alle screens met &eacute;&eacute;n klik kan tonen/verbergen via de voorziene hoofdknop</li>
+    <li>elk individueel <i>screenshot</i> kan tonen/verbergen, via een eigen methode (hyperlink, knop, iets anders?) naar keuze. <br>
+      kies je voor een knop of hyperlink, dan moeten die door het script dynamisch in de pagina geplaatst worden, je mag ze niet vast in de HTML zetten...</li>
+    <li>denk er aan dat ook de <b>tekst</b> van de knoppen/hyperlinks zich moet aanpassen aan de situatie</li>
+    <li>andere figuren in de pagina, mogen natuurlijk niet beïnvloed worden door dit script</li>
+    <li>voorzie ook de mogelijkheid dat de knopteksten in een andere taal getoond kunnen worden (vb. Frans). Taalteksten moeten gemakkelijk te beheren zijn en d.m.v. een eenvoudige waarde instelling door de programmeur kunnen gewijzigd worden (niet door de gebruiker)</li>
+  </ul>
+  <p>Controleer of het pad van alle images correct is. </p>
+</header>
+<aside> <img src="../images/VDAB_200.png">
+  <p>Een vdab dhtml oefening </p>
+</aside>
+<article>
+  <h2> Een nieuwe site maken in Dreamweaver </h2>
+  <button id="hoofdknop">Alle schermen verbergen</button>
+  <p>In DreamWeaver kan je een <i>website</i> als geheel opzetten. Het voordeel is dat alle benodigde pagina&rsquo;s en figuren bij elkaar gehouden worden. Een ander voordeel is het gemak waarmee je de website kunt op de webserver zetten en later bijwerken.</p>
+  <dl>
+    <dt>Site &ndash; Manage Sites - New:</dt>
+    <dd>de Wizard Site definition verschijnt, je beantwoordt een aantal vragen
+      <div class="toggle"><img class="screenshot" width="238" height="222" src="../images/clip_image014.gif" alt="schermafdruk"> </div>
+    </dd>
+    <dt> &ldquo;Hoe wil u de website noemen?&rdquo; </dt>
+    <dd>vul in <i> George&rsquo;s site</i>
+      <div class="toggle"><img class="screenshot" width="310" height="307" src="../images/clip_image002.gif" alt="schermafdruk"> </div>
+    </dd>
+    <dt> &ldquo;Wil u Server technologie gebruiken?&rdquo;</dt>
+    <dd> Neen, ga verder
+      <div class="toggle"><img class="screenshot" width="407" height="175" src="../images/clip_image004.gif" alt="schermafdruk"> </div>
+    </dd>
+    <dt> &ldquo;Hoe wil u tewerk gaan met de bestanden?&rdquo; </dt>
+    <dd>kies voor <i>Ik wil de bestanden lokaal bewerken en dan uploaden naar de server (aangeraden)</i> </dd>
+    <dt>&rdquo;Waar wil u de bestanden lokaal opslaan?</dt>
+    <dd>Op <i>C:\My Documents\George\George&rsquo;s site </i>(wordt automatisch ingevuld)
+      <div class="toggle"><img class="screenshot" width="487" height="294" src="../images/clip_image006.gif" alt="schermafdruk"> </div>
+    </dd>
+    <dt> &ldquo;Hoe wil u de bestanden kopi&euml;ren naar de Remote Server?&rdquo;</dt>
+    <dd>kies voor <i>Local/Network</i></dd>
+    <dt>&rdquo;In welke map op die server wil u de bestanden kopi&euml;ren?&rdquo;</dt>
+    <dd>Op <i>\\Server2\cursisten\Daikin\George\</i>
+      <div class="toggle"><img class="screenshot" width="494" height="246" src="../images/clip_image008.gif" alt="schermafdruk"> </div>
+    </dd>
+    <dt> &ldquo;Wilt u &lsquo;check in&lsquo; en &lsquo;check out&rsquo; activeren?&rdquo; </dt>
+    <dd><i>Neen</i>, ga verder
+      <div class="toggle"><img class="screenshot" width="407" height="175" src="../images/clip_image010.gif" alt="schermafdruk"> </div>
+    </dd>
+    <dt> U bent klaar: de opsomming van al deze instellingen verschijnt</dt>
+    <dd>klik <i>Done</i> als u klaar bent
+      <div class="toggle"><img class="screenshot" width="422" height="418" src="../images/clip_image012.gif" alt="schermafdruk"> </div>
+    </dd>
+    <dt> U ziet de lijst van websites die je reeds maakte, </dt>
+    <dd>klik opnieuw <i>Done</i>
+      <div class="toggle"><img class="screenshot" width="238" height="222" src="../images/clip_image014.gif" alt="schermafdruk"> </div>
+    </dd>
+    <dt>Eenmaal een site gemaakt, heb je een overzicht van alle bestanden ervan in het<i> Files Panel</i> </dt>
+    <dd>De figuur hieronder toont de toestand van een afgewerkte site.
+      <div class="toggle"><img class="screenshot" width="216" height="313" src="../images/clip_image016.gif" alt="schermafdruk"> </div>
+    </dd>
+  </dl>
+</article>
+<footer><a href="http://validator.w3.org/check?uri=referer"><img src="../images/HTML5_Logo_32.png" alt="Valid HTML5" title="Valid HTML5" ></a> <a href="http://jigsaw.w3.org/css-validator/"><img src="../images/css3_logo_32.png" alt="Valid CSS3" title="Valid CSS3" ></a></footer>
+</body>
+</html>

@@ -1,0 +1,410 @@
+/*BACKGROUND*/
+body{
+    background-color:#FCFAF8;
+
+}
+
+/*TOP*/
+#topbanner{
+    background: #8FB209;
+}
+
+.wikkel{
+    width: 70%;
+    margin:0 auto;
+    min-width: 1000px;
+}
+/*HEADER*/
+#topstuk{
+    border-bottom: solid #DCDAD8 1px;
+    /*margin-bottom: 5px;*/
+
+}
+/*LOGINMENU*/
+.login{
+    float:right;
+    color:white;
+    font-size: 1.2em;
+}
+.login>#submit{
+    background-color: #6D9207;
+    border:solid #047B00 1px;
+    color:white;
+}
+
+/*LOGO*/
+#logo{
+    clear:both;
+    float:left;	
+    margin:20px 0px 0 0px;
+    padding:0;
+}
+
+/*TOPMENU*/
+#topmenu {
+    clear:both;
+    text-align:right;
+    float:right;
+    margin-bottom: 5px;
+}
+#topmenu ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+#topmenu ul li{display:inline;}
+#topmenu ul li a {
+    display:inline-block;
+    width:7em;
+    padding:0.2em;
+    font-size:1.2em;
+    font-weight:bold;
+    color:#6C6A68;
+    text-decoration:none;
+}
+#topmenu ul li a:hover, #topmenu ul li a:active{
+    color:#005689;
+    text-decoration: none;
+}
+
+/*IMAGES*/
+img{
+
+}
+
+/*Foto1*/
+#Foto1Skew{
+    float:right;
+    border:solid #E9DCE9 8px;
+    background-color: white;
+    margin-top:40px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    /*box-shadow: rgba(0,0,0,0.4) 10px 10px;*/
+    box-shadow: grey 10px 10px 10px 10px, grey 10px 10px 5px 10px inset;
+    transform: skew(-10deg) rotate(5deg);
+    -webkit-transform: skew(-10deg) rotate(5deg);
+    -o-transform: skew(-10deg) rotate(5deg);
+    -moz-transform: skew(-10deg) rotate(5deg);
+}
+#Foto1{
+    float:right;
+    border:solid #E9DCE9 8px;
+    background-color: white;
+    transform: rotate(8deg);
+    -webkit-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    margin-top:40px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    /*box-shadow: rgba(0,0,0,0.4) 10px 10px;*/
+    box-shadow: grey 10px 10px 10px 10px, grey 10px 10px 5px 10px inset;
+
+}
+#Foto2{
+    float:left;
+    border:solid #E9DCE9 8px;
+    background-color: white;
+    transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    /*box-shadow: rgba(0,0,0,0.4) 10px 10px;*/
+    box-shadow: grey 10px 10px 10px 10px, grey 10px 10px 5px 10px inset;
+
+}
+
+
+/*TEKST*/
+
+/*DEEL 1*/
+h1{
+    font-size: 4em;
+    font-weight: bold;
+}
+h1{
+    color:#7EA107;
+}
+h2{
+    font-size: 2em;
+    font-style: italic;
+    font-weight: bold;
+}
+h2{
+    color:#52463F;
+}
+
+p{
+    /*font-weight:bold;*/
+    font-size: 1em;
+}
+p{
+    color:#52463F;
+}
+h3{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+h3{
+    color:#52463F;
+}
+#intro{
+    float:right;
+}
+#KopInfo{
+    margin-bottom: 60px;
+}
+/*DEEL 2*/
+.middenstuk{
+    background-color: #EBE8E5;
+    border-top: solid #DCDAD8 2px;
+    border-bottom: solid #DCDAD8 2px;
+}
+#OpleidingInfo h2{
+    color:#7EA107;
+    font-style: normal;
+}
+#intro{
+    margin-top:2%;
+}
+#OpleidingInfo ul{
+    list-style-image: url(../img/check.png);
+}
+#opleidingsmenu ul{
+
+    margin:20px;
+    padding:0px;
+}
+#opleidingsmenu li{
+    float:left;
+    width:28%;
+    margin-right:4%;
+    padding-bottom:20px;
+    height:6em;
+} 
+
+/*DEEL 3*/
+#Nieuws h2{
+    color:#7EA107;
+    font-style: normal;
+}
+
+
+#Nieuws h3{
+    color:#52463F;
+}
+#Nieuws2 h2{
+    color:#7EA107;
+    font-style: normal;
+}
+
+
+#Nieuws2 h3{
+    color:#52463F;
+}
+a{
+    text-decoration: none;
+    color: #4C86CF;
+}
+#nieuws{
+    border-bottom: solid #DCDAD8 2px;
+}
+#border{
+    border-top: dotted #DCDAD8 2px;
+    margin-top:5%;
+    margin-bottom:5%;
+    
+}
+a:hover{
+    text-decoration: underline;
+    color: #058;
+}
+
+.article{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    padding:1%;
+    border: 10px solid #E4F0F3;
+}
+
+#nws_123{
+    float:left;
+    width:28%
+}
+#nws_456{
+    margin:0 39% 0 31%;
+}
+#nws_789{
+    float:right;
+    width:38%}
+
+#nws_321{
+    float:left;
+    width:28%
+}
+#nws_987{
+    margin:0 39% 0 31%;
+}
+#nws_654{
+    float:right;
+    width:38%}
+#Foto3{
+    float:right;
+}
+p code{
+    color:#8B1C00;
+}
+/*Footer*/
+.bottom{
+    border-top: solid #DCDAD8 2px;
+}
+#footer{
+    font-size: 0.8em; 
+
+}
+#footertext {
+    font-style: italic; 
+}
+
+
+
+
+
+/*CONTACT PAGE*/
+.left{
+    float:left;
+    width:60%;
+    margin-right: 4%;
+}
+
+.right{
+    float:right;
+    /*margin-left: 55%;*/
+    width:20%;
+
+
+}
+
+#info ul li{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+#minifoto1{float:right;height:250px;width:120px;margin:3px;}/*keyboard*/
+#minifoto2{float:right;height:100px;width:80px;margin:3px;clip:rect(40px, 40px, 40px, 40px);}/*boek*/
+#minifoto3{float:right;height:100px;width:160px;margin:3px;clip:rect(10px, 10px, 60px, 10px);}/*laptop*/
+#minifoto4{float:right;height:250px;width:120px;margin:3px;clip:rect(10px, 120px, 300px, 10px);}/*deur*/
+
+#gmap{border: solid #DCDAD8 2px; margin-bottom: 20px;}
+
+/*CONTACT FORM*/
+.contact div{
+    margin:5px;  
+
+}
+.contact div label{
+    float:left;
+    width:7%;
+}
+.contact div input[type="text"],.contact div input[type="email"]{
+    margin-left:7%;
+}
+.contact div input[type="submit"]{
+    margin-left:14%;
+}
+
+form label.labelCheckbox{
+    float:none;
+    display:inline;
+    zoom:1;
+    padding:0;
+    text-align:left;
+}
+.contact input[type="checkbox"].inline{
+    margin-left:0;
+}
+.contact #verzenden{
+    background-color: #6D9207;
+    border:solid white 1px;
+    color:white;
+    padding:10px;
+}
+
+#vragen{margin-left:7%;}
+
+
+/*Portfolio*/
+.Oefeningenlijst ul{
+    list-style-type: none;
+    margin:0;
+    margin-bottom: 10px;
+    padding:0;
+}
+
+
+/*WIE-pagina*/
+.studentenlijst{
+    list-style-type: none;
+    margin:0;
+    margin-bottom: 10px;
+    padding:0;
+}
+.studentenlijst li{
+    float:left;
+    margin:50px;
+}
+.studentenlijst p{
+    color:#4C86CF;
+    font-weight: bold;
+}
+
+.roteerLinks{
+    text-align:right;
+}
+.roteerLinks img{   
+    border:solid #E9DCE9 8px;
+    background-color: white;
+    transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    margin-top:40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    /*box-shadow: rgba(0,0,0,0.4) 10px 10px;*/
+    box-shadow: grey 10px 10px 10px 10px, grey 10px 10px 5px 10px inset;
+}
+
+.roteerRechts{
+    text-align:left;
+}
+.roteerRechts img{   
+    border:solid #E9DCE9 8px;
+    background-color: white;
+    transform: rotate(8deg);
+    -webkit-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    margin-top:40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    /*box-shadow: rgba(0,0,0,0.4) 10px 10px;*/
+    box-shadow: grey 10px 10px 10px 10px, grey 10px 10px 5px 10px inset;
+}
+
+
+/*CLEARFIX*/
+.clearFix:before, .clearFix:after{
+    content: " ";
+    display: table;
+}
+.clearFix:after{
+    clear:both;
+}
+.clearfix{
+    *zoom:1;
+}
+

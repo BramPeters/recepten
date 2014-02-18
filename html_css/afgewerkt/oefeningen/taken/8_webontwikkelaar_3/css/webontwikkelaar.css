@@ -1,0 +1,565 @@
+@charset "utf-8";
+/*CSS voor Home, RESPONSIVE MOBILE FIRST*/
+
+
+/*******ALGEMEEN + MOBILE FIRST*************/
+body, div, article, section{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font: 16px/1.4 "Lucida Grande", sans-serif;
+    color:#333;
+    background-color: #eed3d7;
+
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+h1, h2{
+    font-size:1.4125em;
+    padding: 0 0.3333em;
+}
+header{
+    position: relative;
+}
+section{
+    clear:both;
+
+}
+
+p{
+    margin-left:0.375em;
+}
+
+.container{
+    overflow:auto;
+}
+/*KOP PHONE*/
+header h1{
+    margin:0.2222em;
+}
+#kopnav{
+    border-top: 1px solid gray;
+    padding-top: 0.6em;
+    margin:0;
+}
+
+.wikkel{
+    width: 70%;
+    margin:0 auto;
+    min-width: 1000px;
+}
+#topbanner{
+    background-color:#8FB209;
+    max-width: 282px;
+    
+    
+}
+.bottom{
+    background-color:#b2dba1;
+}
+
+/*LOGO*/
+#logo{
+    clear:both;
+    float:left;	
+    margin:20px 0px 0 0px;
+    padding:0;
+}
+/*EINDE ALGEMEEN*/
+/****************loginmenu mobile first********************/
+/*LOGINMENU*/
+.login{
+    float:right;
+    color:white;
+    font-size: 1.2em;
+}
+.login>#submit{
+    background-color: #6D9207;
+    border:solid #047B00 1px;
+    color:white;
+}
+
+
+/****************hoofdmenu mobile first********************/
+/* vertikaal menu breedte bepaald door container*/
+
+#hoofdmenu{
+    list-style: none;
+    font-size: 0.875em;
+    font-weight: bold;
+    padding:0;
+    margin: 0 1em;
+    width:auto;
+
+}
+
+#hoofdmenu li{
+    display:block;
+    margin:0;
+    padding: 0.4286em 1.1428em;
+    border-bottom: 1px solid silver;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+}
+
+#hoofdmenu li:first-child{
+    border-top:1px solid silver;
+}
+
+#hoofdmenu a{
+    display: inline;
+    cursor: pointer;
+}
+#hoofdmenu li:hover{
+    color:white;
+    background-color: darkseagreen;
+}
+
+/********HELPER CLASSES PHONE ONLY**************/
+.phone-only{
+    display:block;
+}
+.klein-tablet{
+    display:none;
+}
+.tablet{
+    display:none;
+}
+.desktop{
+    display:none;
+}
+
+/*EINDE HELPER CLASSES PHONE*/
+
+
+/*}EINDE MQ */
+
+/**********TUSSENSLAG?**********************************************************************/
+@media screen and (min-width:361px){
+    .phone-only{
+        display:none;
+    }
+    .klein-tablet{
+        display:block;
+    }
+    .tablet{
+        display:none;
+    }
+    .desktop{
+        display:none;
+    }
+
+    /*Code*/
+    body{
+        background-color: #f8efc0;
+    }
+    #topbanner{
+        background-color:#8FB209;
+         max-width: 100%;
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+    form{
+       max-width: 282px; 
+       margin-left:auto;
+       margin-right:auto;
+    }
+
+}
+/*}EINDE MQ */
+
+/************TABLET***************************************************************************/
+/*VOLLEDIGE TEKST, GEEN FOTO'S*/
+@media screen and (min-width:900px){
+    .phone-only{
+        display:none;
+    }
+    .klein-tablet{
+        display:block;
+    }
+    .tablet{
+        display:block;
+    }
+    .desktop{
+        display:none;
+    }
+
+    /*Code*/
+    body{
+        background-color: #f8efc0;
+    }
+    #topbanner{
+        background-color:#8FB209;
+        max-width: 100%;
+    }
+    .login label, .login input{
+        clear:none;
+    }
+    .login{
+        float:right;
+    }
+
+    .container{
+        width:80%;
+        max-width:1000px;
+        margin: 0 auto;
+        position:relative;
+        height:100%;
+
+    }
+    /*TOPMENU*/
+    #hoofdmenu {
+        clear:both;
+        text-align:right;
+        float:right;
+        margin-bottom: 5px;
+    }
+    #hoofdmenu ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+    #hoofdmenu ul li{display:inline;}
+    #hoofdmenu ul li a {
+        display:inline-block;
+        width:7em;
+        padding:0.2em;
+        font-size:1.2em;
+        font-weight:bold;
+        color:#6C6A68;
+        text-decoration:none;
+    }
+    #hoofdmenu ul li a:hover, #topmenu ul li a:active{
+        color:#005689;
+        text-decoration: none;
+    }
+    #hoofdmenu li:nth-child(1n+0){
+        border-top:1px solid silver;
+    }
+    form{
+       max-width: 100%; 
+    }
+    /*Foto1*/
+    #Foto1{
+        float:right;
+        border:solid #E9DCE9 8px;
+        background-color: white;
+    }
+    #Foto2{
+        background-color: white;
+        float:left;
+        /*margin-top:-50px;*/
+        border:solid #E9DCE9 8px;
+        margin-right: 30px;
+    }
+
+    /*DEEL 1*/
+    h1{
+        font-size: 4em;
+        font-weight: bold;
+    }
+    h1{
+        color:#7EA107;
+    }
+    h2{
+        font-size: 2em;
+        font-style: italic;
+        font-weight: bold;
+    }
+    h2{
+        color:#52463F;
+    }
+
+    p{
+        /*font-weight:bold;*/
+        font-size: 1.3em;
+    }
+    p{
+        color:#52463F;
+    }
+    h3{
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+    h3{
+        color:#52463F;
+    }
+}
+/*}EINDE MQ */
+
+
+
+/************DESKTOP****************************************************************************************************/
+/*STANDAARD VERSIE VAN DE WEBSITE*/
+@media screen and (min-width:1230px){
+    .phone-only{
+        display:none;
+    }
+    .klein-tablet{
+        display:block;
+    }
+    .tablet{
+        display:block;
+    }
+    .desktop{
+        display:block;
+    }
+
+    /*Code*/
+    /*BACKGROUND*/
+    body{
+        background-color:#FCFAF8;
+
+    }
+
+    /*TOP*/
+    #topbanner{
+        background: #8FB209;
+    }
+
+    .wikkel{
+        width: 70%;
+        margin:0 auto;
+        min-width: 1000px;
+    }
+    /*HEADER*/
+    #topstuk{
+        border-bottom: solid #DCDAD8 1px;
+        margin-bottom: 5px;
+
+    }
+    /*LOGINMENU*/
+    form{
+        float:right;
+        color:white;
+        font-size: 1.2em;
+    }
+    form>#submit{
+        background-color: #6D9207;
+        border:solid #047B00 1px;
+        color:white;
+    }
+
+    /*LOGO*/
+    #logo{
+        clear:both;
+        float:left;	
+        margin:20px 0px 0 0px;
+        padding:0;
+    }
+
+    /*TOPMENU*/
+    #hoofdmenu {
+        clear:both;
+        text-align:right;
+        float:right;
+        margin-bottom: 5px;
+    }
+    #hoofdmenu ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+    #hoofdmenu ul li{display:inline;}
+    #hoofdmenu ul li a {
+        display:inline-block;
+        width:7em;
+        padding:0.2em;
+        font-size:1.2em;
+        font-weight:bold;
+        color:#6C6A68;
+        text-decoration:none;
+    }
+    #hoofdmenu ul li a:hover, #topmenu ul li a:active{
+        color:#005689;
+        text-decoration: none;
+    }
+    #hoofdmenu li:nth-child(1n+0){
+        border-top:1px solid silver;
+    }
+
+    /*IMAGES*/
+    img{
+
+        padding:10px 10px 10px 10px;
+        background-color: white;
+
+    }
+
+    /*Foto1*/
+    #Foto1{
+        float:right;
+        border:solid #E9DCE9 8px;
+        background-color: white;
+    }
+    #Foto2{
+        background-color: white;
+        float:left;
+        margin-top: 1em;
+        border:solid #E9DCE9 8px;
+        margin-right: 30px;
+    }
+
+
+    /*TEKST*/
+
+    /*DEEL 1*/
+    h1{
+        font-size: 4em;
+        font-weight: bold;
+    }
+    h1{
+        color:#7EA107;
+    }
+    h2{
+        font-size: 2em;
+        font-style: italic;
+        font-weight: bold;
+    }
+    h2{
+        color:#52463F;
+    }
+
+    p{
+        /*font-weight:bold;*/
+        font-size: 1.3em;
+    }
+    p{
+        color:#52463F;
+    }
+    h3{
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+    h3{
+        color:#52463F;
+    }
+
+    #KopInfo{
+        margin-bottom: 60px;
+    }
+    /*DEEL 2*/
+    .middenstuk{
+        background-color: #EBE8E5;
+        border-top: solid #DCDAD8 2px;
+        border-bottom: solid #DCDAD8 2px;
+    }
+    #OpleidingInfo h2{
+        color:#7EA107;
+        font-style: normal;
+    }
+
+    #OpleidingInfo ul{
+        list-style-image: url(../img/check.png);
+    }
+    #opleidingsmenu ul{
+
+        margin:20px;
+        padding:0px;
+    }
+    #opleidingsmenu li{
+        float:left;
+        width:28%;
+        margin-right:4%;
+        padding-bottom:50px;
+        margin-left:10px;
+        height:6em;
+    } 
+
+    /*DEEL 3*/
+    #Nieuws h2{
+        color:#7EA107;
+        font-style: normal;
+    }
+
+
+    #Nieuws h3{
+        color:#52463F;
+    }
+
+    a{
+        text-decoration: none;
+        color: #4C86CF;
+    }
+    a:hover{
+        text-decoration: underline;
+        color: #058;
+    }
+
+    .article{
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        padding:2%;
+        border: 100px solid #E4F0F3;
+    }
+    .tekstnieuws{
+        font-size: 0.8em;
+    }
+    #nws_123{
+        float:left;
+        width:32%
+    }
+    #nws_456{
+        margin:0 35% 0 35%;
+    }
+    #nws_789{
+        float:right;
+        width:29%}
+    #Foto3{
+        float:right;
+    }
+    p code{
+        color:#8B1C00;
+    }
+    /*Footer*/
+    .bottom{
+        border-top: solid #DCDAD8 2px;
+    }
+    #footer{
+        font-size: 0.8em; 
+
+    }
+    #footertext {
+        font-style: italic; 
+    }
+
+
+    /*CLEARFIX*/
+    .clearFix:before, .clearFix:after{
+        content: " ";
+        display: table;
+    }
+    .clearFix:after{
+        clear:both;
+    }
+    .clearfix{
+        *zoom:1;
+    }
+
+
+}
+/*}EINDE MQ */
+
+
+
+
+/**/
+/*CLEARFIX*/
+.clearFix:before, .clearFix:after{
+    content: " ";
+    display: table;
+}
+.clearFix:after{
+    clear:both;
+}
+.clearfix{
+    *zoom:1;
+}

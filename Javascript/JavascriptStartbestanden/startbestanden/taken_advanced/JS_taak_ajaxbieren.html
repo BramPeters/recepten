@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>JS advanced taak: bieren en brouwers</title>
+<style media="screen" type="text/css">
+<!--
+div.vb {
+	background-color:#CCFFCC;
+	padding:1em;
+}
+td {
+	padding:0
+}
+#bierData {
+	float: right;
+	padding: 0;
+	width:12em;
+	height:10em;
+	background-color:#FFCCCC;
+	border:1px solid gray;
+}
+#bierData div {
+	border-bottom:1px solid silver;
+	padding: 0.2em;
+}
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+
+<body>
+<h1>JS advanced taak: Bieren en brouwers</h1>
+<p>Controleer de werking van het <a href="http://localhost/javascript/opgeloste_taken/bieren_ajaxdata.php">php script</a> in de server </p>
+<p>Maak uw keuze</p>
+<div id="bierData"></div>
+<div id="keuzes">
+  <form name="frmBieren" action="bieren.php" method="post">
+    <p>
+      <label for="brouwers">brouwer:
+        <select name="brouwers" id="brouwers">
+          <option value="--">-- kies een brouwer --</option>
+        </select>
+      </label>
+      <button type="button" id="btn_brouwer" title="kies een brouwer" >kies</button>
+      <label for="bieren">bier:
+        <select name="bieren" id="bieren">
+          <option value="--">-- kies een bier --</option>
+          <!-- voorbeeld option te genereren:    <option value="--">Antwerpen</option>-->
+          
+        </select>
+      </label>
+      <button type="button" id="btn_bier" title="kies een bier">kies</button>
+    </p>
+  </form>
+</div>
+</body>
+</html>

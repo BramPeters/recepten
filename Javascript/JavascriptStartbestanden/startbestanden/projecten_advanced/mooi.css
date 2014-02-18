@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* 
+
+mooi.css
+
+algemeen stylesheet voor JS adv project 'interface' 
+
+*/
+
+div{
+	margin:0;
+	padding:0;
+	border:none;
+}
+body {
+	background:#F0F0F0;
+	font-family:"Comic Sans MS", "Lucida Grande", sans-serif;
+	margin:0;
+	padding:0;
+}
+
+/**********structuur*****************/
+
+.strook{
+	margin:0 auto;
+	width:1000px;
+	padding:1px;
+	height:100%;
+	}
+#kop{
+	background:#EBE6D1 url(../images/bgstrip2.gif) repeat-x scroll 0 0;
+	color:#333;
+	height:110px;
+	padding:5px 0 0 5àpx;
+	}
+#kop h1{margin:12px 0 0 0;}
+#kop h3{
+	margin:-10px 0 0 600px;
+	font-style:italic;
+	border:none;
+	}
+#voet{
+	background:#600;
+	color:white;
+	height:40px;
+	text-align:center;
+
+	}
+#midden{
+	color:#333;
+	}
+#midden .strook{
+		background:white;
+		padding:1px 5px 1px 5px;;
+	}	
+/**********algemeen*****************/
+
+a{color:#6CF;}
+
+h2,h3,h4,h5,h6{color:#5555A2;border-bottom:1px solid #C5C5EF;}
+dl, p, blockquote {
+	text-align:justify;
+}
+pre {
+	background-color:#EBE7D1;
+	color:#990000;
+	border:1px solid #DEDEDE;
+	clear:left;
+	font-family:"Courier New",Courier,monospace;
+	padding:1em ;
+	margin:0 1em;
+}
+img {
+	border:0px solid black;
+	margin-right:1em;
+}
+code {
+	color:#990000;
+	font-family:"Courier New",Courier,monospace;
+	font-size:1.1em;
+}
+em {
+	font-style:normal;
+	font-weight:bold;
+}
+div.inhoudstafel{
+		background-color:#CCF;padding:1em;margin:1em;
+}
+div.inhoudstafel a{
+		font-size:0.9em;
+		padding-top:0.2em;
+		padding-top:0.2em
+}
+

@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS voor JS project 'een DOM inhoudstafel' */
+
+body {
+	background:white none repeat scroll 0 0;
+	font-family:Verdana,Arial,sans-serif;
+	color:#4E4E4E;
+	margin:1em;
+	padding:0;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-family:Arial,Helvetica,sans-serif;
+	margin-left:-1em;
+	padding:0.2em;
+}
+h1 {
+	letter-spacing:0.2em;
+	text-transform:uppercase;
+	margin:0.6em 0;
+}
+h2, h3, h4 {
+	background-color:#F3F3FF;
+	border-bottom-style:dotted;
+	border-width:1px;
+}
+
+h1 {color:#4D5486;}
+h2 {color:#3366CC;}
+h3 {color:#CC9900;}
+h4 {color:#CC6600;}
+h5 {color:#CC3300;}
+h6 {color:#999900;}
+
+dl, p, blockquote {
+	text-align:justify;
+}
+pre {
+	background-color:#CCFFCC;
+	border:1px solid #DEDEDE;
+	clear:left;
+	color:#990000;
+	font-family:"Courier New",Courier,monospace;
+	padding:1em 1em 1em 3em;
+}
+img {
+	border:0px solid black;
+	margin-right:1em;
+}
+code {
+	color:#990000;
+	font-family:"Courier New",Courier,monospace;
+	font-size:1.1em;
+}
+em {
+	font-style:normal;
+	font-weight:bold;
+}
+div.inhoudstafel{
+		background-color:#CCFFCC;
+}
+div.inhoudstafel a{
+		font-size:0.9em;
+		padding-top:0.2em;
+		padding-top:0.2em
+}
+

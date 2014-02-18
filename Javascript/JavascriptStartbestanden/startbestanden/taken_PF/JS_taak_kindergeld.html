@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS PF taak: kindergeld</title>
+<style media="screen" type="text/css">
+<!--
+label {
+	display:inline-block;
+	width:100px;
+}
+div.vb {
+	background-color:#CCFFCC;
+	padding:1em;
+}
+-->
+</style>
+</head>
+<body>
+<h1>Javascript PF taak: kindergeld</h1>
+
+<h3>Opdracht: </h3>
+<ul>
+  <li>Een moeder heeft recht op &euro; 25,00 kindergeld per kind. Voor het       derde kind (en elk volgend kind) krijgt ze een toeslag van &euro; 12,50. Voor       het vijfde (en elk volgend) kind krijgt ze nog eens een toeslag van &euro;       7,50.</li>
+  <li>Als het maandloon van de moeder kleiner is dan of gelijk aan &euro;       500,00, dan krijgt ze 25% toeslag op het kindergeld. Maar als haar       maandloon groter is dan    &euro; 2000,00, dan krijgt ze 45% minder kindergeld.</li>
+  <li> Minimaal heeft een moeder altijd recht op &euro; 25,00 per kind.</li>
+  <li>Vul aantal kinderen en maandloon in, en <i>toon in het outputelement</i> het kindergeld waar de moeder recht op heeft. </li>
+  <li>indien een 0 of een negatief getal wordt ingevuld voor kinderen of maandloon, <em>waarschuw in een berichtenvenster</em></li>
+  <li>Bijv. : 6 kinderen en &euro; 1 500,00 maandloon &agrave; &euro; 215,00 kindergeld</li>
+  <li>validatie van getallen mag ook hier nog achterwege blijven</li>
+</ul>
+
+<h3>Geteste topics</h3>
+<ul>
+  <li>programmatielogica : selectie</li>
+</ul>
+<h3>Oplossing: </h3>
+
+<form name="frmKindergeld" id="frmKindergeld" method="get" action="">
+<p>
+<label for="kinderen">aantal kinderen</label>
+<input type="text" name="kinderen" id="kinderen">
+</p>
+<p>
+<label for="maandloon">maandloon</label>
+<input type="text" name="maandloon" id="maandloon">
+</p>
+<p>
+<button type="button" id="deKnop">Bereken kindergeld</button>
+</p>
+</form> 
+
+<div class="vb" id="output"></div>
+</body>
+</html>

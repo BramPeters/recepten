@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="iso-8859-1">
+		<title>JS PF project: personeel</title>
+		<style type="text/css">
+#output {
+	background-color:#F5F5F5;
+	padding: 1em;
+	width: 34em;
+}
+form {
+	background-color: silver;
+	width: 34em;
+	padding: 1em;
+}
+form input[type=text], form select, button {
+	width: 14em;
+}
+form label {
+	display: inline-block;
+	text-align: right;
+	width: 4em;
+	padding: 0.3em 1em;
+}
+label.msg {
+	width: auto;
+	text-align: left;
+}
+div.persoon{
+	border:3px solid white;
+	margin:0.6em;
+	width:96%;
+	background-color:#F5F5F5;
+}
+div.persoon span{
+	display:inline-block;
+	margin:0;
+	padding:2px;
+	vertical-align: top;
+}
+span.prop{
+	background-color:#6699FF;
+	width:36%;
+	
+}
+span.val{
+	clear:right;
+	background-color:#C5C5EF;
+	width:61%;
+}
+button.like{
+	background:transparent url(../images/like.png) no-repeat top left;
+	padding-left: 20px;
+	width: 50px;
+	
+}
+</style>
+<script>
+
+//===============GLOBALS======================================
+//array van functies
+var aFuncties	= ["instructeur","bediende","manager","arbeider"];
+//array van personen, elke persoon is een object
+var aoPersoneel = [
+	{id:4678,naam:"Roger Mary", functie:"instructeur", leeftijd: 65, sexe:"m", gehuwd:true, kinderen:[{naam:"Liesbeth", leeftijd: 26, sexe:"v"}],vrienden:24},
+	{naam:"Evelyn Van Welsenaers", leeftijd: 44, sexe:"v", gehuwd:true, kinderen:[{naam:"Patrick", leeftijd: 12, sexe:"m"},{naam:"Jonas", leeftijd: 14, sexe:"m"},], functie:"bediende",id:1025,vrienden:11},
+	{leeftijd: 27, sexe:"v", gehuwd:false,id:9007,functie:"arbeider",naam:"Heidi Vercouteren",vrienden:6}
+]
+
+window.onload = function(){
+
+//=======DOM REFERENTIES=======================================
+
+//knoppen
+var eToevoegen 		= document.getElementById('toevoegen');
+var ePersoneelsLijst= document.getElementById('personeelsLijst');
+//invulvelden, keuzelijsten, etc...
+var eNaam 			= document.getElementById('naam');
+var eFunctie 		= document.getElementById('functie');
+var eSexe 			= document.frmPersoneelslid.sexe;
+var eLeeftijd 		= document.getElementById('leeftijd');
+var eGehuwd 		= document.getElementById('gehuwd');
+var eKind1			= document.getElementById('kind1');
+var eKind2			= document.getElementById('kind2');
+var eKind3			= document.getElementById('kind3');
+//andere
+var eOutput			= document.getElementById('output');
+var eTeller			= document.getElementById('teller');
+
+//=======KEUZELIJST OPVULLEN ===================================
+
+
+
+
+}
+
+</script>
+</head>
+	<body>
+		<h1>JS PF project: Personeel</h1>
+		<p>
+			Dit project leert je omgaan met <code>Array</code>s en <code>Object</code>variabelen die gebruikt worden om  gegevens in op te slaan. <br>Daarnaast binden we ook knoppen aan event handlers.<br>
+			Deze pagina bevat een kleine databank van personen die we kunnen tonen en waar we aan kunnen toevoegen.
+		</p>
+		<h3>Opdracht:</h3>
+		<p>
+			<cite>Om een nieuw personeelslid toe te voegen, vul de nodige gegevens in</cite>
+		</p>
+		<form name="frmPersoneelslid" action="" method="get">
+			<p>
+				* verplicht veld
+			</p>
+			<div>
+				<label for='naam'>naam *</label>
+				<input type="text" name="naam" id="naam">
+				<label class="msg"></label>
+			</div>
+			<div>
+				<label for='leeftijd'>leeftijd *</label>
+				<input type="text" name="leeftijd" id="leeftijd">
+				<label class="msg"></label>
+			</div>
+			<div>
+				<label for='functie'>functie *</label><select name="functie" id="functie"></select><label class="msg"></label>
+			</div>
+			<div>
+				<label for='sexe'>sexe *</label>man
+				<input type="radio" name="sexe" id="man"  value="m">
+				vrouw
+				<input type="radio" name="sexe" id="vrouw" value="v">
+				<label class="msg"></label>
+			</div>
+			<div>
+				<label for='gehuwd'>gehuwd?</label>
+				<input type="checkbox" name="gehuwd" id="gehuwd">
+				<label class="msg"></label>
+			</div>
+			<div>
+				<label for='kind1'>kind1</label>
+				<input type="text" name="kind1" id="kind1">
+				<label class="msg"></label>
+			</div>
+			<div>
+				<label for='kind2'>kind2</label>
+				<input type="text" name="kind2" id="kind2">
+				<label class="msg"></label>
+			</div>
+			<div>
+				<label for='kind3'>kind3</label>
+				<input type="text" name="kind3" id="kind3">
+				<label class="msg"></label>
+			</div>
+			<div>
+				<label></label>
+				<button id= "toevoegen" type="button">
+					gegevens toevoegen
+				</button><label class="msg"> <span id="teller">3</span> personeelsleden in de databank</label>
+			</div>
+		</form>
+		<button id= "personeelsLijst" type="button">
+			toon personeel
+		</button>
+		<div id="output"></div>
+	</body>
+</html>

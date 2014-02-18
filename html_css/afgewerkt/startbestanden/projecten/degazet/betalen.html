@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="css/gazet.css" rel="stylesheet">
+<link href="css/forms.css" rel="stylesheet">
+<title>De Gazet</title>
+</head>
+<body class="abonneren">
+<div id="topbanner">
+  <div class="wikkel">
+    <nav id="topmenu">
+      <ul>
+        <li><a href="index.html">Nieuws</a></li>
+        <li><a href="dating.html">Dating</a></li>
+        <li><a href="culinair.html">Culinair</a></li>
+        <li><a href="webshop.html">Webshop</a></li>
+      </ul>
+      
+    </nav>
+  </div>
+</div>
+<div class="wikkel cf">
+  <div class="inhoud">
+    <header>
+      <nav id="extramenu">
+        <ul>
+          <li>&nbsp;</li>
+        </ul>
+      </nav>
+      <h1 id="logo"><a href="index.html"  title="De Gazet met het allerlaatste nieuws">De Gazet</a></h1>
+      <nav id="abonneermenu" class="cf">
+        <ul class="breadcrumbs">
+          <li class="actief"><a href="abonneren.html">Soort abonnement</a></li>
+          <li class="actief"><a href="gegevens.html">Uw gegevens</a></li>
+          <li class="actief"><a href="bevestig.html">Bevestigen</a></li>
+          <li class="actief"><a href="#">Betalen</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!--span3 section-->
+    
+    <section class="span5">
+      <article>
+        <div id="abonnementkeuzes" class="bt3 cf">
+          <h2>Betalingswijze en Facturatie</h2>
+          <div>
+            <input type="radio" id="kredietkaart" value="kredietkaart"  name="betaalwijze"  />
+            <label>via Kredietkaart</label>
+            <div>
+              <form>
+                <div>
+                  <label for="cardholder">Naam kaarthouder:</label>
+                  <input type="text" id="cardholder" name="cardholder"  title="de naam die op de kredietkaart staat"  required >
+                </div>
+                <div>
+                  <label for="cardnumber" >Kaartnummer:</label>
+                  <input type="text" id="cardnumber" name="cardnumber"  title="de naam die op de kredietkaart staat"  required >
+                </div>
+                <div>
+                  <label for="expdate" >Vervaldatum (mm/jjjj):</label>
+                  <select id="expdatemonth" name="expdatemonth"  title="maand van de vervaldatum van kaart"  required >
+                    <option value="">...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                  </select>
+                  <select id="expdateyear" name="expdateyear"  title="jaar van de vervaldatum van kaart"  required >
+                    <option value="">...</option>
+                    <option>2012</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="card_verification_code" >Kaartnummer:</label>
+                  <input type="text" id="card_verification_code" name="card_verification_code"  title="verificatiecode"  required >
+                </div>
+              </form>
+            </div>
+          </div>
+          <div>
+            <input type="radio" id="overschrijving" value="overschrijving"  name="betaalwijze"  />
+            <label>via overschrijving</label>
+          </div>
+          <div>
+            <input type="radio" id="domicile" value="domicile"  name="betaalwijze"  />
+            <label>via domicili&euml;ring</label>
+          </div>
+          <div>
+            <input class="blauw" type="button" value="Betalen" id="betalen"/>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!--span5 section-->
+    
+    <section class="span5 bt3" >
+      <p>Voor verdere assistentie en hulp betreffende de aboonementen kunt u het gratis nummer 0800 445566 bellen. <br>
+        U vind ook help bij de <a href="#">Veel Gestelde Vragen en Voorwaarden</a> en <a href="#">condities</a></p>
+    </section>
+  </div>
+  <!--einde content--> 
+</div>
+<!--einde wikkel-->
+<footer>
+  <div class="wikkel">De Gazet is een oefening voor HTML &amp; CSS</div>
+</footer>
+</body>
+</html>

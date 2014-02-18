@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* 
+ORIGINEEL menu.css voor dropdownmenu 
+
+gebruikt enkel CSS3 
+	box-shadow, gradients :  	IE9 OK
+	transition: 				IE9	NOK
+*/
+
+/* hoofdmenu styles */
+.hor_dropdown_menu {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1em;
+  /*16px*/
+
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  background: #e570e7;
+  background: -moz-linear-gradient(top, #e570e7 0%, #c85ec7 47%, #a849a3 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e570e7), color-stop(47%, #c85ec7), color-stop(100%, #a849a3));
+  background: -webkit-linear-gradient(top, #e570e7 0%, #c85ec7 47%, #a849a3 100%);
+  background: -o-linear-gradient(top, #e570e7 0%, #c85ec7 47%, #a849a3 100%);
+  background: -ms-linear-gradient(top, #e570e7 0%, #c85ec7 47%, #a849a3 100%);
+  background: linear-gradient(to bottom, #e570e7 0%, #c85ec7 47%, #a849a3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e570e7', endColorstr='#a849a3', GradientType=0);
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+}
+.hor_dropdown_menu li {
+  float: left;
+  position: relative;
+  margin: 0;
+  list-style: none;
+}
+.hor_dropdown_menu li:hover > a {
+  background: #fb83fa;
+  background: -moz-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fb83fa), color-stop(100%, #e93cec));
+  background: -webkit-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background: -o-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background: -ms-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background: linear-gradient(to bottom, #fb83fa 0%, #e93cec 100%);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=0); */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb83fa', endColorstr='#e93cec', GradientType=0);
+}
+.hor_dropdown_menu li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+.hor_dropdown_menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.6em 1.25em;
+}
+.hor_dropdown_menu .actief > a {
+  background: #fb83fa;
+  background: -moz-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fb83fa), color-stop(100%, #e93cec));
+  background: -webkit-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background: -o-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background: -ms-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background: linear-gradient(to bottom, #fb83fa 0%, #e93cec 100%);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=0); */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb83fa', endColorstr='#e93cec', GradientType=0);
+}
+.hor_dropdown_menu ul {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+  width: 12em;
+  background: #D566D5;
+  -moz-transition: opacity .25s linear, visibility .1s linear .1s;
+  -webkit-transition: opacity .25s linear, visibility .1s linear .1s;
+  -o-transition: opacity .25s linear, visibility .1s linear .1s;
+  transition: opacity .25s linear, visibility .1s linear .1s;
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+}
+.hor_dropdown_menu ul li {
+  float: none;
+  margin: 0;
+}
+.hor_dropdown_menu ul li:hover > ul {
+  /*enkel voor extra transition effectje subsub: beweging left*/
+
+  left: 11em;
+}
+.hor_dropdown_menu ul ul {
+  top: 0.6em;
+  left: 13em;
+  -moz-transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+  -webkit-transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+  -o-transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+  transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+}

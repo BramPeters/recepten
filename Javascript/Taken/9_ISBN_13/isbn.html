@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>JS PF project: een ISBN nummer valideren</title>
+
+        <style media="screen" type="text/css">
+
+            div.vb{
+                background-color:#CCFFCC;
+                padding:1em;
+            }
+            label.error{
+                display:none;
+                color:red;
+            }        
+
+        </style>
+        <script type="text/javascript">
+
+            /**** OPLOSSING ISBN10 zonder taak -> met taak (ISBN13) zie JS_taakbasis_isbn13_afgewerkt.html ****/
+            //globals
+            var divOutput;
+            var isbnVeld;
+            var frm;
+            var arrISBN = ['978-90-209-7557-4', '978-2-87386-537-5', '0-596-00048-0', '0 9579218 4 3', '90-430-0508-8', '90-430-0779-X', '978-90-209-7455-3', '048629868X', '0_140009_930', '978-0552139823', '978-0-596-51774-8', '978-1-59059-908-2'];
+
+            //*******************************
+            window.onload = function() {
+
+                divOutput = document.getElementById('output');
+                labelFout = document.getElementById('fout');
+                frm = document.frmISBN;
+                isbnVeld = frm.kw; //name kw noodzakelijk voor isbndb.com
+
+
+                //lijst testwaarden
+                var strNummers = "";
+                var check = "";
+                for (var i = 0; i < arrISBN.length; i++) {
+                    check = arrISBN[i];
+                    checkisbn = isValidISBN(check);
+                    if (checkisbn === true){
+                    strNummers += arrISBN[i] +" Is een geldig isbn" + "<br />";
+                    }else{ strNummers += arrISBN[i] +" Is GEEN geldig isbn" + "<br />";}
+                }
+                divOutput.innerHTML = strNummers;
+                isbnVeld.onfocus = function() {
+                    labelFout.style.display = "none";
+                };
+
+                //event handler voor form.submit onderscheppen
+                frm.onsubmit = function() {
+                    var isbn = isbnVeld.value;
+                    var geldig = isValidISBN(isbn);
+                    console.log("waarde is een geldig isbnnummer: " + geldig);
+                    if (geldig === false) {
+                        labelFout.style.display = "inline";
+                    } 
+                    return geldig;
+                };
+
+                
+            };
+
+            function isValidISBN(isbn) {
+                isbn = isbn.replace(/\s/gi, ""); //verwijder spaties
+                isbn = isbn.replace(/\-/gi, ""); //verwijder koppeltekens
+                var l = isbn.length;
+                if (l === 10) {
+                    var basis9 = isbn.substr(0, 9);
+                    var control = isbn.substr(9);
+                    if (!isNaN(basis9)) {
+                        control = control.replace("X", "10", "gi");
+                        control = parseInt(control);
+                        if (!isNaN(control)) {
+                            var sum = 0;
+                            for (var i = 0; i < basis9.length; i++) {
+                                sum += parseInt(basis9.charAt(i)) * (i + 1);
+                            }
+                            var modulo = sum % 11;
+                            return(control === modulo);
+                            //return true;
+
+                        } else {
+                            return false;
+                        }
+
+                    } else {
+                        return false;
+                    }
+                } else {
+                    if (l === 13) {
+                        var basis12 = isbn.substr(0, 12);
+                        var control = isbn.substr(12);
+                        if (!isNaN(basis12)) {
+                            control = parseInt(control);
+                            if (!isNaN(control)) {
+                                var sum = 0;
+                                for (var i = 0; i < basis12.length; i++) {
+                                    evencheck = i % 2;
+                                    if (evencheck === 1) {
+                                        sum += parseInt(basis12.charAt(i));
+                                    }
+                                    else {
+                                        sum += (parseInt(basis12.charAt(i)) * (3));
+                                    }
+                                }
+                                var mod = sum % 10;
+                                var modulo = 10 - mod;
+                                return(control === modulo);
+                                //return true;
+
+
+                            } else {
+                                return false;
+                            }
+                        } else {
+                            return false;
+                        }
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+            
+            //
+        </script>
+    </head>
+    <body>
+        <h1>JS PF project: een ISBN nummer valideren</h1>
+        <form name="frmISBN" action="http://isbndb.com/search-all.html" method="get">
+            <p>Vul een ISBN-10 of ISBN-13 nummer in: <input type="text" name="kw" /><input type="submit" value="Valideer"/>
+                <label class="error" id="fout">ongeldig ISBN nummer</label></p>
+        </form>
+        <p>Enkele testwaarden (geldig en ongeldig):</p>
+        <div id="output"></div>
+        <p>Geldige isbn-nummers worden doorgestuurd naar isbndb.com. Dat betekent niet dat ze gevonden zullen worden. Ongeldige nummers worden geweigerd.</p>
+
+    </body>
+</html>

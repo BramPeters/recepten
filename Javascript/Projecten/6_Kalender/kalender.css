@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* kalender CSS Document */
+
+
+table.kalender{
+		font-family:Geneva, Arial, Helvetica, sans-serif;
+		font-size:10px;
+		font-weight:bold;
+		color:#FFF;
+		border-collapse:collapse;
+		empty-cells:show;
+		border:1px solid silver;
+		margin:1px;
+		background-color:#666;
+		
+	}
+
+table.kalender td, table.kalender th {
+		border:1px solid #39C;
+		width:18px;
+		height:18px;
+		margin:0;
+		padding:1px;
+		text-align:center;
+		vertical-align:middle;
+	}
+
+.vandaag{
+	background-color:orange;
+	}
+.verjaardag{
+	background-color:darkorchid;
+	}

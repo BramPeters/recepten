@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Webontwikkelaar taak</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="fortawesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="alert alert-success">
+            <div class="container-fluid">
+                <form class="form-inline pull-right" method="get" action="/search" id="login">
+                    <label for="username">username</label>
+                    <input type="text" name="username" id="username">
+                    <label for="pw">wachtwoord</label>
+                    <input type="password" name="pw" id="pw">
+                    <input type="submit" value="aanmelden" id="submit">
+                </form>
+            </div>   
+        </header>
+        <section id="intro">
+            <div class="container-fluid">
+                <div id="logo" class="pull-left"><a href="webontwikkelaar_home.html"><img src="../img/vdab_200.png"></a></div>
+                <nav id="hoofdmenu" class="navbar pull-right">
+                    <div class="navbar-inner">
+                    <ul class="nav">
+                        <li class="active"><a href="webontwikkelaar_wat.html">Wat we doen</a></li>
+                        <li><a href="webontwikkelaar_wie.html">Wie we zijn</a></li>
+                        <li><a href="webontwikkelaar_portfolio.html">Portfolio</a></li>
+                        <li><a href="webontwikkelaar_contact.html">Contact</a></li>
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- DEEL 2-->
+        <section id="wat" class="well">
+
+            <div class="container-fluid">
+                <img id="Foto1" src="../img/php_code.jpg" class="img-polaroid pull-right">
+                <div id="OpleidingInfo" class="clearFix">
+
+                    <h1>Wat we doen</h1>
+                    <p>vdab opleidingen zijn gericht op het vinden van werk in die richting.</p>
+                    <p>Zowat alle IT functies zijn nog steeds knelpuntenberoepen waarvoor men moeilijk de geschikte vrouw/man vindt. Daarom zijn IT opleidingen pragmatisch en gefocussed op wat je nodig hebt om de job te kunnen doen.</p>
+                </div>
+            </div>
+        </section>
+        <section id="opleidingen">
+            <div class="container-fluid">
+                <div id="phpontwikkelaar" class="row-fluid">
+                    <h2 class="span12"><i class="icon-leaf"></i>PHP Ontwikkelaar</h2>
+                </div>
+                <div class="row-fluid">
+                    <article id="nws_123" class="span4">
+                        <h3>Server-side</h3>
+                        <div>
+                            <p>Een PHP ontwikkelaar gebruikt <a href="http://www.php.net">PHP</a> om server-side scripts te maken die dynamisch webpagina's genereren. Je onderzoekt de wensen van de gebruikers en ontwerpt en onderhoudt het programma, test het resultaat en voorziet het van de nodige documentatie.</p>
+                        </div>
+                    </article>
+                    <article id="nws_789" class="span4">
+                        <h3>CMS</h3>
+                        <div>
+                            <p>PHP wordt zowel door grote als kleine bedrijven gebruikt, maar is specifiek gericht op webapplicaties. Enkele gekende PHP toepassingen (dikwijls samen met MySql) zijn <a href="http://www.wordpress.com">WordPress</a>, <a href="http://www.Drupal.com">Drupal</a>, <a href="http://www.joomla.org">Joomla</a> en <a href="http://www.mediaWiki.com">mediaWiki</a>. PHP leent zich tot het ontwikkelen van e-commerce applicaties, Content-management systemen, blog-sites en andere.</p>
+                        </div>
+
+                    </article> 
+                    <article id="nws_456" class="span4">
+
+                        <h3>Open Source</h3>
+                        <div>
+                            <p>PHP is Open Source en geniet zo van de ondersteuning en documentatie van de development community. Het is ook gratis software.<br>
+                                PHP heeft een wat lagere instapdrempel dan alternatieven zoals Java of .Net, maar voldoet evenzeer aan alle vereisten voor de professionele programmeur.</p>
+                        </div>
+
+                    </article>
+                </div>
+                <div id="frontendontwikkelaar" class="row-fluid">
+                    <h2 class="span12"><i class="icon-flag"></i>Front-end ontwikkelaar</h2>
+                </div>
+                <div class="row-fluid">
+                    <article id="nws_321" class="span4" >
+                        <h3>Perfectionist</h3>
+                        <div>
+                            <p>Een front-end webontwikkelaar is de man/vrouw die ervoor zorgt dat de gegevens die van de webserver komen op een goede manier getoond worden in de browser van de gebruiker.</p>
+                            <p>Hij is een meester op gebied van client-side scripting, en kan in geen tijd met widgets uit een Javascript library de interactiviteit van een pagina vergroten. </p>
+                        </div>
+                    </article>
+                    <article id="nws_654" class="span4">
+                        <h3>Client-side</h3>
+                        <div>
+                            <p>Met zijn kennis van <code>HTML</code>, <code>CSS</code> en <code>Javascript</code> is hij in staat de dromen van de webdesigner en de eisen van de back-end developer met elkaar te verzoenen, daar precies ligt zijn grote strekte. Hij blijft uiteraard op de hoogte van het allernieuwste in HTML5, CSS3 en Javascript.</p>
+                            <p>Alhoewel hij enige kennis heeft van de 'back-end', de server-side scripts, is hij niet diegene die de gegevens uit de database produceert met PHP, Java of VB.Net. Hij begrijpt echter heel goed hoe een <code>XML</code> of <code>JSON</code> bestand in elkaar zit en hoe hij ze kan gebruiken in zijn zelfgeschreven AJAX scripts.</p>
+                        </div>
+                    </article>   
+                    <div class="span4">
+                        <img id="Foto2" src="../img/mockup1.jpg" class="img-polaroid">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--einde inhoud-->
+        <!--footer--> 
+        <footer class="well">
+            <div class="container-fluid" >
+                <div class="bottom clearFix">
+                    <div class="wikkel clearFix">
+                        <nav id="footer" class="clearfix">
+
+                            <p>&copy; vdab | <a href="webontwikkelaar_contact.html">mail ons</a> | maandag 4 februari 2013</p>
+                            <p id="footertext">Dit is een oefenpagina voor de informaticaopleidingen van de vdab:  het is mogelijk dat de informatie op deze pagina verouderd en niet meer accuraat is. De hyperlinks kunnen naar niet bestaande URL's verwijzen.</p>
+                            <!--einde footer--> 
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

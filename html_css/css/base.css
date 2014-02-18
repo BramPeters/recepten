@@ -1,0 +1,492 @@
+@charset "utf-8";
+
+/********HELPER CLASSES PHONE ONLY**************/
+.phone-only{
+    display:block;
+}
+.showalways{
+    display:block;
+}
+.desktop{
+    display:none;
+}
+
+/*EINDE HELPER CLASSES PHONE*/
+
+
+/********** BACKGROUND*********************************************/
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Grande', 'Lucida Grande', Verdana, Arial;
+    font-size: 12px;
+}
+.wikkel{
+
+    background-color: white;
+    background-color: white;
+
+    -moz-box-shadow: 0 0 5px 5px #4B0082;
+    -webkit-box-shadow: 0 0 5px 5px #4B0082;
+    box-shadow: 0 0 5px 5px #4B0082;
+}
+
+.Middenstuk{
+    width: 100%;
+    margin: 20px;
+    /*margin-left: 100px;*/
+}
+
+#kop{
+
+    height:12em;
+
+}
+
+#kop h1{
+    color:#4B0082;
+    text-align: center;
+}
+h1{
+    font-size: 3.5em;
+    font-weight: bold;
+}
+h1{
+    color:#4B0082;
+}
+
+h2{
+    font-size: 3.5em;
+    font-weight: bold;
+}
+h2{
+    color:#4B0082;
+}
+div p{
+    text-align: center;
+}
+#footer{
+    margin-top:2em;
+    margin-bottom: 2em;
+}
+#footer p{
+    color:#4B0082;
+    text-align: center;
+}
+.wikkel{
+    margin-top: 4em;
+    margin-bottom:4em;
+
+}
+
+/********** TOPMENU GSM*********************************************/
+#kop{
+    height:100%;
+    width:100%;
+}
+#hoofdmenu{
+    list-style: none;
+    font-size: 0.875em;
+    font-weight: bold;
+    padding:0;
+    width:auto;
+}
+#hoofdmenu ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+#hoofdmenu li{
+    display:block;
+    margin:0;
+    padding: 0.4286em 1.1428em;
+    border-bottom: 1px solid silver;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    background-color: #8B668B;
+    text-align: center;
+
+}
+#hoofdmenu .actief {
+    background-color:#8b2374;
+}
+
+#hoofdmenu li:first-child{
+    border-top:1px solid silver;
+}
+
+#hoofdmenu div{
+    width:100%;
+    height:100%;
+}
+#hoofdmenu a{
+    display: inline;
+    cursor: pointer;
+    width:7em;
+    padding:0.2em;
+    font-size:1.2em;
+    font-weight:bold;
+    color:lightgrey;
+    text-decoration:none;
+    width:100%;
+    height:100%;
+}
+#hoofdmenu li:hover{
+    color:purple;
+    background-color: #4B0082;
+}
+
+/********** TOPMENU DESKTOP*********************************************/
+@media screen and (min-width:900px){
+    /********HELPER CLASSES PHONE ONLY**************/
+    .phone-only{
+        display:none;
+    }
+    .desktop{
+        display:block;
+    }
+    .showalways{
+        display:block;
+    }
+
+    /*EINDE HELPER CLASSES PHONE*/
+    #kop{
+        border-bottom: 2px solid #4B0082;
+        margin-bottom: 2em;
+        -webkit-border-radius: 0px 0px 12px 12px;
+        border-radius: 0px 0px 12px 12px;
+        -moz-border-radius: 0px 0px 12px 12px;
+    }
+    .wikkel{
+        width: 70%;
+        margin:0 auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        min-width: 1000px;
+        background-color: dimgrey;
+        background-color: #a069d6;
+
+        -moz-box-shadow: 0 0 5px 5px #4B0082;
+        -webkit-box-shadow: 0 0 5px 5px #4B0082;
+        box-shadow: 0 0 5px 5px #4B0082;
+    }
+
+
+
+    #hoofdmenu {
+        clear:both;
+        text-align:right;
+        float:right;
+        margin-bottom: 5px;
+    }
+    #hoofdmenu ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+    #hoofdmenu ul li{display:inline;}
+    #hoofdmenu ul li a {
+        display:inline-block;
+        width:7em;
+        padding:0.2em;
+        font-size:1.2em;
+        font-weight:bold;
+        color:lightgrey;
+        text-decoration:none;
+    }
+    #hoofdmenu ul li a:hover, #hoofdmenu ul li a:active{
+        color:lightgray;
+        text-decoration: none;
+    }
+    #hoofdmenu li:nth-child(1n+0){
+        border-top:1px solid silver;
+    }
+}
+
+/*EINDE TOPMENU*/
+
+
+/********** LINKERKOLOM: NIEUWS*********************************************/
+
+#Nieuws{
+    float:right;
+    border-left: 2px solid silver;
+    background-color: #8d41d6;
+    width:20%;
+    margin-left: 3%;
+}
+#Nieuws h2{
+    margin: 10px 10px 0px 10px;
+    color:black; /*4B0082*/
+    font-size:1.2em;
+
+}
+
+#Nieuws article{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 2px solid darkgrey;  
+    margin: 10px 10px 0px 10px;
+}
+#Nieuws article h3{
+
+    color:BLACK;
+}
+
+.artwrap{
+    background:
+        -moz-radial-gradient(0 100%, circle, rgba(128,0,128,0) 14px, #800080 15px),
+        -moz-radial-gradient(100% 100%, circle, rgba(128,0,128,0) 14px, #800080 15px),
+        -moz-radial-gradient(100% 0, circle, rgba(128,0,128,0) 14px, #800080 15px),
+        -moz-radial-gradient(0 0, circle, rgba(128,0,128,0) 14px, #800080 15px);
+    opacity: 0.5;
+    background:
+        -webkit-radial-gradient(0 100%, circle, rgba(128,0,128,0) 14px, #800080 15px),
+        -webkit-radial-gradient(100% 100%, circle, rgba(128,0,128,0) 14px, #800080 15px),
+        -webkit-radial-gradient(100% 0, circle, rgba(128,0,128,0) 14px, #800080 15px),
+        -webkit-radial-gradient(0 0, circle, rgba(128,0,128,0) 14px, #800080 15px);
+    opacity: 0.5;
+}
+
+.artwrap{
+    background-position: bottom left, bottom right, top right, top left;
+    -moz-background-size: 50% 50%;
+    -webkit-background-size: 50% 50%;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.artwrap div{
+    padding: 10px;
+
+}
+/********** EINDE LINKERKOLOM: NIEUWS*********************************************/
+
+/*test menu*/
+.oef{
+    border: 2px solid black;
+    text-align: center;
+    -webkit-border-radius: 12px;
+    border-radius:12px;
+    -moz-border-radius:12px;
+    height:7em;
+    margin-bottom:3em; 
+    background-color: #5e0dac;
+}
+.oef a{
+    margin-top:.5em;
+}
+
+.oef p{
+    margin-left:1em;
+    margin-top: -5em;
+    color: black;
+}
+
+
+/*pdf make up*/
+#pdf{
+    height:80em;
+    margin-top:2em;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+#pdfdownload{text-align: center;}
+#pdfdownload a{
+    color:white;
+    text-decoration:none;
+    margin-left: 50%;
+
+}
+
+#pdfdownload a:hover{
+    color:#4B0082;
+    text-decoration:underline;   
+}
+
+
+
+
+
+/**************CONTACT PAGINA*************************************************/
+
+/*CONTACT INFO*/
+.contactInfo{
+    padding-top: 3em;
+        padding-bottom:3em;
+}
+#contact1{
+    color:lightgrey;
+    background-color:#9400D3;
+    font-weight: bold;
+    opacity:0.5;
+    width:14em;
+    padding:2em;
+    margin-left:28%;
+    margin-top: 1%;
+}
+#contact2{
+    color:lightgrey;
+    font-weight: bold;
+    background-color:#4B0082;
+    opacity:0.5;
+    width:14em;
+    padding:2em;
+    margin-left:28%;
+
+}
+#contact3{
+    color:lightgrey;
+    font-weight: bold;
+    background-color:blueviolet;
+    opacity:0.5;
+    width:14em;
+    padding:2em;
+    margin-left:44%;
+    margin-top:-18.6%;
+        padding-top: 6.6em;
+        padding-bottom:6.75em;
+
+}
+
+
+
+
+/*CONTACT FORM*/
+.linkerhoeken:before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  z-index: 9;
+  background: #a069d6;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari and Chrome */
+  -o-transform: rotate(45deg); /* Opera */
+  -moz-transform: rotate(45deg); /* Firefox */
+}
+.linkerhoeken:after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  z-index: 9;
+  background: #a069d6;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari and Chrome */
+  -o-transform: rotate(45deg); /* Opera */
+  -moz-transform: rotate(45deg); /* Firefox */
+}
+
+.rechterhoeken:before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  z-index: 9;
+  background: #a069d6;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari and Chrome */
+  -o-transform: rotate(45deg); /* Opera */
+  -moz-transform: rotate(45deg); /* Firefox */
+}
+.rechterhoeken:after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  z-index: 9;
+  background: #a069d6;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari and Chrome */
+  -o-transform: rotate(45deg); /* Opera */
+  -moz-transform: rotate(45deg); /* Firefox */
+}
+
+
+
+.contact{
+    position: relative;
+    margin-left: 28%;
+        margin-right:auto;
+        margin-top: 5em;
+        width:35em;
+        margin-bottom: 3em;
+        padding: 2em;
+        background-color: purple;
+        opacity: 0.6;
+}
+.contact div{
+    margin:5px;  
+
+}
+.contact div label{
+    float:left;
+    width:8em;
+}
+.contact div input[type="text"],.contact div input[type="email"]{
+    margin-left:7%;
+    width:18em;
+}
+.contact div input[type="submit"]{
+    margin-left:14%;
+}
+
+form label.labelCheckbox{
+    float:none;
+    display:inline;
+    zoom:1;
+    padding:0;
+    text-align:left;
+}
+.contact input[type="checkbox"].inline{
+    margin-left:0;
+}
+.contact #verzenden{
+    background-color: #4B0082;
+    border:solid white 1px;
+    color:white;
+    padding:10px;
+}
+
+#vragen{margin-left:7%; width:18em;height:6em;}
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
+/*CLEARFIX*/
+.clearFix:before, .clearFix:after{
+    content: " ";
+    display: table;
+}
+.clearFix:after{
+    clear:both;
+}
+.clearfix{
+    *zoom:1;
+}

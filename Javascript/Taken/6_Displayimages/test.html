@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS PF taak: TagCloud</title>
+        <script>
+            window.onload = function() {
+                screenlinks = document.getElementsByClassName('screenLink');
+                var index = 0;
+                var indices;
+                for (; index < screenlinks.length; index++) {
+                    addHandlerNative(index, screenlinks[index]);
+                }
+
+                function addHandlerNative(index, element) {
+                    element.onclick = function() {
+                        screenshots = document.getElementsByClassName('screenshot');
+                        screenshots[index].style.display = 'none';
+                    };
+                }
+            };
+        </script>
+
+        <style>
+            .screenshot {
+                display:'block';
+                height: 20px;
+                width: 50px;
+                background-color: #000000;
+                margin: 10px;
+                font-family:"comic-sans";
+                color: #FFF;
+            }
+            .screenLink {
+                font-family: wingdings;
+            }
+            .screenLink:hover {
+                color: #777777;
+                cursor:pointer;
+            }
+        </style>
+
+
+    <body> 
+        <a class='screenLink'>hoverme</a>
+        <a class='screenLink'>hoverme</a>
+        <a class='screenLink'>hoverme</a>
+        <a class='screenLink'>hoverme</a>
+
+        <div class='screenshot'>WHY</div>
+        <div class='screenshot'>DID</div>
+        <div class='screenshot'>YOU</div>
+        <div class='screenshot'>CLEAR</div>
+    </body>
+    <!-- why is comic sans blocked T.T.. ohwait "" ahahaha, me too -->

@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM Attributen en methods uitgetest</title>
+<style>
+table.flashy {
+	table-layout:fixed;
+	width:400px;
+	empty-cells:show;
+	border:2px solid #433025;
+	border-collapse:collapse;
+}
+table.flashy th {
+	border: 1px solid gray;
+	text-align:center;
+	vertical-align:central;
+	background-color:#D8346A;
+}
+table.flashy td {
+	border: 1px solid gray;
+	text-align:center;
+	vertical-align:central;
+}
+/*
+table.flashy tr.oneven {background-color: #FFD88A;color:#3369D7}
+table.flashy tr.even {background-color: #FF8AB0;color:#433025}
+*/
+table.flashy tr:nth-child(even) {background-color: #FF8AB0;color:#433025}
+table.flashy tr:nth-child(odd) {background-color: #FFD88A;color:#3369D7}
+
+</style>
+
+<script>
+
+window.onload = function(){
+	
+	
+	
+	//====opdracht1: voeg dynamisch een item "koffie" toe achteraan de boodschappenlijst
+	
+	//	var secBoodschappen 	= document.getElementById('huishouden');
+	//	var lijstBoodschappen 	= secBoodschappen.getElementsByTagName('ul')[0];
+	
+	//1bis: met queryselector
+	var lijstBoodschappen 	= document.querySelector('#huishouden ul');
+	var nieuwItem			= document.createElement('li');
+	var tekst				= document.createTextNode('koffie');
+	nieuwItem.appendChild(tekst);
+	lijstBoodschappen.appendChild(nieuwItem);
+		
+	
+	
+	//====opdracht 2: achtergrond kleuren via inline style
+	//2bis: gebruik een bestaande CSS class en pas die toe
+	//2bisbis: scripting is onnodig : gebruik de juiste CSS selectors in je stylesheet!
+	
+	/*
+	var evenRijen 			= document.querySelectorAll('tbody tr:nth-child(odd)');
+	var onevenRijen 		= document.querySelectorAll('tbody tr:nth-child(even)');
+	for (i=0;i<evenRijen.length;i++){
+		//blauw op roze
+		//evenRijen[i].style.backgroundColor 		= "#FFD88A";
+		//evenRijen[i].style.color 				= "#3369D7";
+		evenRijen[i].setAttribute("class","even");
+		}
+	for (i=0;i<onevenRijen.length;i++){
+		//bruin op geel
+		//onevenRijen[i].style.backgroundColor 	= "#FF8AB0";
+		//onevenRijen[i].style.color 				= "#433025";
+		onevenRijen[i].setAttribute("class","oneven");
+		}
+	*/
+	
+	//====opdracht 3: wis knop verwijdert rij
+	
+	var wisLinks = document.querySelectorAll('a.wislink');
+	//eventhandler
+	for (i=0;i<wisLinks.length;i++){
+		wisLinks[i].addEventListener('click', verwijderRij, false);
+		}
+	
+	function verwijderRij(e){
+		/*
+		eventhandler: verwijdert de huidige produktrij
+		*/
+		e.preventDefault();
+		var antwoord = window.confirm("dit produkt verwijderen?");		//boolean
+		if (antwoord === true){
+			//console.log('verwijder OK')
+			//in welke tabelrij zit deze link?
+			var rij 	= this.parentNode.parentNode;
+			var tbodie 	= rij.parentNode;
+			
+			tbodie.removeChild(rij);
+			
+			
+			}
+		
+		}
+	
+	
+}//einde onload
+	
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <header>
+    <hgroup>
+      <h1>DOM Attributen en methods uitgetest</h1>
+      <h2>Demos van de DOM in het theorieboek (editie 2012)</h2>
+    </hgroup>
+  </header>
+  <article>
+    <section id="huishouden">
+      <h3>Boodschappenlijst</h3>
+      <ul>
+        <li>brood</li>
+        <li>margarine</li>
+        <li>eieren</li>
+        <li>spek</li>
+      </ul>
+      <h3>Klusjeslijst</h3>
+      <ul id="klusjes">
+        <li>gordijnen strijken</li>
+        <li>schilderen
+          <ul>
+            <li>keukenvenster</li>
+            <li>garagedeur</li>
+          </ul>
+        </li>
+        <li>mol vangen</li>
+      </ul>
+    </section>
+    <section id="wishlist">
+      <h3>Wishlist</h3>
+      <table class="flashy">
+        <thead>
+          <tr>
+            <th scope="col">Wat</th>
+            <th scope="col">prijs</th>
+            <th scope="col">foto</th>
+            <th scope="col">wissen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>iPad</td>
+            <td>450</td>
+            <td><img src="../images/ipad.jpg" width="80" height="80" alt="iPad"></td>
+            <td><a href="#" class='wislink'>wis</a></td>
+          </tr>
+          <tr>
+            <td>boek</td>
+            <td>34</td>
+            <td><img src="../images/book.jpg" width="80" height="80" alt="book"></td>
+            <td><a href="#" class='wislink'>wis</a></td>
+          </tr>
+          <tr>
+            <td>voetbal</td>
+            <td>120</td>
+            <td><img src="../images/football.jpg" width="80" height="80" alt="voetbal"></td>
+            <td><a href="#" class='wislink'>wis</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </article>
+  <footer>Copyright vdab</footer>
+</div>
+</body>
+</html>

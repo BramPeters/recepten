@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS PF taak: Taalkeuze</title>
+        <script type="text/javascript" src="cookies.js"></script>
+        <script type="text/javascript" src="taal2.js"></script>
+        <style media="screen" type="text/css">
+            em {
+                font-style:normal;
+                font-weight:bold;
+                color:#906;
+            }
+            #vlaggen{
+                margin-left: 5em;
+                height:10em;
+            }
+            img {
+                float:left;
+                margin: 2em;
+                background-color: lightsalmon;
+                padding:2em;
+            }
+            h3 {
+                clear:both;
+            }
+            #tagContainer {
+                position:relative;
+                background-color:#CFF;
+                margin:1em;
+                padding:0;
+                width: 1000px;
+                height:800px;
+                overflow:hidden;
+                border:2px solid silver;
+            }
+            span.tag {
+                position:absolute;
+                top:0;
+                left:0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript PF taak: Taalkeuze</h1>
+        <h3>Opdracht: </h3>
+        <ul>
+            <li>Maak een intropagina waar de gebruiker d.m.v.<em>hyperlinks</em> een definitieve taalkeuze kan maken.</li>
+            <li>Door op deze link te klikken wordt hij naar een taalpagina gebracht in de respectievelijke taal.</li>
+            <li>Bij een tweede bezoek krijgt de gebruiker de intropagina niet meer te zien.</li>
+            <li>Op elk van de pagina's is er echter een link voorzien die hem kan terugbrengen naar de intropagina.</li>
+            <li>Voorzie ook een hyperlink/knop <em>vernietig cookie</em> voor testing</li>
+        </ul>
+        <div id='vlaggen'>
+            <a href="nederlands.html" id="nl" class="keuze"><img src="images/be.png" alt="Nederlands"></a>
+            <a href="francais.html" id="fr" class="keuze"><img src="images/fr.png" alt="Frans"></a>
+            <a href="english.html" id="en" class="keuze"><img src="images/gb.png" alt="Engels"></a>
+        </div>
+        <div id="output">Welkom beste bezoeker. Kies uw taal door op een vlaggetje te klikken.</div>
+    </body>
+</html>

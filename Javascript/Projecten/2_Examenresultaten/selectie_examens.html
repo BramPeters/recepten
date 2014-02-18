@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JS PF project: Selectie examens</title>
+<style type="text/css">
+label {
+	display:inline-block;
+	width:6em;
+}
+#output {
+	background-color:#CFC;
+	padding:1em;
+}
+</style>
+</head>
+<body>
+<h1>JS PF project: Selectie examens</h1>
+<p>We houden geen rekening met het invullen van foute gegevens, we doen geen validatie. Zorg ervoor dat je getallen binnen het juiste bereik invult</p>
+<h3>Opdracht:</h3>
+<p><cite>Elk vak staat op 10 punten. In eerste instantie is een student geslaagd als hij voor Wiskunde een 6/10 haalt. In de projectopdracht wordt die voorwaarde dan stelselmatig uitgebreid. <br />
+  Toon het resultaat en indien niet geslaagd, ook de reden ervoor </cite></p>
+<form>
+  <p>
+    <label>Wiskunde</label>
+    <input type="text" name="wiskunde" id="wiskunde" size="2" />
+  </p>
+  <p>
+    <label>Boekhouden</label>
+    <input type="text" name="boekhouden" id="boekhouden" size="2" />
+  </p>
+  <p>
+    <label>Informatica</label>
+    <input type="text" name="informatica" id="informatica" size="2" />
+  </p>
+  <p>
+    <label></label>
+    <button id= "goKnop" type="button">Go</button>
+  </p>
+</form>
+<div id="output"></div>
+<script>
+    var eKnop = document.querySelector('#goKnop');
+    eKnop.onclick = evalueer;
+    function evalueer(){
+        /*evalueer of geslaagd of niet*/
+        console.log('fn evalueer');
+        
+        //invulvelden
+        var eWiskunde = document.getElementById('wiskunde');
+        var eBoekhouden = document.getElementById('boekhouden');
+        var eInformatica = document.getElementById('informatica');
+        
+        //punten
+        var nWisk = parseInt(eWiskunde.value);
+        var nBoek = parseInt(eBoekhouden.value);
+        var nInfr = parseInt(eInformatica.value);
+        
+        var nTot1 = nWisk + nBoek + nInfr;
+        var nGmid = nTot1/3;
+        
+        console.log("totaal: "+ nTot1);
+    
+    //evaluatie
+    var sBericht="";
+    if((nWisk >= 6 && nBoek + nInfr >= 12) || nInfr >= 10){
+        sBericht= "U bent geslaagd";
+        if(nGmid >= 7){sBericht += " met onderscheiding"}
+        else{sBericht += " met voldoening"}
+    }
+    else{
+        sBericht = "U bent NIET geslaagd";
+    }
+    console.log(sBericht);
+       
+    //output naar div
+    var eOutput = document.querySelector('#output');
+    eOutput.innerHTML = sBericht;
+    }
+    
+</script>
+</body>
+</html>

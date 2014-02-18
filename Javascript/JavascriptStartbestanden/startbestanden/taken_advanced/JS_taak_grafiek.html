@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JS advanced taak: Grafiek</title>
+<style media="screen" type="text/css">
+<!--
+body {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+code{
+	font: normal bold 1em "Courier New", Courier, monospace ;
+	color: darkblue;
+}
+-->
+</style>
+<script type="text/javascript">
+
+var weergegevens2009 = [
+	["temperatuur","neerslag"],
+	["jan",0.7,62.9],
+	["feb",3.6,57.1],
+	["mar",6.7,68.2],
+	["apr",12.5,47.1],
+	["mei",14.4,43.1],
+	["jun",16.6,64.5],
+	["jul",18.7,73.1],	
+	["aug",19.4,34.7],
+	["sep",15.8,29.1],
+	["okt",11.3,105],
+	["nov",9.7,98],
+	["dec",2.9,80.8]
+]
+
+</script>
+</head>
+<body>
+<h1>JS advanced taak: Grafiek</h1>
+<p>Een taak over objecten en inheritance en het tekenen van vormen met de <code>canvas</code> tag.</p>
+<p>Opmerking: momenteel ondersteunen enkel <i>Chrome</i> en <i>FireFox</i> dit HTML5 element</p>
+<h3>Geteste topics</h3>
+<ul>
+  <li>werken met het <code>canvas</code> element</li>
+  <li>objecten, constructors, inheritance</li>
+</ul>
+<h3>Opdracht: </h3>
+<ul>
+  <li>de code bevat een array van weergegevens voor het jaar 2009 (bron KMI)</li>
+  <li>voeg zelf een <code>canvas</code> element in de HTML in (breedte 800px, hoogte 600px) en zorg voor een bericht voor browsers die deze tag niet ondersteunen </li>
+  <li>teken  op het canvas de neerslaghoeveelheden als blauw opgevulde balkjes en de temperaturen als  een rode lijn van  met elkaar verbonden punten</li>
+  <li>doe dit met <b>constructors</b> om &quot;balk&quot; en &quot;lijn&quot; objecten te instanti&euml;ren. Probeer deze constructors zelf af te leiden van een <b>superClass</b> <i>Vorm</i> die een method <i>teken(</i>) die voor de echte weergave op het canvas zorgt. Deze method kan door de  subClasses (eventueel)  overschreven worden (override) </li>
+</ul>
+</body>
+</html>

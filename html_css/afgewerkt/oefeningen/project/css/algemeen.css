@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* 	minimale default CSS voor sjabloon.html
+	Save as andere naam
+ */
+html,body{height:100%;}
+div, section, header, footer {
+	margin:0;
+	padding:0;
+}
+header {
+	background:silver;
+	padding:1px;			/*  collapsing margin fix */
+	height:20%;
+	min-height:220px;
+}
+footer {
+	background:silver;
+	padding:1px;			/*  collapsing margin fix */
+	height:10%;
+}
+.midden {
+	background:white;
+	padding:1px;	/*  collapsing margin fix */
+	min-height:70%;			
+}
+.content {
+	width:80%;
+	max-width:1200px;
+	margin:0 auto;
+}
+img {
+	float:left;
+	margin:0 1em 0 0;
+}
+/*clear*/
+.cf {
+	clear:both;
+}
+/*clearfix hack*/
+.clearFix:before, .clearFix:after {
+	content: " ";
+	display: table;
+}
+.clearFix:after {
+	clear: both;
+}
+/* enkel voor IE6/7  */ 
+.clearFix {
+ *zoom: 1;
+}

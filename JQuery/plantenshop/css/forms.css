@@ -1,0 +1,156 @@
+/**********************************
+
+algemene form styles
+
+breedte, plaatsing en bg kleuren worden hier niet bepaald
+gebruik daarvoor een local stylesheet 
+
+***********************************/
+form {
+	font-size: 1em;
+	color: #333;
+	padding:1em;
+}
+form>div, form>div>div, form>fieldset>div {
+	position:relative;
+	clear: left;
+	display: block;
+	zoom: 1;
+	margin: 0.3em 0 0 0;
+	padding: 0.1em 0.2em;
+}
+/*velden, controls*/
+form input[type="email"], 
+form input[type="password"], 
+form input[type="text"], 
+form input[type="url"], 
+form input[type="search"], 
+form input[type="number"], 
+form input[type="tel"],
+form textarea {
+	width: 35%;
+	border: 1px solid #999;
+	min-height: 0.875em;
+	padding: 0.4em 0.5em;
+}
+form input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+form input.kort{
+	width:7em;
+	}
+form input:focus {
+	border: 1px dotted black;
+}
+form input.error {
+	border: 1px dotted red;
+}
+form select {
+	border: 1px solid #999;
+	padding: 0.2em 0.5em;
+	width: 35%;
+	min-width:7em;
+	}
+form textarea{
+	overflow:auto;
+	vertical-align:top;
+	min-height:7em;
+	}
+/* gekleurde buttons*/
+
+button, input[type="button"],input[type="submit"], input[type="reset"]{
+	
+	display: inline-block;
+	padding: 0.3em 1.3em;
+	font-size: 0.875em;			/*14px*/
+	}
+	
+button.blauw,  input[type="button"].blauw, input[type="submit"].blauw, input[type="reset"].blauw{
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-shadow: 0 2px 0 #004372;
+	background-color: #005689;
+	border: 1px solid #005689;
+	box-shadow: 0 2px 5px 2px #EDEDED;
+	}
+
+/*labels en berichten*/
+label{
+/* losse labels */
+	float:none;
+	display: inline;	
+	padding:0 ;
+	min-height: 0.875em;			/*14px*/	
+	text-align: left;
+}
+
+form label {
+/*labels in form lay-out*/ 	
+	float:left;
+	display: block;	
+	position:relative;
+	width: 25%;
+	margin:0 ;
+}
+form label.compact {
+	display: inline;
+	margin: 0;
+	padding: 4px 10px 0 0;
+	text-indent: 0;
+	width: auto;
+}
+form label.labelCheckbox, label.labelRadio {
+	float: none;
+	display: inline;	
+	zoom: 1;
+	padding: 0;
+	text-align: left;
+}
+form span.fieldval {
+	display:inline-block;
+	float:right;
+	max-width:35%;
+	color: red;
+	font-style: italic
+}
+label.error {
+	font:"Courier New", Courier, monospace;
+	font-size:1em;
+	width: 35%;
+	color:#CC0000;
+	float:right;
+}
+abbr.verplicht {
+	color:magenta;
+	font-size:1.3em;
+}
+label.verplicht::before {
+	content: "\2764"; /* hartje */
+	display: inline-block;
+	position:absolute;
+	top:0.4em;
+	left: -1.5em;
+	color:magenta;
+	padding-right: 0.4em; 
+}
+form .controlbox {
+  	width: 35%;
+	display: inline-block;
+}
+form .controlbox label{width:auto;}
+form .controlbox.hor label.labelCheckbox{display:inline;}
+form .controlbox.vert label.labelCheckbox{display:inline-block;width:100%;}
+
+/*fieldset*/
+form fieldset{
+	border-left:none;
+	border-right:none;
+	border-bottom:none;
+	margin-bottom:1em;
+	}
+form fieldset legend{
+	font-size:1.1em;
+	font-style:italic;
+	}

@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* jQuery eindtaak CSS Document */
+
+/*@import "cmxformTemplate.css";
+@import "cmxform.css";*/
+/* 
+
+cmxforms komen mee met de JQ form validation plugin maar zijn onafhankelijk ontwikkeld door Nick Rigby
+zie http://www.alistapart.com/articles/prettyaccessibleforms
+ze zijn nodig voor de styling van de validation classes
+je kan uiteraard zelf de classes stylen of er iets aan toevoegen/wijzigen zoals hieronder
+
+*/
+label.error{display:inline;} /*zodat de error labels naast de input elementen komen*/
+div{
+	padding:0;
+	margin:0;
+}
+body {
+  color:#555555;
+  font-family:Verdana,Arial,sans-serif;
+  font-size:70%;
+  font-weight:normal;
+  text-decoration:none;
+  background-color:#CCC;
+}
+#container{
+	width:940px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;
+	}
+#kop{
+	width:100%;
+	height:120px;
+	background:red url(../images/sardines.png) no-repeat scroll top left;
+	}
+#kop h1{
+	color:white;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:4em;
+	margin: 0.8em;
+}
+#koptitel{
+	margin: 10px 0px 10px 100px; 
+	}
+#buik{
+	overflow:auto;
+	width:100%;
+	height: 1%;
+	padding:0;
+	}
+#prent{
+	width:100%;
+	height:100px;
+	background:transparent url(../images/sardines1.jpg) no-repeat scroll top left;
+	}
+#links{
+	float:left;
+	display: inline;
+	width: 150px;
+	height:600px;
+	background:white url(../images/links.png) no-repeat scroll left top;
+	}
+#midden{	
+	float:left;
+	display: inline;
+	width: 600px;
+	padding-left:2px;
+	}
+#rechts{
+	float:right;
+	display: inline;
+	width: 185px;
+	height:600px;
+	background:white url(../images/rechts.png) no-repeat scroll left top;
+	}
+
+#voet{
+	width:100%;
+	background-color:red;
+	color:white;
+	text-align:center;
+	padding: 0.8em 0;
+	}
+label {
+  display:block;
+  font-weight:bold;
+  padding:0;
+}
+.inline{display:inline;}
+form, label, li, ol, p {
+  margin:0;
+  padding:0;
+}
+select {
+  
+  margin-bottom:4px;
+}
+select, input {
+	clear:left;
+}
+fieldset input, fieldset select, fieldset textarea {
+  font-size:100%;
+  font-weight:normal;
+}
+
+
+.foutBox {
+	display:none;
+	background-color:#FFC;
+	border: 1px solid red;
+	margin:1em;
+	padding:2em;
+	}
+.foutBox h2{
+	color:red;
+	}
+.foutBox ul{
+	list-style-type:disc;
+	}
+	
+.foutBox label.error{
+	float:none;
+	display:inline;
+	width:auto;
+}

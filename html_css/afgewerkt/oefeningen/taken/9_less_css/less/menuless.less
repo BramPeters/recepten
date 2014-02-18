@@ -1,0 +1,114 @@
+/*color:(top gradient bij hover en actief)*/
+@color1: #fb83fa;
+/*color:(bot gradient bij hover en actief)*/
+@color2: #e93cec;
+
+/*color:(top gradient bij niet actief)*/
+@color3: #e570e7;
+
+/*color:(mid gradient bij niet actief)*/
+@color4: #c85ec7;
+
+/*color:(bot gradient bij niet actief)*/
+@color5: #a849a3;
+
+/*color:(submenu kleur)*/
+@color6: #D566D5;
+
+/* hoofdmenu styles */
+.hor_dropdown_menu {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1em;
+  /*16px*/
+
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  background: @color3;
+  background: -moz-linear-gradient(top, @color3 0%, @color4 47%, @color5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @color3), color-stop(47%, @color4), color-stop(100%, @color5));
+  background: -webkit-linear-gradient(top, @color3 0%, @color4 47%, @color5 100%);
+  background: -o-linear-gradient(top, @color3 0%, @color4 47%, @color5 100%);
+  background: -ms-linear-gradient(top, @color3 0%, @color4 47%, @color5 100%);
+  background: linear-gradient(to bottom, @color3 0%, @color4 47%, @color5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color3', endColorstr='@color5', GradientType=0);
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+
+    li {
+        float: left;
+        position: relative;
+        margin: 0;
+        list-style: none;
+
+        &:hover > a {
+            background: @color1;
+            background: -moz-linear-gradient(top, @color1 0%, @color2 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @color1), color-stop(100%, @color2));
+            background: -webkit-linear-gradient(top, @color1 0%, @color2 100%);
+            background: -o-linear-gradient(top, @color1 0%, @color2 100%);
+            background: -ms-linear-gradient(top, @color1 0%, @color2 100%);
+            background: linear-gradient(to bottom, @color1 0%, @color2 100%);
+            /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=0); */
+
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0);
+        }
+        &:hover > ul {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 0.6em 1.25em;
+    }
+    .actief > a {
+        background: @color1;
+        background: -moz-linear-gradient(top, @color1 0%, @color2 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @color1), color-stop(100%, @color2));
+        background: -webkit-linear-gradient(top, @color1 0%, @color2 100%);
+        background: -o-linear-gradient(top, @color1 0%, @color2 100%);
+        background: -ms-linear-gradient(top, @color1 0%, @color2 100%);
+        background: linear-gradient(to bottom, @color1 0%, @color2 100%);
+        /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@start', endColorstr='@stop', GradientType=0); */
+
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=0);
+    }
+    ul {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        padding: 0;
+        width: 12em;
+        background: @color6;
+        -moz-transition: opacity .25s linear, visibility .1s linear .1s;
+        -webkit-transition: opacity .25s linear, visibility .1s linear .1s;
+        -o-transition: opacity .25s linear, visibility .1s linear .1s;
+        transition: opacity .25s linear, visibility .1s linear .1s;
+        box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.5);
+        
+        li {
+            float: none;
+            margin: 0;
+        
+            &:hover > ul {
+                 /*enkel voor extra transition effectje subsub: beweging left*/
+                left: 11em;
+            }
+        }
+        ul {
+            top: 0.6em;
+            left: 13em;
+            -moz-transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+            -webkit-transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+            -o-transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+            transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+        }
+    }
+}

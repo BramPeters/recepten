@@ -1,0 +1,17 @@
+.well{
+    padding-left: 0;
+    padding-right: 0;
+}
+.form-inline{
+    margin-bottom:0;
+}
+#logo { 
+    margin-bottom:1em;
+}
+h2 i[class|="icon"]{padding-right: 0.6em;}
+
+.info ul li{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}

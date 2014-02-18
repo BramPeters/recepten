@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JS adv project: Widget interface</title>
+
+<link rel="stylesheet" href="mooi.css"  type="text/css" media="screen" />
+<link rel="stylesheet" href="print.css"  type="text/css" media="print" />
+
+</head>
+<body>
+<div id="kop">
+  <div class="strook">
+    <h1>JS adv project: Widget User Interface</h1>
+    <h3>by vdab</h3>
+  </div>
+</div>
+<div id="midden">
+  <div class="strook">
+    <h2 class="noprint">Inhoud</h2>
+    <div class="inhoudstafel" id="tocHier"><span id="noscript"> <em>Hier moet de inhoudstafel van deze pagina te zien zijn</em><br />
+      Omdat je dit leest is er een <b>probleem</b>: meer dan waarschijnlijk komt het omdat Javascript niet geactiveerd is in je browser. <br />
+      Activeer javascript dus in de instellingen van je browser. <br />
+      Helpt dat niet <a href="mailto:mickey.mouse@disney.com?subject=probleem met javascript">stuur dan een mailtje aan de ontwerper van deze website</a>. </span> </div>
+    <h2 class="noprint">Inlichtingen</h2>
+    <form action="js_form_ontvanger.html" method="get" name="frmInlichtingen" id="frmInlichtingen" onsubmit="return false;">
+      <fieldset id="gegevens">
+        <legend>Persoonlijk</legend>
+        <label for="naam">naam:</label>
+        <input type="text" name="naam" id="naam" class="text required" title="uw volledige naam " />
+        <br />
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email" class="text required email" title="uw emailadres" />
+        <br />
+        <label  for="geboortedatum">geboortedatum:</label>
+        <input type="text" name="geboortedatum" id="geboortedatum" size="10"  title="uw geboortedatum (dd/mm/yyyy)"  class="text required datum" />
+        <br />
+         <label for="kleur">kies een kleur:</label>
+        <select name="kleur" id="kleur" title="kies een kleur" class="required">
+          <option value="" selected="selected">kies een kleur</option>
+          <option value="red">rood</option>
+          <option value="blue">blauw</option>
+          <option value="yellow">geel</option>
+          <option value="green">groen</option>
+        </select>
+         <br />
+        <label for="junkmail">ik wens junkmail te ontvangen</label>
+        <input type="checkbox" name="junkmail" id="junkmail" class="" title="junkmail" />
+      </fieldset>
+       	<input type="submit" value="Bevestig" alt="Klik hier om te bevestigen" title="Klik hier om te bevestigen" />
+  		<input type="reset" value="Opnieuw" alt="herzet alle waarden van het formulier" title="herzet alle waarden van het formulier" />
+    </form>
+    <h2 id="statements">JS Statements</h2>
+    <ul>
+      <li>JS is <em>Hoofdlettergevoelig</em>: <br />
+        de variabele <i>objTekstBox</i> is verschillend van <i>objtekstbox</i> en <i>OBJtekstbox</i>... <br />
+        de methode <code>Focus()</code> zal niet werken, <code>focus()</code> daarentegen wel </li>
+      <li>JS <em>negeert witruimte</em> (spaties en tabs) </li>
+      <li>Elke statement afsluiten  met een <em>punt-komma</em> is aan te raden maar <em>optioneel</em></li>
+      <li><em>Block</em> statements worden vervat in
+        accolades <code>{}</code>, een punt-komma is onnodig </li>
+      <li><em>Commentaar</em> kan op twee manieren:
+        <ul>
+          <li>gebruik <code>//</code> voor commentaar op 1 lijn</li>
+          <li>gebruik <code>/* */</code> voor commentaar gespreid over meerdere lijnen </li>
+        </ul>
+      </li>
+      <li><em>Escape strings</em>: het <em>backslash</em> karakter (\) gevolgd door een
+        karakter zorgt ervoor dat dat karakter steeds letterlijk genomen wordt en niet geïnterpreteerd door de parser. We noemen dit een <em>escape sequence</em> .<br />
+        Bijvoorbeeld: onderstaande stringvariabele bevat de aanhalingstekens letterlijk<br />
+        <br />
+        <pre>var strTekst = "en toen zei ze \"oei, het is gevallen\"";</pre>
+        Sommige speciale statements worden ook met een escape sequence weergegeven: <br />
+        <table>
+          <tr>
+            <td> \b </td>
+            <td> backspace </td>
+          </tr>
+          <tr>
+            <td> \r </td>
+            <td> nieuwe regel </td>
+          </tr>
+          <tr>
+            <td> \n </td>
+            <td> nieuwe lijn </td>
+          </tr>
+          <tr>
+            <td> \t </td>
+            <td> tabulatie </td>
+          </tr>
+        </table>
+      </li>
+      <li><em>Identifiers</em> zijn de termen die je mag gebruiken voor <em>variabelen</em> en <em>functies</em>:<br />
+        ze mogen beginnen met een letter, een underscore _ , of een dollarteken $.<br />
+        ze mogen niet beginnen met een getal </li>
+      <li>bij conventie beginnen alle variabelennamen, functienamen, parameters met een kleine letter, enkel Constructors krijgen een hoofdletter </li>
+      <li><em>Sleutelwoorden</em> mag je niet gebruiken als variabele of fucntienaam.<br />
+        Er zijn er heel wat: <code>break, do, this, final,</code> ...<br />
+        alle sleutelwoorden worden in kleine letters geschreven </li>
+    </ul>
+    <h2 id="waarden">waarden</h2>
+    <p>JS kent  3 <em>primitieve</em> datatypes, <code>boolean</code>, <code>number</code> en <code>string</code> met daarnaast <em>objecten</em> en <code>null</code> en <code>undefined</code>. Een primitief datatype is een eenvoudige waarde in het computergeheugen tegenover objecten die complexe gegevens zijn.</p>
+    <h3 id="getallen">number</h3>
+    <p>Er is slechts één getaltype in JS: <code>number</code>, dat infeite een 64-bit <a href="http://en.wikipedia.org/w/index.php?title=Floating_point&oldid=150927305" target="_blank">floating point</a> getal (=double). Er is geen apart integertype. </p>
+    <p>Er bestaat een speciaal getal <code>NaN</code>, dat <i>geen getal</i> voorstelt: iets is geen getal. <code>NaN</code> is het resultaat van een <code>undefined</code> waarde of een foutieve bewerking. <code>NaN</code> is besmettelijk: het plant zich voort in een bewerking (2 * <code>NaN</code> = <code>NaN</code>) .<br />
+      <code>NaN</code> kan met niets vergeleken worden, inclusief zichzelf. Om te testen voor deze waarde maak je gebruik van de  speciale functie <code>isNaN()</code>. </p>
+    <p>Omdat bijna alle waarden in het programma binnenkomen als tekst - we zijn tenslotte bezig in een webpagina - zijn er   enkele speciale functies die tekst omzetten in een getal:</p>
+    <ul>
+      <li><code>Number()</code>: zet een waarde om in een getal (base-10). Bij problemen krijg je <code>NaN</code></li>
+      <li><code>parseInt()</code>, <code>parseFloat()</code>: zetten waarden resp. om in integers of in floating point getallen. Een verschil met is dat er ook hexadecimale of octale getallen kunnen omgezet worden dmv een 'radix' argument.  Bij problemen returnt de functie een <code>NaN</code></li>
+    </ul>
+    <pre>var getal = Number(&quot; 33 &quot;) //geeft 33
+
+var probleem = Number (3 muizen)
+</pre>
+    <p>Om berekeningen te kunnen maken met getallen is er een apart <a href="jsNaslag_Math.asp">Math object</a> met heel wat functies.</p>
+    <h3 id="string">string</h3>
+    <p>Een <code>string</code> is een sequentie van nul of meer <em>Unicode</em> karakters vervat in enkele (apostrophe) of dubbele aanhalingstekens. Deze twee kunnen in elkaar vervat worden, zoniet moet je escape sequences gebruiken: </p>
+    <pre>
+"&lt;i&gt;htmltekst vervat in i tag&lt;/i&gt;";
+"'alternerende types aanhalingstekens'";
+"en toen zei ze: \"ik heb het laten vallen\"";
+</pre>
+    <p>Om twee strings te <em>concateneren</em> gebruiken we de <code>+</code> operator:</p>
+    <pre>'hello' + 'world' = 'hello world'</pre>
+    <p>Om het aantal karakters van een string te kennen gebruiken we de <code>length</code> property:</p>
+    <pre>var tekst = "";
+tekst.length; // geeft 0</pre>
+    <p>Om een getal in een string om te zetten gebruiken we de <code>String</code> functie:</p>
+    <pre>var waarde = 9
+isNaN(String(waarde) // geeft true</pre>
+    <p>Een string is infeite een object en heeft een heleboel <a href="jsnaslag_stringmethods.asp">String methods</a> laten ons toe ze te manipuleren. </p>
+    <p>Nog enkele bemerkingen: </p>
+    <ul>
+      <li>enkele aanhalingstekens kunnen variabelen niet interpreteren zoals in php </li>
+      <li>JS heeft geen apart data type voor een enkel karakter zoals in C of Java</li>
+      <li>om te weten of ze  identiek zijn kan je twee strings vergelijken worden met de <code>==</code> operator </li>
+    </ul>
+    <h3 id="boolean">boolean</h3>
+    <p>Er zijn uiteraard slechts twee <code>boolean</code> waarden: <code>true</code> en <code>false.</code><br />
+      Er is ook de functie <code>Boolean()</code> die 'falsy' en 'truthy' waarden evalueert tot een resulterende <code>boolean</code> </p>
+    <pre>
+  false == false // returnt true
+  Boolean(null) // returnt false
+  </pre>
+    <p>de waarden <code>false</code>, <code>null</code>, <code>undefined</code>, een lege string, het getal 0, geven steeds <code>false</code> in deze functie, de rest geeft <code>true</code>.</p>
+    <h3 id="null">null</h3>
+    <p>De waarde <code>null</code> staat voor <i>geen waarde, geen object</i>. Als een variabele de waarde <code>null</code> bevat, weet je dat het een ongeldige waarde is. </p>
+    <p>Door een variabele de waarde <code>null</code> te geven, vernietig je de variabele. </p>
+    <h3 id="undefined">undefined</h3>
+    <p>De waarde <code>undefined</code> wordt gereturnt <i>als een variabele gedeclareerd is, maar geen waarde gekregen heeft</i>. <code>undefined</code> krijg je ook als een object niet gevonden kan worden. De <code>void</code> operator returnt ook <code>undefined</code>.</p>
+    <pre>
+null == undefined; // returnt true
+null === undefined; //returnt false
+var v 	// returnt undefined
+var tekort = document.getElementById('afwezig'); // returnt undefined
+void 0 === undefined;	// returnt true  </pre>
+    <h3 id="object">objecten</h3>
+    <p>Alle andere waarden in JS zijn objecten, inclusief functies.</p>
+    <p>Een <em>object</em> is een container voor <em>naam=waarde</em> paren, andersgenoemd <em>properties</em> (eigenschappen). De <i>naam</i> is een <code>string</code>, de <i>waarde</i> eender welk datatype uitgezonderd <code>undefined</code>. Die properties kunnen dan bereikt worden ofwel met de . notatie, ofwel als in een <i>associatief array</i>, met vierkante haakjes en de naam van de property in aanhalingstekens:</p>
+    <pre>image.width
+image["width"]</pre>
+    <p>JS bevat een aantal ingebouwde objecten zoals het <a href="jsNaslag_Math.asp">Math</a>, <a href="jsNaslag_Date.asp">Date</a> object.</p>
+    <p><a href="jsPraktijk_objects.asp#objaanmaken">Objecten kunnen aangemaakt worden</a>, maar sommige properties van objecten zijn zelf een object, bijvoorbeeld <code>document.cookie</code></p>
+    <pre>var o = new Object();
+o.x = 4.5;
+o.y = O;</pre>
+    <p>zoals je hierboven merkt kan je zelf arbitraire eigenschappen bedenken en die eender welke waarde geven.</p>
+    <p>Zo zijn properties eigenlijk variabelen die een waarde bevatten. Bevat die variabele echter zelf een functie (zie hieronder) dan spreken we van een <em>method</em> en dan schrijven we de eigenschap met <em>()</em> erachter:</p>
+    <pre>
+document.form.button.focus	//is de eigenschap focus en returnt true of false
+document.form.button.focus()	//is de method focus die de focus op de knop zet
+</pre>
+    <p>&nbsp; </p>
+    <h2 id="operatoren">expressies en operatoren</h2>
+    <p> Een <em>expressie</em> is een JS statement dat geëvalueerd wordt tot een resultaat. Een expressie die bestaat uit een letterlijke waarde is die waarde zelf, maar waarden kunnen ook vergeleken worden of er kan een bewerking mee gedaan worden. Voorbeelden van expressies:</p>
+    <pre>
+"javascript is OK"	// een letterlijke expressie
+tekst.length	// het aantal karakters in een string
+i++	// de variabele i verhogen met 1
+i>j	// twee variabelen vergelijken
+</pre>
+    <p>Expressies maken gebruik van <em>operatoren</em>: </p>
+    <h3 id="toewijzing"> toewijzingsoperatoren: </h3>
+    <p> Naast de normale toewijzing operator = bestaan er nog enkele
+      'shortcuts' </p>
+    <table  width="60%" class="cursus">
+      <tr>
+        <td width="22%" align="center"> = </td>
+        <td width="33%" align="center"> x = y </td>
+        <td width="45%"> normale toewijzing </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> x += y </td>
+        <td width="33%" align="center"> x = x + y </td>
+        <td width="45%">  </td>
+      </tr>
+    </table>
+    <h3 id="arithmetic">berekeningsoperatoren</h3>
+    <table width="60%" class="cursus">
+      <tr>
+        <td width="22%" align="center">+</td>
+        <td width="33%" align="center">1 + 2 = 3<br />
+          1 + &quot;1&quot; = &quot;11&quot;</td>
+        <td width="45%">som<br />
+          indien één van de waarden een string is wordt dit een concatenation operator </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center">-</td>
+        <td width="33%" align="center">1 - 2 = -1 <br />
+          &quot;1&quot; -&quot;2&quot; = -1<br /></td>
+        <td width="45%">verschil<br />
+          indien mogelijk gebeurt er impliciete conversie van andere types </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center">*</td>
+        <td width="33%" align="center">1 * 2 = 2 <br />
+          &quot;3&quot; * &quot;2&quot; = 6 </td>
+        <td width="45%">vermenigvuldiging<br />
+          indien mogelijk gebeurt er impliciete conversie van andere types </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center">/</td>
+        <td width="33%" align="center">1 / 2 = 0.5 <br />
+          1 / 0 = NaN </td>
+        <td width="45%">deling<br />
+          indien één van de waarden 0 is, dan evalueert de expressie tot <code>NaN</code></td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> % </td>
+        <td width="33%" align="center"> 12 % 5 = 2 </td>
+        <td width="45%"> Modulo<br />
+          Geeft de rest van een deling </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> ++ </td>
+        <td width="33%" align="center"> als x = 3 dan<br />
+          x++ geeft x = 3<br />
+          ++x geeft x = 4 </td>
+        <td width="45%"> Stijging<br />
+          voegt 1 toe voor of na de waarde </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> -- </td>
+        <td width="33%" align="center"> als x = 3 dan<br />
+          x-- geeft x = 3<br />
+          --x geeft x = 2 </td>
+        <td width="45%"> Daling<br />
+          trekt 1 af voor of na de waarde </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> - </td>
+        <td width="33%" align="center"> -y </td>
+        <td width="45%"> Negatie<br />
+          Geeft de negative waarde van </td>
+      </tr>
+    </table>
+    <h3 id="vgl">vergelijkingsoperatoren</h3>
+    <table width="60%" class="cursus">
+      <tr>
+        <td width="22%" align="center"> == </td>
+        <td width="33%" align="center"> 3 == "3" </td>
+        <td width="45%"> True indien gelijk, niet noodzakelijk van hetzelfde type </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> === </td>
+        <td width="33%" align="center"> x === y </td>
+        <td width="45%"> True indien gelijk en van hetzelfde type </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> != </td>
+        <td width="33%" align="center"> x != y </td>
+        <td width="45%"> Niet gelijk. Verschillende types worden gerpobeerd gelijk te
+          stellen </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> !== </td>
+        <td width="33%" align="center"> x !== y </td>
+        <td width="45%"> strikt niet gelijk. False indien niet van hetzelfde type </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center">&gt; </td>
+        <td width="33%" align="center">  </td>
+        <td width="45%"> groter dan </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center">&lt; </td>
+        <td width="33%" align="center">  </td>
+        <td width="45%"> kleiner dan </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center">&gt;= </td>
+        <td width="33%" align="center">  </td>
+        <td width="45%"> ten minste </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center">&lt;= </td>
+        <td width="33%" align="center">  </td>
+        <td width="45%"> ten hoogste </td>
+      </tr>
+    </table>
+    <h3 id="logisch">logische operatoren</h3>
+    <table width="60%" class="cursus">
+      <tr>
+        <td width="22%" align="center">&amp;&amp; </td>
+        <td width="33%" align="center"> expr1 &amp;&amp; expr2 </td>
+        <td width="45%"> Logische AND </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> || </td>
+        <td width="33%" align="center"> expr1 || expr2 </td>
+        <td width="45%"> Logische OR </td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> !expr </td>
+        <td width="33%" align="center"> !expr </td>
+        <td width="45%"> Logische NOT </td>
+      </tr>
+    </table>
+    <h3 id="stringoperator">string operatoren</h3>
+    <table width="60%" class="cursus">
+      <tr>
+        <td width="22%" align="center"> + </td>
+        <td width="33%" align="center">"text" + "text" </td>
+        <td width="45%"> concatenation <br /></td>
+      </tr>
+      <tr>
+        <td width="22%" align="center"> += </td>
+        <td width="33%" align="center"> str1 += str2 </td>
+        <td width="45%"> shorthand voor<br />
+          str1 = str1 + str2 </td>
+      </tr>
+    </table>
+    <h3 id="andere">andere operatoren</h3>
+    <h6>in</h6>
+    <p>the <code>in</code> operator:<br />
+      geeft <code>true</code> als de linkse waarde een <i>property</i> is van het rechtse <i>object</i> </p>
+    <h6>instanceof </h6>
+    <p>the <code>instanceof</code> operator:<br />
+      evalueert of een objectvariabele een instance is van een object </p>
+    <h6>typeof </h6>
+    <p>the <code>typeof</code> operator:<br />
+      evalueert het type van een variabele. Mogelijke returnwaarden zijn &quot;number&quot;, &quot;string&quot;, &quot;boolean&quot;, &quot;object&quot;, &quot;function&quot;, &quot;undefined&quot; .<br />
+      Niet perfect want ook arrays en <code>null</code> worden als object getypeerd...</p>
+    <h6>void </h6>
+    <p>the <code>void</code> operator:<br />
+      wordt gebruikt om een returnwaarde op <code>undefined</code> te zetten, zodat de expressie niets teruggeeft. Typisch bij een javascript statement in de <code>href</code> van een <code>a</code> element</p>
+    <h6>new</h6>
+    <p>the <code>new</code> operator:<br />
+      wordt gebruikt bij een constructor van een object </p>
+    <h3 id="conditional">conditionele operator</h3>
+    <table width="90%" class="cursus">
+      <tr>
+        <td width="44%" align="center"> var = (test) ? true : false </td>
+        <td width="44%" align="center"> tekst = (G>10) ? 'groot' : 'klein' </td>
+      </tr>
+    </table>
+    <h2 id="variabelen">variabelen</h2>
+    <p>Een variabele is een naam die een waarde krijgt. JS reserveert een stukje geheugen om de waarde - gekoppeld aan de variabelenaam - te bewaren, tijdelijk. De variabele krijgt een waarde of het resultaat van een bewerking toegewezen. <br />
+      In JS is het ook mogelijk een functie aan een variabele toe te wijzen. </p>
+    <pre>i = 0;<br />var totaal = 23 *7;
+var flag = true; 
+var voorlopig = undefined; 
+var lijst = ['jan','piet','pol'];
+var mijnObject.spreek = function() { alert(this.naam) }; </pre>
+    <h3 id="typing">typing</h3>
+    <p><em>Typing</em> gaat over de vraag welke soort waarde  de <code>var</code> bevat: een tekst, een getal, een true/false, een object? </p>
+    <p><em>Javascript is een 'losjes getypeerde' taal</em>. Javascript kent data types maar ze worden niet  streng toegepast. In tegenstelling tot 'sterk getypeerde' talen zoals C++ of Java zijn een aantal dingen mogelijk:</p>
+    <ul>
+      <li>Een variabele wordt geen data type toegekend  tijdens de declaratie, dus kan je er eender welke waarde aan toekennen </li>
+      <li>dat betekent niet dat de variabele niet getypeerd is: afhankelijk van de waarde krijgt de variabele een datatype toegekend</li>
+    </ul>
+    <h3 id="dec">declaratie</h3>
+    <p>Om een variabele te gebruiken moet je hem <em>declareren</em> met het <code>var</code> sleutelwoord: </p>
+    <pre>var i;
+var totaal;
+var voornaam;</pre>
+    <h3 id="omzetting">omzetting</h3>
+    <p>We merkten eerder op dat JS veel <em>impliciete</em> conversies doet: zo zullen in <code>'3'*'2'</code> de <code>string</code>'s omgezet worden naar <code>number</code> om de vermenigvuldiging te doen slagen. Dat gebeurt niet altijd, vooral als de bewerking onduidelijk is zoals bij een optelling. Soms moeten we dus zelf proberen een typeconversie te doen. </p>
+    <h4 id="omzetNumber">Omzetting naar Number</h4>
+    <ul>
+      <li>met <code>parseInt(), parseFloat()</code></li>
+      <li>met <code>Number()</code></li>
+    </ul>
+    <h4 id="omzetString">Omzetting  naar een String</h4>
+    <ul>
+      <li>met <code>toString()</code></li>
+      <li>met <code>String()</code></li>
+    </ul>
+    <h4 id="omzetBoolean">Omzetting naar boolean</h4>
+    <ul>
+      <li><i>type-cast</i> met <code>Boolean()</code></li>
+    </ul>
+    <h3 id="scope">scope</h3>
+    <p>De <em>scope</em> van een variabele is het <em>bereik</em> binnen het programma waarin de variabele geldt.</p>
+    <p>Een <em><i>global</i></em> variable is overal bereikbaar (binnen de geheugenruimte van één webpagina)  in tegenstelling tot een <em><i>local</i></em> variable die enkel bereikbaar is binnen de functie  waarin hij gedeclareerd wordt.</p>
+    <p>&nbsp;</p>
+    <h2 id="eval">eval()</h2>
+    <p>De globale functie <code>eval()</code> evalueert - en voert dus eventueel uit - een Javascript expressie. Deze functie is niet geassocieerd met een bepaald object.</p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+<div id="voet" class="noprint">
+  <div class="strook"> &copy;vdab </div>
+</div>
+</body>
+</html>

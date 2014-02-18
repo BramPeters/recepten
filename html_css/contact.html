@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index pagina css & html</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favico.ico">
+    </head>
+    <body>
+    <header id="kop">
+        <div class="wikkel clearFix">
+            <h1>Welkom op de website van Bram</h1>
+            <!-- Topmenu-->
+            <div id="hoofdmenu">      
+                <ul>
+                    <li><a href='home.html' title='Welkom op de showcase'>Welkom</a></li>
+                    <li><a href='oefeningen.html' title='De reeds gemaakte oefeningen'>Oefeningen</a></li>
+                    <li><a href='cv.html' title='Mijn cv'>C V</a></li>
+                    <li class="actief"><a href='contact.html' title='Contactpagina'>Contact</a></li>
+                </ul>   
+            </div>
+        </div>
+    </header>
+            <div class="wikkel clearFix">
+            <div class="contactInfo">
+                <div id="contact1">
+                    <p>Bram Peters</p>
+                    <p>Hoefijzerlaan 86</p>
+                    <p>8000 Brugge</p>       
+                </div>
+                <div id="contact2">
+                    <p>brampeters22@hotmail.com</p>
+                    <p>0484 92 43 66</p>  
+                </div>
+                <div id="contact3">
+                    <p>Twitter</p>
+                    <p>Facebook</p>
+                    <p>LinkdIn</p>       
+                </div>
+            </div>
+
+
+                <div class="contact">
+                      <div class="linkerhoeken"></div>
+	<div class="rechterhoeken"></div>
+            <h3>Heeft u nog vragen?</h3>
+            <form class= "clearFix" action="js_form_ontvanger.html" method="get" id="frmgegevens" name="frmgegevens">
+                <div>
+                    <label for="vnaam" title="verplicht">Wie bent u?</label>
+                    <input type="text"  id="vnaam" name="vnaam" autofocus placeholder="uw naam" title="vul hier uw naam in "  required >
+                </div><div>
+                    <label for="email" >Email:</label>
+                    <input type="email" id="email" name="email" placeholder="uw emailadres" title="mijn emailadres" required >
+                </div><div>
+                    <label for="vragen" >Uw vraag</label>
+                    <textarea id="vragen" name="vragen" placeholder="vragen?" title="Heeft u nog vragen?" ></textarea>
+                </div><div>
+                    <label class="labelCheckbox">
+                        <input type="checkbox" id="actiesmail" value name="kortingen"  />
+                        Hou mij op de hoogte van de nieuwe acties van het centrum</label>
+                </div><div class="clearFix">
+                    <input type="submit" value="Stuur door" id="verzenden"/>
+                </div>
+            </form>
+</div>
+
+        </div>
+
+
+    <div class="wikkel clearFix">
+        <div id="footer"><p>&copy;Webpagina  -  Bram Peters  -  2014</p></div>
+    </div>
+
+
+</body>

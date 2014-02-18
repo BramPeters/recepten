@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JS adv project: dynamisch gekoppelde keuzelijsten met Ajax</title>
+<style media="screen" type="text/css">
+div.vb {
+	background-color:#CCFFCC;
+	padding:1em;
+}
+td {
+	padding:0
+}
+</style>
+</head>
+<body>
+<h1>JS adv project: dynamisch gekoppelde keuzelijsten met Ajax</h1>
+<h2>Inwoners in Belgische steden</h2>
+<p>Maak uw keuze</p>
+<div id="keuzes">
+  <form name="frmSteden" action="steden.php" method="post">
+    <p>
+      <label for="gewest">gewest:</label>
+      <select name="gewest" id="gewest">
+        <option value="">-- kies een gewest --</option>
+        <option value="g_br">Brussels gewest</option>
+        <option value="g_vl">Vlaanderen</option>
+        <option value="g_wg">Waals gewest</option>
+      </select>
+      <button type="button" id="btn_gewest" title="kies een gewest">kies</button>
+      <label for="prov">provincie:</label>
+      <select name="prov" id="prov">
+        <option value="">-- kies een provincie --</option>
+      </select>
+      <button type="button" id="btn_prov" title="kies een provincie">kies</button>
+      <label for="stad">stad:</label>
+      <select name="stad" id="stad">
+        <option value="">-- kies een stad --</option>
+      </select>
+      <button type="button" id="btn_stad" title="toon inwoners van stad">toon inwoners</button>
+    </p>
+  </form>
+</div>
+</body>
+</html>

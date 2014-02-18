@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS PF taak: TagCloud</title>
+<style media="screen" type="text/css">
+<!--
+em {
+	font-style:normal;
+	font-weight:bold;
+	color:#906;
+}
+img {
+	float:left
+}
+h3 {
+	clear:both;
+}
+#tagContainer {
+	position:relative;
+	background-color:#CFF;
+	margin:1em;
+	padding:0;
+	width: 500px;
+	height:400px;
+	overflow:hidden;
+	border:2px solid silver;
+}
+span.tag {
+	position:absolute;
+	top:0;
+	left:0;
+}
+-->
+</style>
+<script type="text/javascript">
+//het array met de tags
+//elk item is zelf een Array met de naam, het huidig aantal stemmen en het vorig aantal stemmen die het kreeg
+var arrTags = [
+				["Javascript", 1634, 987],
+				["jQuery", 1111, 34],
+				["PHP", 1024,1122],
+				["Asp.Net", 977, 1005],
+				["Photoshop", 594, 789],
+				["XML", 40, 666],
+				["Access", 55, 77],
+				["Java", 278, 277],
+				["MySQL", 155, 122]
+			   ]
+
+</script>
+</head>
+<body>
+<h1>Javascript PF taak: eenvoudige Tag cloud</h1>
+<p><img src="350px-World_Population.png" alt="wereldbevolking per land">Een <em>tag cloud</em> of <em>data cloud</em>,  is een visuele voorstelling van het belang van een term, meestal in een website. <br>
+  Het aantal keren dat die term voorkomt wordt dan voorgesteld door de lettergrootte en/of de kleur van het woord. Hiernaast zie je bijvoorbeeld een tag cloud die het aantal inwoners per land weergeeft</p>
+<h3>Opdracht: </h3>
+<ul>
+  <li>Bekijk de broncode. Dit bestand bevat een  Array <code>arrTags</code> . Maak er gebruik van om een eenvoudige <em>tag cloud</em> te produceren in het element <code>#tagContainer</code></li>
+  <li>maak voor elke term in het array een <code>span</code> element aan en positioneer dat <code>absolute</code> in de container.</li>
+  <li>Maak gebruik van <code>Math.random()</code> om een willekeurige plaats, zowel vertikaal als horizontaal, te genereren binnen de container.</li>
+  <li>bedenk zelf een algoritme die de lettergrootte berekend afhankelijk van het aantal stemmen die een term kreeg</li>
+  <li>kan je ook de kleur toekennen? groen voor stijgers, rood voor dalers</li>
+</ul>
+<h3>Geteste topics</h3>
+<ul>
+  <li>Arrays</li>
+  <li>style properties</li>
+  <li><code>Math.rand()</code> object</li>
+</ul>
+<div id="tagContainer"></div>
+</body>
+</html>

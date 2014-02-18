@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="css/gazet.css" rel="stylesheet">
+<link href="css/forms.css" rel="stylesheet">
+<script>
+/*
+dit Javascript enkel ter ondersteuning van deze HTML/CSS cursus: 
+U hoeft voor deze HTML/CSS cursus geen Javascript kennen of rekening te houden met dit scriptje
+*/
+
+window.onload = function (){
+	//bevestig button
+	var elmBevestig = document.querySelector("#bevestig");
+	elmBevestig.addEventListener("click",function(){
+				location.href ="betalen.html";
+		})
+	
+	//maak object met alle naam=waarde paren
+	var objQS = verwerkQueryString();
+	//console.log(objQS);
+	//maak collections van alle spans in gegevensDIV
+	var colSpans = document.querySelectorAll("#bevestiggegevens span");
+	//lus doorheen alle properties van object en vul spans in 
+	for (var propertyName in objQS) {
+		colSpans[propertyName].innerText = objQS[propertyName];
+		}
+}
+//****************
+function verwerkQueryString(){
+	/*
+	@querystring
+	return object
+	*/
+	var objQueryGegevens = {};
+	var strGet = ""; 
+	//lees de querystring
+	strGet= unescape(location.search.substring(1));
+
+	if (strGet != "") {
+		//maak een array van doorgestuurde key=value paren 
+		var arrControls = strGet.split("&");
+		// declareer een tijdelijk array die de naam-waarde paren zal bevatten
+		
+		for (i=0;i<arrControls.length;i++) {
+			// naam en waarden worden gescheiden in een tmparray
+			var arrTemp = new Array();
+			arrTemp = arrControls[i].split("=");			
+			objQueryGegevens[arrTemp[0]] = arrTemp[1];
+			}
+	}
+	return objQueryGegevens;
+}
+
+
+</script>
+<title>De Gazet</title>
+</head>
+<body class="abonneren">
+<div id="topbanner">
+  <div class="wikkel">
+    <nav id="topmenu">
+      <ul>
+        <li><a href="index.html">Nieuws</a></li>
+        <li><a href="dating.html">Dating</a></li>
+        <li><a href="culinair.html">Culinair</a></li>
+        <li><a href="webshop.html">Webshop</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="wikkel cf">
+  <div class="inhoud">
+    <header>
+      <nav id="extramenu">
+        <ul>
+          <li>&nbsp;</li>
+        </ul>
+      </nav>
+      <h1 id="logo"><a href="index.html"  title="De Gazet met het allerlaatste nieuws">De Gazet</a></h1>
+      <nav id="abonneermenu" class="cf">
+        <ul class="breadcrumbs">
+          <li class="actief"><a href="abonneren.html">Soort abonnement</a></li>
+          <li class="actief"><a href="gegevens.html">Uw gegevens</a></li>
+          <li class="actief"><a href="#">Bevestigen</a></li>
+          <li ><a href="#">Betalen</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!--span3 section-->
+    
+    <section class="span5">
+      <article>
+        <div id="abonnementkeuzes" class="bt3 cf">
+          <h2>Uw koos voor</h2>
+          <p>een Weekend abonnement vanaf € 15/maand <a href="abonneren.html">wijzig</a></p>
+        </div>
+        <div id="bevestiggegevens" class="bt3 cf">
+          <h2>Bevestig uw gegevens</h2>
+          <p>Controleer de juistheid van uw gegevens, aub:</p>
+          <div>
+            <label>Voornaam:</label>
+            <span id="vnaam"></span> </div>
+          <div>
+            <label>Familienaam:</label>
+            <span id="fnaam"></span> </div>
+          <div>
+            <label>Straat:</label>
+            <span id="straat"></span> </div>
+          <div>
+            <label>Postnummer:</label>
+            <span id="postnr"></span> </div>
+          <div>
+            <label>Gemeente:</label>
+            <span id="gemeente"></span> </div>
+          <div>
+            <label>Land:</label>
+            <span id="land"></span> </div>
+          <div>
+            <label>Telefoon:</label>
+            <span id="tel"></span></div>
+          <div>
+            <label>Email:</label>
+            <span id="email"></span></div>
+          <div>
+            <label>Geboortedatum:</label>
+            <span id="geboren"></span></div>
+          <div>
+            <label>Geslacht:</label>
+            <span id="sexe"></span></div>
+          <div>
+            <label>U vroeg ook</label>
+            <span id="vragen"></span></div>
+          <div>
+            <input class="blauw" type="button" value="Bevestig" id="bevestig"/>
+            <input class="blauw" type="reset" value="Annuleer" />
+          </div>
+        </div>
+      </article>
+    </section>
+    <!--span5 section-->
+    
+    <section class="span5 bt3" >
+      <p>Voor verdere assistentie en hulp betreffende de aboonementen kunt u het gratis nummer 0800 445566 bellen. <br>
+        U vind ook help bij de <a href="#">Veel Gestelde Vragen en Voorwaarden</a> en <a href="#">condities</a></p>
+    </section>
+  </div>
+  <!--einde content--> 
+</div>
+<!--einde wikkel-->
+<footer>
+  <div class="wikkel">De Gazet is een oefening voor HTML &amp; CSS</div>
+</footer>
+</body>
+</html>
